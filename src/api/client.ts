@@ -508,6 +508,8 @@ export async function lookupTicketFromScan(raw: string): Promise<ScanLookup | nu
     }
   }
 
+  if (!ticket) return null
+
   const event = await api.getEvent(ticket.eventId)
   let buyer: User | null = null
   if (ticket.ownerType === 'customer' && ticket.ownerId) {
