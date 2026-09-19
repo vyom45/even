@@ -25,8 +25,13 @@ export function LoginPage() {
     try {
       const u = await login(email, password)
       navigate(roleHome[u.role])
-    } catch {
-      setError('Invalid credentials. Use Admin / Customer / Scanner below.')
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : ''
+      if (msg === 'Invalid credentials') {
+        setError('Invalid credentials. Use Admin / Customer / Scanner below.')
+      } else {
+        setError('Backend API not reachable. Run npm run dev (Vite + json-server on port 3001).')
+      }
     } finally {
       setLoading(false)
     }
