@@ -2,6 +2,7 @@ import axios from 'axios'
 import { API_BASE } from '../utils/constants'
 import { uid } from '../utils/formatters'
 import { parseTicketQr } from '../utils/ticketQr'
+import { initialDb } from '../data/dbData'
 import type {
   EventRecord,
   Order,
@@ -19,63 +20,316 @@ export const http = axios.create({
   headers: { 'Content-Type': 'application/json' },
 })
 
+const DB_KEY = 'garba_mock_db_store'
+
+function getLocalDb() {
+  try {
+    const raw = localStorage.getItem(DB_KEY)
+    if (raw) return JSON.parse(raw)
+  } catch {}
+  saveLocalDb(initialDb)
+  return initialDb
+}
+
+function saveLocalDb(data: any) {
+  try {
+    localStorage.setItem(DB_KEY, JSON.stringify(data))
+  } catch {}
+}
+
+async function withFallback<T>(
+  httpFn: () => Promise<T>,
+  fallbackFn: () => T | Promise<T>,
+): Promise<T> {
+  try {
+    return await httpFn()
+  } catch {
+    return await fallbackFn()
+  }
+}
+
 export async function loginRequest(email: string, password: string): Promise<User | null> {
-  const { data } = await http.get<User[]>('/users', { params: { email } })
-  const user = data.find((u) => u.email.toLowerCase() === email.toLowerCase())
-  if (!user || user.password !== password) return null
-  if (!['admin', 'customer', 'scanner'].includes(user.role)) return null
-  const { password: _pw, ...safe } = user
-  return safe as User
+  return withFallback(
+    async () => {
+      const { data } = await http.get<User[]>('/users', { params: { email } })
+      const user = data.find((u) => u.email.toLowerCase() === email.toLowerCase())
+      if (!user || user.password !== password) return null
+      if (!['admin', 'customer', 'scanner'].includes(user.role)) return null
+      const { password: _pw, ...safe } = user
+      return safe as User
+    },
+    () => {
+      const db = getLocalDb()
+      const user = (db.users || []).find((u: any) => u.email.toLowerCase() === email.toLowerCase())
+      if (!user || user.password !== password) return null
+      if (!['admin', 'customer', 'scanner'].includes(user.role)) return null
+      const { password: _pw, ...safe } = user
+      return safe as User
+    },
+  )
 }
 
 export const api = {
-  getUsers: () => http.get<User[]>('/users').then((r) => r.data),
-  getUser: (id: string) => http.get<User>(`/users/${id}`).then((r) => r.data),
+  getUsers: () =>
+    withFallback(
+      () => http.get<User[]>('/users').then((r) => r.data),
+      () => getLocalDb().users || [],
+    ),
+
+  getUser: (id: string) =>
+    withFallback(
+      () => http.get<User>(`/users/${id}`).then((r) => r.data),
+      () => {
+        const u = (getLocalDb().users || []).find((x: User) => x.id === id)
+        if (!u) throw new Error('User not found')
+        return u
+      },
+    ),
+
   updateUser: (id: string, patch: Partial<User>) =>
-    http.patch<User>(`/users/${id}`, patch).then((r) => r.data),
+    withFallback(
+      () => http.patch<User>(`/users/${id}`, patch).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const idx = (db.users || []).findIndex((x: User) => x.id === id)
+        if (idx !== -1) {
+          db.users[idx] = { ...db.users[idx], ...patch }
+          saveLocalDb(db)
+          return db.users[idx]
+        }
+        throw new Error('User not found')
+      },
+    ),
 
   getEvents: (params?: Record<string, string>) =>
-    http.get<EventRecord[]>('/events', { params }).then((r) => r.data),
-  getEvent: (id: string) => http.get<EventRecord>(`/events/${id}`).then((r) => r.data),
+    withFallback(
+      () => http.get<EventRecord[]>('/events', { params }).then((r) => r.data),
+      () => {
+        let list: EventRecord[] = getLocalDb().events || []
+        if (params?.status) list = list.filter((e) => e.status === params.status)
+        return list
+      },
+    ),
+
+  getEvent: (id: string) =>
+    withFallback(
+      () => http.get<EventRecord>(`/events/${id}`).then((r) => r.data),
+      () => {
+        const e = (getLocalDb().events || []).find((x: EventRecord) => x.id === id)
+        if (!e) throw new Error('Event not found')
+        return e
+      },
+    ),
+
   createEvent: (payload: Omit<EventRecord, 'id'> & { id?: string }) =>
-    http.post<EventRecord>('/events', { id: uid('e'), ...payload }).then((r) => r.data),
+    withFallback(
+      () => http.post<EventRecord>('/events', { id: uid('e'), ...payload }).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const newRecord = { id: uid('e'), ...payload }
+        db.events = [...(db.events || []), newRecord]
+        saveLocalDb(db)
+        return newRecord as EventRecord
+      },
+    ),
+
   updateEvent: (id: string, patch: Partial<EventRecord>) =>
-    http.patch<EventRecord>(`/events/${id}`, patch).then((r) => r.data),
+    withFallback(
+      () => http.patch<EventRecord>(`/events/${id}`, patch).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const idx = (db.events || []).findIndex((x: EventRecord) => x.id === id)
+        if (idx !== -1) {
+          db.events[idx] = { ...db.events[idx], ...patch }
+          saveLocalDb(db)
+          return db.events[idx]
+        }
+        throw new Error('Event not found')
+      },
+    ),
 
   getPassLots: (params?: Record<string, string>) =>
-    http.get<PassLot[]>('/passLots', { params }).then((r) => r.data),
-  getPassLot: (id: string) => http.get<PassLot>(`/passLots/${id}`).then((r) => r.data),
+    withFallback(
+      () => http.get<PassLot[]>('/passLots', { params }).then((r) => r.data),
+      () => {
+        let list: PassLot[] = getLocalDb().passLots || []
+        if (params?.eventId) list = list.filter((p) => p.eventId === params.eventId)
+        return list
+      },
+    ),
+
+  getPassLot: (id: string) =>
+    withFallback(
+      () => http.get<PassLot>(`/passLots/${id}`).then((r) => r.data),
+      () => {
+        const l = (getLocalDb().passLots || []).find((x: PassLot) => x.id === id)
+        if (!l) throw new Error('PassLot not found')
+        return l
+      },
+    ),
+
   createPassLot: (payload: Omit<PassLot, 'id'> & { id?: string }) =>
-    http.post<PassLot>('/passLots', { id: uid('pl'), ...payload }).then((r) => r.data),
+    withFallback(
+      () => http.post<PassLot>('/passLots', { id: uid('pl'), ...payload }).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const newLot = { id: uid('pl'), ...payload }
+        db.passLots = [...(db.passLots || []), newLot]
+        saveLocalDb(db)
+        return newLot as PassLot
+      },
+    ),
+
   updatePassLot: (id: string, patch: Partial<PassLot>) =>
-    http.patch<PassLot>(`/passLots/${id}`, patch).then((r) => r.data),
+    withFallback(
+      () => http.patch<PassLot>(`/passLots/${id}`, patch).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const idx = (db.passLots || []).findIndex((x: PassLot) => x.id === id)
+        if (idx !== -1) {
+          db.passLots[idx] = { ...db.passLots[idx], ...patch }
+          saveLocalDb(db)
+          return db.passLots[idx]
+        }
+        throw new Error('PassLot not found')
+      },
+    ),
 
   getTickets: (params?: Record<string, string>) =>
-    http.get<Ticket[]>('/tickets', { params }).then((r) => r.data),
-  getTicket: (id: string) => http.get<Ticket>(`/tickets/${id}`).then((r) => r.data),
+    withFallback(
+      () => http.get<Ticket[]>('/tickets', { params }).then((r) => r.data),
+      () => {
+        let list: Ticket[] = getLocalDb().tickets || []
+        if (params?.eventId) list = list.filter((t) => t.eventId === params.eventId)
+        if (params?.ownerType) list = list.filter((t) => t.ownerType === params.ownerType)
+        if (params?.ownerId) list = list.filter((t) => t.ownerId === params.ownerId)
+        if (params?.status) list = list.filter((t) => t.status === params.status)
+        if (params?.qrCode) list = list.filter((t) => t.qrCode === params.qrCode)
+        return list
+      },
+    ),
+
+  getTicket: (id: string) =>
+    withFallback(
+      () => http.get<Ticket>(`/tickets/${id}`).then((r) => r.data),
+      () => {
+        const t = (getLocalDb().tickets || []).find((x: Ticket) => x.id === id)
+        if (!t) throw new Error('Ticket not found')
+        return t
+      },
+    ),
+
   createTicket: (payload: Omit<Ticket, 'id'> & { id?: string }) =>
-    http.post<Ticket>('/tickets', { id: uid('t'), ...payload }).then((r) => r.data),
+    withFallback(
+      () => http.post<Ticket>('/tickets', { id: uid('t'), ...payload }).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const newTicket = { id: uid('t'), ...payload }
+        db.tickets = [...(db.tickets || []), newTicket]
+        saveLocalDb(db)
+        return newTicket as Ticket
+      },
+    ),
+
   updateTicket: (id: string, patch: Partial<Ticket>) =>
-    http.patch<Ticket>(`/tickets/${id}`, patch).then((r) => r.data),
+    withFallback(
+      () => http.patch<Ticket>(`/tickets/${id}`, patch).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const idx = (db.tickets || []).findIndex((x: Ticket) => x.id === id)
+        if (idx !== -1) {
+          db.tickets[idx] = { ...db.tickets[idx], ...patch }
+          saveLocalDb(db)
+          return db.tickets[idx]
+        }
+        throw new Error('Ticket not found')
+      },
+    ),
 
   getOrders: (params?: Record<string, string>) =>
-    http.get<Order[]>('/orders', { params }).then((r) => r.data),
+    withFallback(
+      () => http.get<Order[]>('/orders', { params }).then((r) => r.data),
+      () => {
+        let list: Order[] = getLocalDb().orders || []
+        if (params?.buyerId) list = list.filter((o) => o.buyerId === params.buyerId)
+        return list
+      },
+    ),
+
   createOrder: (payload: Omit<Order, 'id'> & { id?: string }) =>
-    http.post<Order>('/orders', { id: uid('ord'), ...payload }).then((r) => r.data),
+    withFallback(
+      () => http.post<Order>('/orders', { id: uid('ord'), ...payload }).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const newOrder = { id: uid('ord'), ...payload }
+        db.orders = [...(db.orders || []), newOrder]
+        saveLocalDb(db)
+        return newOrder as Order
+      },
+    ),
 
   getTransactions: (params?: Record<string, string>) =>
-    http.get<Transaction[]>('/transactions', { params }).then((r) => r.data),
+    withFallback(
+      () => http.get<Transaction[]>('/transactions', { params }).then((r) => r.data),
+      () => {
+        let list: Transaction[] = getLocalDb().transactions || []
+        if (params?.sellerId) list = list.filter((tx) => tx.sellerId === params.sellerId)
+        return list
+      },
+    ),
+
   createTransaction: (payload: Omit<Transaction, 'id'> & { id?: string }) =>
-    http.post<Transaction>('/transactions', { id: uid('tx'), ...payload }).then((r) => r.data),
+    withFallback(
+      () => http.post<Transaction>('/transactions', { id: uid('tx'), ...payload }).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const newTx = { id: uid('tx'), ...payload }
+        db.transactions = [...(db.transactions || []), newTx]
+        saveLocalDb(db)
+        return newTx as Transaction
+      },
+    ),
 
   getWallets: (params?: Record<string, string>) =>
-    http.get<Wallet[]>('/wallets', { params }).then((r) => r.data),
+    withFallback(
+      () => http.get<Wallet[]>('/wallets', { params }).then((r) => r.data),
+      () => {
+        let list: Wallet[] = getLocalDb().wallets || []
+        if (params?.userId) list = list.filter((w) => w.userId === params.userId)
+        return list
+      },
+    ),
+
   updateWallet: (id: string, patch: Partial<Wallet>) =>
-    http.patch<Wallet>(`/wallets/${id}`, patch).then((r) => r.data),
+    withFallback(
+      () => http.patch<Wallet>(`/wallets/${id}`, patch).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const idx = (db.wallets || []).findIndex((x: Wallet) => x.id === id)
+        if (idx !== -1) {
+          db.wallets[idx] = { ...db.wallets[idx], ...patch }
+          saveLocalDb(db)
+          return db.wallets[idx]
+        }
+        throw new Error('Wallet not found')
+      },
+    ),
 
   getPlaces: (params?: Record<string, string>) =>
-    http.get<Place[]>('/places', { params }).then((r) => r.data),
-  getPlace: (id: string) => http.get<Place>(`/places/${id}`).then((r) => r.data),
+    withFallback(
+      () => http.get<Place[]>('/places', { params }).then((r) => r.data),
+      () => getLocalDb().places || [],
+    ),
+
+  getPlace: (id: string) =>
+    withFallback(
+      () => http.get<Place>(`/places/${id}`).then((r) => r.data),
+      () => {
+        const p = (getLocalDb().places || []).find((x: Place) => x.id === id)
+        if (!p) throw new Error('Place not found')
+        return p
+      },
+    ),
 }
 
 /** Admin lists qty from a pass lot onto customer Discover. */
