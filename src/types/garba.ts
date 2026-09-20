@@ -54,9 +54,10 @@ export interface EventRecord {
   convenienceFee?: number
   publicPriceFrom: number
   featured?: boolean
-  offerType?: 'single' | 'bundle9x' | string
+  offerType?: 'single' | 'bundle9x' | 'venue' | string
   nights?: number
   bundleDays?: BundleDay[]
+  placeId?: string
 }
 
 export interface BundleDay {

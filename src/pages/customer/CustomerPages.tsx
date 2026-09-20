@@ -9,7 +9,7 @@ import {
   Search,
   Ticket as TicketIcon,
 } from 'lucide-react'
-import { api, checkoutPasses, getCustomerFacingEvents } from '../../api/client'
+import { api, checkoutPasses, getCustomerFacingEvents, getVenuePassEvent } from '../../api/client'
 import { useAuth } from '../../auth/useAuth'
 import { Button } from '../../components/ui/Button'
 import { Badge, statusTone } from '../../components/ui/Badge'
@@ -36,10 +36,14 @@ export function CustomerLayout() {
 type EventWithStock = EventRecord & { availablePasses: number }
 
 export function CustomerHomePage() {
+  const navigate = useNavigate()
   const [events, setEvents] = useState<EventWithStock[]>([])
   const [places, setPlaces] = useState<Place[]>([])
   const [selectedPlaceId, setSelectedPlaceId] = useState<string | null>(null)
+  const [venueBusy, setVenueBusy] = useState(false)
+  const [venueMsg, setVenueMsg] = useState('')
   const [q, setQ] = useState('')
+  const [offerMode, setOfferMode] = useState<'bundle' | 'individual'>('bundle')
   const [category, setCategory] = useState('all')
   const [area, setArea] = useState('all')
   const [sort, setSort] = useState('featured')
@@ -62,17 +66,37 @@ export function CustomerHomePage() {
   }
 
   useEffect(() => {
+    setVenueMsg('')
+  }, [selectedPlaceId])
+
+  useEffect(() => {
     void load()
   }, [])
 
-  const categories = useMemo(() => Array.from(new Set(events.map((e) => e.category))), [events])
-  const areas = useMemo(
-    () => Array.from(new Set([...events.map((e) => e.area), ...places.map((p) => p.area)].filter(Boolean) as string[])),
-    [events, places],
-  )
+  const categories = useMemo(() => {
+    const scoped = events.filter((e) =>
+      offerMode === 'bundle' ? e.offerType === 'bundle9x' : e.offerType === 'venue' || e.offerType === 'single',
+    )
+    return Array.from(new Set(scoped.map((e) => e.category)))
+  }, [events, offerMode])
+
+  const areas = useMemo(() => {
+    if (offerMode === 'individual') {
+      return Array.from(new Set(places.map((p) => p.area).filter(Boolean)))
+    }
+    const fromEvents = events
+      .filter((e) => e.offerType === 'bundle9x')
+      .flatMap((e) => [e.area, ...(e.bundleDays ?? []).map((d) => d.area)])
+    return Array.from(new Set(fromEvents.filter(Boolean) as string[]))
+  }, [events, places, offerMode])
 
   const filtered = useMemo(() => {
     let list = events.filter((e) => {
+      const isBundle = e.offerType === 'bundle9x'
+      const isIndividual = e.offerType === 'venue' || e.offerType === 'single'
+      if (offerMode === 'bundle' && !isBundle) return false
+      if (offerMode === 'individual' && !isIndividual) return false
+
       const dayHit = (e.bundleDays ?? []).some(
         (d) =>
           d.venue.toLowerCase().includes(q.toLowerCase()) ||
@@ -95,11 +119,13 @@ export function CustomerHomePage() {
     if (sort === 'price') list = [...list].sort((a, b) => a.publicPriceFrom - b.publicPriceFrom)
     if (sort === 'date') list = [...list].sort((a, b) => a.date.localeCompare(b.date))
     if (sort === 'featured') list = [...list].sort((a, b) => Number(b.featured) - Number(a.featured))
-    if (sort === 'bundle') {
-      list = [...list].sort((a, b) => Number(b.offerType === 'bundle9x') - Number(a.offerType === 'bundle9x'))
-    }
     return list
-  }, [events, q, category, area, sort])
+  }, [events, q, category, area, sort, offerMode])
+
+  useEffect(() => {
+    setCategory('all')
+    setArea('all')
+  }, [offerMode])
 
   const selectedPlace = places.find((p) => p.id === selectedPlaceId) ?? null
 
@@ -108,31 +134,34 @@ export function CustomerHomePage() {
 
   return (
     <div className="animate-fade-in">
-      <section className="relative mb-6 overflow-hidden rounded-3xl bg-ink-950 text-white">
-        <img
-          src="/images/navratri/n03.jpg"
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover opacity-50"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/85 to-transparent" />
-        <div className="relative px-5 py-10 sm:px-10 sm:py-14">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-300">Discover · Navratri</p>
-          <h1 className="mt-2 max-w-lg font-display text-3xl font-extrabold sm:text-4xl">
+      <section className="relative mb-6 overflow-hidden rounded-3xl bg-gradient-to-br from-[#B57F08] via-[#C9920A] to-[#A86F06] text-white shadow-soft">
+        {/* Centered Ambe Maa eye aura */}
+        <div className="relative flex items-center justify-center px-4 pt-5 sm:pt-6">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute h-28 w-28 rounded-full bg-[#FFE6A0]/55 blur-2xl sm:h-40 sm:w-40"
+          />
+          <img
+            src="/images/hero/ambe-maa.svg"
+            alt=""
+            className="relative z-[1] h-auto w-[42%] max-w-[140px] opacity-95 sm:w-[28%] sm:max-w-[170px]"
+          />
+        </div>
+        {/* Copy at bottom */}
+        <div className="relative z-10 px-5 pb-5 pt-1 text-center sm:px-10 sm:pb-6">
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-100 sm:text-xs">
+            Discover · Navratri
+          </p>
+          <h1 className="mx-auto mt-1 max-w-xl font-display text-xl font-extrabold leading-tight drop-shadow-sm sm:text-3xl">
             {places.length} Garba venues — map where nights happen
           </h1>
-          <p className="mt-2 max-w-md text-sm text-white/75">
+          <p className="mx-auto mt-1.5 max-w-md text-xs text-white/90 sm:text-sm">
             Browse Navratri photos, then use the map to see the exact venue location.
           </p>
-          <input
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-            placeholder="Search Mandavadi, GIFT City, Bopal…"
-            className="mt-5 h-12 w-full max-w-md rounded-2xl bg-white/95 px-4 text-sm font-medium text-ink-900 outline-none placeholder:text-ink-400"
-          />
         </div>
       </section>
 
-      <section className="mb-8 grid gap-4 lg:grid-cols-[1.4fr_1fr]">
+      <section className="mb-6">
         <NavratriMap
           places={places}
           selectedId={selectedPlaceId}
@@ -142,50 +171,6 @@ export function CustomerHomePage() {
           }}
           height={440}
         />
-        <div className="rounded-2xl border border-ink-100 bg-white p-4 shadow-soft">
-          {selectedPlace ? (
-            <>
-              <img
-                src={selectedPlace.image}
-                alt=""
-                className="mb-3 h-40 w-full rounded-xl object-cover"
-              />
-              <Badge tone="brand" className="mb-2">{selectedPlace.city}</Badge>
-              <h2 className="font-display text-xl font-bold text-ink-900">{selectedPlace.name}</h2>
-              <p className="mt-2 flex items-start gap-1.5 text-sm text-ink-600">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" />
-                {selectedPlace.address}
-              </p>
-              <p className="mt-2 text-xs text-ink-500">
-                Location is on the map (left). Photo above is Navratri / Garba vibe for this venue.
-              </p>
-              {selectedPlace.mapImage && (
-                <details className="mt-3 rounded-xl border border-ink-100 bg-ink-50 p-2">
-                  <summary className="cursor-pointer px-1 text-xs font-semibold text-ink-600">
-                    Venue ground on map (satellite)
-                  </summary>
-                  <img
-                    src={selectedPlace.mapImage}
-                    alt="Venue area on map"
-                    className="mt-2 h-32 w-full rounded-lg object-cover"
-                  />
-                </details>
-              )}
-              <Button
-                className="mt-4 w-full"
-                variant="outline"
-                onClick={() => {
-                  setQ(selectedPlace.name.split('–')[0].trim().split(' ')[0])
-                  setArea(selectedPlace.area)
-                }}
-              >
-                Find related passes
-              </Button>
-            </>
-          ) : (
-            <p className="text-sm text-ink-500">Tap a pin on the map</p>
-          )}
-        </div>
       </section>
 
       <section className="mb-6">
@@ -215,6 +200,131 @@ export function CustomerHomePage() {
         </div>
       </section>
 
+      <section className="mb-8">
+        <div className="rounded-2xl border border-ink-100 bg-white p-4 shadow-soft sm:p-5">
+          {selectedPlace ? (
+            <div className="grid gap-5 sm:grid-cols-[240px_1fr] lg:grid-cols-[280px_1fr]">
+              <img
+                src={selectedPlace.image}
+                alt=""
+                className="h-48 w-full rounded-xl object-cover sm:h-full sm:min-h-[220px]"
+              />
+              <div>
+                <Badge tone="brand" className="mb-2">{selectedPlace.city}</Badge>
+                <h2 className="font-display text-xl font-bold text-ink-900 sm:text-2xl">{selectedPlace.name}</h2>
+                <p className="mt-2 flex items-start gap-1.5 text-sm text-ink-600">
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" />
+                  {selectedPlace.address}
+                </p>
+                <p className="mt-2 text-xs text-ink-500">
+                  Pick a venue above or on the map — details show here.
+                </p>
+                {selectedPlace.mapImage && (
+                  <details className="mt-3 rounded-xl border border-ink-100 bg-ink-50 p-2">
+                    <summary className="cursor-pointer px-1 text-xs font-semibold text-ink-600">
+                      Venue ground on map (satellite)
+                    </summary>
+                    <img
+                      src={selectedPlace.mapImage}
+                      alt="Venue area on map"
+                      className="mt-2 h-32 w-full rounded-lg object-cover"
+                    />
+                  </details>
+                )}
+                <Button
+                  className="mt-4 w-full max-w-md bg-gradient-to-r from-brand-700 via-brand-600 to-amber-600 text-white shadow-md hover:from-brand-800 hover:to-amber-700"
+                  loading={venueBusy}
+                  onClick={async () => {
+                    setVenueBusy(true)
+                    setVenueMsg('')
+                    try {
+                      const found = await getVenuePassEvent(selectedPlace.id)
+                      if (!found || found.availablePasses <= 0) {
+                        setVenueMsg('No individual passes listed for this venue yet.')
+                        return
+                      }
+                      navigate(`/app/events/${found.event.id}`)
+                    } catch {
+                      setVenueMsg('Could not open venue passes. Is the API running?')
+                    } finally {
+                      setVenueBusy(false)
+                    }
+                  }}
+                >
+                  Buy individual venue pass
+                </Button>
+                <p className="mt-1.5 text-[11px] font-medium text-ink-400">
+                  One night only · this mandli ground
+                </p>
+                {venueMsg && (
+                  <p className="mt-2 max-w-md rounded-xl bg-amber-50 px-2 py-1.5 text-xs font-medium text-amber-800">
+                    {venueMsg}
+                  </p>
+                )}
+              </div>
+            </div>
+          ) : (
+            <p className="text-sm text-ink-500">Tap a venue or map pin to see details</p>
+          )}
+        </div>
+      </section>
+
+      <div className="mb-4 space-y-4">
+        <div>
+          <label htmlFor="discover-search" className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-ink-400">
+            Search
+          </label>
+          <input
+            id="discover-search"
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="Search Mandavadi, GIFT City, Bopal…"
+            className="h-11 w-full rounded-xl border border-ink-200 bg-white px-4 text-sm font-medium text-ink-900 outline-none placeholder:text-ink-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
+          />
+        </div>
+        <div>
+          <p className="mb-2 text-xs font-bold uppercase tracking-wide text-ink-400">Pass type</p>
+          <div
+            className="inline-flex rounded-2xl border border-ink-200 bg-ink-50 p-1"
+            role="radiogroup"
+            aria-label="Pass type"
+          >
+            <label
+              className={`cursor-pointer rounded-xl px-4 py-2 text-sm font-bold transition ${
+                offerMode === 'bundle'
+                  ? 'bg-brand-700 text-white shadow-sm'
+                  : 'text-ink-600 hover:text-ink-900'
+              }`}
+            >
+              <input
+                type="radio"
+                name="offerMode"
+                className="sr-only"
+                checked={offerMode === 'bundle'}
+                onChange={() => setOfferMode('bundle')}
+              />
+              9x Bundles
+            </label>
+            <label
+              className={`cursor-pointer rounded-xl px-4 py-2 text-sm font-bold transition ${
+                offerMode === 'individual'
+                  ? 'bg-brand-700 text-white shadow-sm'
+                  : 'text-ink-600 hover:text-ink-900'
+              }`}
+            >
+              <input
+                type="radio"
+                name="offerMode"
+                className="sr-only"
+                checked={offerMode === 'individual'}
+                onChange={() => setOfferMode('individual')}
+              />
+              Individual venue
+            </label>
+          </div>
+        </div>
+      </div>
+
       <div className="mb-5 grid gap-3 sm:grid-cols-3">
         <Select label="Category" value={category} onChange={(e) => setCategory(e.target.value)} options={[{ value: 'all', label: 'All categories' }, ...categories.map((c) => ({ value: c, label: c }))]} />
         <Select label="Area" value={area} onChange={(e) => setArea(e.target.value)} options={[{ value: 'all', label: 'All areas' }, ...areas.map((a) => ({ value: a, label: a }))]} />
@@ -224,7 +334,6 @@ export function CustomerHomePage() {
           onChange={(e) => setSort(e.target.value)}
           options={[
             { value: 'featured', label: 'Featured' },
-            { value: 'bundle', label: '9x bundles first' },
             { value: 'date', label: 'Date' },
             { value: 'price', label: 'Price: low to high' },
           ]}
@@ -233,8 +342,12 @@ export function CustomerHomePage() {
 
       {filtered.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-ink-200 bg-white px-6 py-14 text-center">
-          <p className="font-display text-lg font-bold">No listed passes match</p>
-          <p className="mt-2 text-sm text-ink-500">Admin must list passes for sale before events show here.</p>
+          <p className="font-display text-lg font-bold">No passes match</p>
+          <p className="mt-2 text-sm text-ink-500">
+            {offerMode === 'bundle'
+              ? 'No 9x bundles listed right now — try Individual venue.'
+              : 'No individual venue passes match these filters.'}
+          </p>
         </div>
       ) : (
         <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
@@ -244,8 +357,15 @@ export function CustomerHomePage() {
                 <img src={ev.image} alt={ev.name} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-transparent to-transparent" />
                 <div className="absolute left-3 top-3 flex flex-wrap gap-1">
-                  <Badge tone="brand">{ev.offerType === 'bundle9x' ? '9x Bundle' : ev.category}</Badge>
+                  <Badge tone="brand">
+                    {ev.offerType === 'bundle9x'
+                      ? '9x Bundle'
+                      : ev.offerType === 'venue'
+                        ? 'Individual'
+                        : ev.category}
+                  </Badge>
                   {ev.offerType === 'bundle9x' && <Badge tone="success">{ev.nights ?? 9} nights</Badge>}
+                  {ev.offerType === 'venue' && <Badge tone="info">1 night</Badge>}
                   {ev.featured && <Badge tone="warning">Featured</Badge>}
                 </div>
                 <div className="absolute bottom-0 p-4 text-white">

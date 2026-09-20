@@ -28,4 +28,9 @@
   .glass-panel {
     @apply border border-white/60 bg-white/80 shadow-soft backdrop-blur-md;
   }
+
+  /* Keep Leaflet below app chrome (header is z-[1100]) */
+  .leaflet-container {
+    @apply z-0;
+  }
 }

@@ -34,6 +34,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const login = useCallback(async (email: string, password: string) => {
     const found = await loginRequest(email, password)
+    if (!found) throw new Error('Invalid credentials')
     setUser(found)
     localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(found))
     return found

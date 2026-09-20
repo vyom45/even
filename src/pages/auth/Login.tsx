@@ -24,9 +24,9 @@ export function LoginPage() {
     setLoading(true)
     try {
       const u = await login(email, password)
-      navigate(roleHome[u.role] || '/app')
+      navigate(roleHome[u.role])
     } catch {
-      navigate('/app')
+      setError('Invalid credentials. Use Admin / Customer / Scanner below.')
     } finally {
       setLoading(false)
     }
@@ -39,9 +39,9 @@ export function LoginPage() {
     setLoading(true)
     try {
       const u = await login(demoEmail, demoPassword)
-      navigate(roleHome[u.role] || '/app')
+      navigate(roleHome[u.role])
     } catch {
-      navigate('/app')
+      setError('API not reachable. Run npm run dev (Vite + json-server).')
     } finally {
       setLoading(false)
     }
@@ -73,7 +73,9 @@ export function LoginPage() {
           >
             <div>
               <h2 className="font-display text-2xl font-bold text-ink-900">Sign in</h2>
-              <p className="mt-1 text-sm text-ink-500">Password for all demos: demo123</p>
+              <p className="mt-1 text-sm text-ink-500">
+                Demo mode — password not checked. Use quick login or any email below.
+              </p>
             </div>
             <Input label="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
             <Input
@@ -81,7 +83,7 @@ export function LoginPage() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              required
+              placeholder="Optional — not verified"
             />
             {error && (
               <p className="rounded-xl bg-red-50 px-3 py-2 text-sm font-medium text-red-700">{error}</p>

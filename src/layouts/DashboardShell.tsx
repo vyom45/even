@@ -24,7 +24,7 @@ export function DashboardShell({
 
   return (
     <div className="flex min-h-screen flex-col bg-ink-50">
-      <header className="sticky top-0 z-40 border-b border-ink-100 bg-white/90 backdrop-blur">
+      <header className="sticky top-0 z-[1100] border-b border-ink-100 bg-white/95 backdrop-blur">
         <div className="page-container flex h-14 items-center justify-between gap-3">
           <div className="flex items-center gap-2.5">
             <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-700 text-white">

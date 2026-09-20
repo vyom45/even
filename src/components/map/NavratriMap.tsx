@@ -67,8 +67,8 @@ export function NavratriMap({
   }
 
   return (
-    <div className={cn('overflow-hidden rounded-2xl border border-ink-100 shadow-soft', className)}>
-      <div className="flex items-center justify-between gap-2 border-b border-ink-100 bg-white px-3 py-2">
+    <div className={cn('relative z-0 isolate overflow-hidden rounded-2xl border border-ink-100 shadow-soft', className)}>
+      <div className="relative z-10 flex items-center justify-between gap-2 border-b border-ink-100 bg-white px-3 py-2">
         <p className="text-xs font-bold uppercase tracking-wide text-ink-500">
           Navratri map · {withCoords.length} venues
         </p>
@@ -95,41 +95,43 @@ export function NavratriMap({
           </button>
         </div>
       </div>
-      <MapContainer center={center} zoom={11} style={{ height, width: '100%' }} scrollWheelZoom>
-        {basemap === 'satellite' ? (
-          <TileLayer
-            attribution='Tiles &copy; Esri'
-            url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-          />
-        ) : (
-          <TileLayer
-            attribution='&copy; OpenStreetMap'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-        )}
-        <FlyTo place={selected} />
-        {withCoords.map((p) => (
-          <Marker
-            key={p.id}
-            position={[p.lat!, p.lng!]}
-            icon={p.id === selectedId ? activeIcon : pinIcon}
-            eventHandlers={{
-              click: () => onSelect?.(p),
-            }}
-          >
-            <Popup>
-              <div className="min-w-[160px]">
-                <p className="font-bold text-sm">{p.name}</p>
-                <p className="text-xs text-slate-600 mt-1">{p.address}</p>
-                {p.image && (
-                  <img src={p.image} alt="" className="mt-2 h-20 w-full rounded object-cover" />
-                )}
-                <p className="mt-1 text-[10px] text-slate-500">Map pin = venue location</p>
-              </div>
-            </Popup>
-          </Marker>
-        ))}
-      </MapContainer>
+      <div className="relative z-0">
+        <MapContainer center={center} zoom={11} style={{ height, width: '100%' }} scrollWheelZoom>
+          {basemap === 'satellite' ? (
+            <TileLayer
+              attribution='Tiles &copy; Esri'
+              url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+            />
+          ) : (
+            <TileLayer
+              attribution='&copy; OpenStreetMap'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+          )}
+          <FlyTo place={selected} />
+          {withCoords.map((p) => (
+            <Marker
+              key={p.id}
+              position={[p.lat!, p.lng!]}
+              icon={p.id === selectedId ? activeIcon : pinIcon}
+              eventHandlers={{
+                click: () => onSelect?.(p),
+              }}
+            >
+              <Popup>
+                <div className="min-w-[160px]">
+                  <p className="font-bold text-sm">{p.name}</p>
+                  <p className="text-xs text-slate-600 mt-1">{p.address}</p>
+                  {p.image && (
+                    <img src={p.image} alt="" className="mt-2 h-20 w-full rounded object-cover" />
+                  )}
+                  <p className="mt-1 text-[10px] text-slate-500">Map pin = venue location</p>
+                </div>
+              </Popup>
+            </Marker>
+          ))}
+        </MapContainer>
+      </div>
     </div>
   )
 }
