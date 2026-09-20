@@ -2,6 +2,7 @@ import axios from 'axios'
 import { API_BASE } from '../utils/constants'
 import { uid } from '../utils/formatters'
 import { parseTicketQr } from '../utils/ticketQr'
+import { dbData } from '../data/dbData'
 import type {
   EventRecord,
   Order,
@@ -17,66 +18,289 @@ import type {
 export const http = axios.create({
   baseURL: API_BASE,
   headers: { 'Content-Type': 'application/json' },
+  timeout: 3000,
 })
 
+const STORAGE_KEY = 'eventbiz_inmemory_db_v1'
+
+function getLocalDb() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY)
+    if (saved) return JSON.parse(saved)
+  } catch {
+    // ignore
+  }
+  const clone = JSON.parse(JSON.stringify(dbData))
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(clone))
+  } catch {
+    // ignore
+  }
+  return clone
+}
+
+function saveLocalDb(db: any) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(db))
+  } catch {
+    // ignore
+  }
+}
+
+function filterList<T extends Record<string, any>>(list: T[], params?: Record<string, string>): T[] {
+  if (!params || Object.keys(params).length === 0) return list
+  return list.filter((item) =>
+    Object.entries(params).every(([k, v]) => String(item[k]) === String(v))
+  )
+}
+
+async function withFallback<T>(httpFn: () => Promise<T>, fallbackFn: () => T | Promise<T>): Promise<T> {
+  try {
+    return await httpFn()
+  } catch {
+    return await fallbackFn()
+  }
+}
+
 export async function loginRequest(email: string, _password: string): Promise<User | null> {
-  const { data } = await http.get<User[]>('/users', { params: { email } })
-  const user = data.find((u) => u.email.toLowerCase() === email.toLowerCase())
-  // Demo: skip password check — any click / any password logs in if email exists
-  if (!user) return null
-  if (!['admin', 'customer', 'scanner'].includes(user.role)) return null
-  const { password: _pw, ...safe } = user
-  return safe as User
+  return withFallback(
+    async () => {
+      const { data } = await http.get<User[]>('/users', { params: { email } })
+      const user = data.find((u) => u.email.toLowerCase() === email.toLowerCase())
+      if (!user) return null
+      if (!['admin', 'customer', 'scanner'].includes(user.role)) return null
+      const { password: _pw, ...safe } = user
+      return safe as User
+    },
+    () => {
+      const db = getLocalDb()
+      const user = (db.users as User[]).find((u: any) => u.email.toLowerCase() === email.toLowerCase())
+      if (!user) return null
+      if (!['admin', 'customer', 'scanner'].includes(user.role)) return null
+      const { password: _pw, ...safe } = user
+      return safe as User
+    }
+  )
 }
 
 export const api = {
-  getUsers: () => http.get<User[]>('/users').then((r) => r.data),
-  getUser: (id: string) => http.get<User>(`/users/${id}`).then((r) => r.data),
+  getUsers: () =>
+    withFallback(
+      () => http.get<User[]>('/users').then((r) => r.data),
+      () => getLocalDb().users
+    ),
+  getUser: (id: string) =>
+    withFallback(
+      () => http.get<User>(`/users/${id}`).then((r) => r.data),
+      () => {
+        const item = getLocalDb().users.find((u: any) => u.id === id)
+        if (!item) throw new Error('User not found')
+        return item
+      }
+    ),
   updateUser: (id: string, patch: Partial<User>) =>
-    http.patch<User>(`/users/${id}`, patch).then((r) => r.data),
+    withFallback(
+      () => http.patch<User>(`/users/${id}`, patch).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const idx = db.users.findIndex((u: any) => u.id === id)
+        if (idx !== -1) {
+          db.users[idx] = { ...db.users[idx], ...patch }
+          saveLocalDb(db)
+          return db.users[idx]
+        }
+        throw new Error('User not found')
+      }
+    ),
 
   getEvents: (params?: Record<string, string>) =>
-    http.get<EventRecord[]>('/events', { params }).then((r) => r.data),
-  getEvent: (id: string) => http.get<EventRecord>(`/events/${id}`).then((r) => r.data),
+    withFallback(
+      () => http.get<EventRecord[]>('/events', { params }).then((r) => r.data),
+      () => filterList(getLocalDb().events, params)
+    ),
+  getEvent: (id: string) =>
+    withFallback(
+      () => http.get<EventRecord>(`/events/${id}`).then((r) => r.data),
+      () => {
+        const item = getLocalDb().events.find((e: any) => e.id === id)
+        if (!item) throw new Error('Event not found')
+        return item
+      }
+    ),
   createEvent: (payload: Omit<EventRecord, 'id'> & { id?: string }) =>
-    http.post<EventRecord>('/events', { id: uid('e'), ...payload }).then((r) => r.data),
+    withFallback(
+      () => http.post<EventRecord>('/events', { id: uid('e'), ...payload }).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const newItem = { id: uid('e'), ...payload }
+        db.events.push(newItem)
+        saveLocalDb(db)
+        return newItem
+      }
+    ),
   updateEvent: (id: string, patch: Partial<EventRecord>) =>
-    http.patch<EventRecord>(`/events/${id}`, patch).then((r) => r.data),
+    withFallback(
+      () => http.patch<EventRecord>(`/events/${id}`, patch).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const idx = db.events.findIndex((e: any) => e.id === id)
+        if (idx !== -1) {
+          db.events[idx] = { ...db.events[idx], ...patch }
+          saveLocalDb(db)
+          return db.events[idx]
+        }
+        throw new Error('Event not found')
+      }
+    ),
 
   getPassLots: (params?: Record<string, string>) =>
-    http.get<PassLot[]>('/passLots', { params }).then((r) => r.data),
-  getPassLot: (id: string) => http.get<PassLot>(`/passLots/${id}`).then((r) => r.data),
+    withFallback(
+      () => http.get<PassLot[]>('/passLots', { params }).then((r) => r.data),
+      () => filterList(getLocalDb().passLots, params)
+    ),
+  getPassLot: (id: string) =>
+    withFallback(
+      () => http.get<PassLot>(`/passLots/${id}`).then((r) => r.data),
+      () => {
+        const item = getLocalDb().passLots.find((p: any) => p.id === id)
+        if (!item) throw new Error('PassLot not found')
+        return item
+      }
+    ),
   createPassLot: (payload: Omit<PassLot, 'id'> & { id?: string }) =>
-    http.post<PassLot>('/passLots', { id: uid('pl'), ...payload }).then((r) => r.data),
+    withFallback(
+      () => http.post<PassLot>('/passLots', { id: uid('pl'), ...payload }).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const newItem = { id: uid('pl'), ...payload }
+        db.passLots.push(newItem)
+        saveLocalDb(db)
+        return newItem
+      }
+    ),
   updatePassLot: (id: string, patch: Partial<PassLot>) =>
-    http.patch<PassLot>(`/passLots/${id}`, patch).then((r) => r.data),
+    withFallback(
+      () => http.patch<PassLot>(`/passLots/${id}`, patch).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const idx = db.passLots.findIndex((p: any) => p.id === id)
+        if (idx !== -1) {
+          db.passLots[idx] = { ...db.passLots[idx], ...patch }
+          saveLocalDb(db)
+          return db.passLots[idx]
+        }
+        throw new Error('PassLot not found')
+      }
+    ),
 
   getTickets: (params?: Record<string, string>) =>
-    http.get<Ticket[]>('/tickets', { params }).then((r) => r.data),
-  getTicket: (id: string) => http.get<Ticket>(`/tickets/${id}`).then((r) => r.data),
+    withFallback(
+      () => http.get<Ticket[]>('/tickets', { params }).then((r) => r.data),
+      () => filterList(getLocalDb().tickets, params)
+    ),
+  getTicket: (id: string) =>
+    withFallback(
+      () => http.get<Ticket>(`/tickets/${id}`).then((r) => r.data),
+      () => {
+        const item = getLocalDb().tickets.find((t: any) => t.id === id)
+        if (!item) throw new Error('Ticket not found')
+        return item
+      }
+    ),
   createTicket: (payload: Omit<Ticket, 'id'> & { id?: string }) =>
-    http.post<Ticket>('/tickets', { id: uid('t'), ...payload }).then((r) => r.data),
+    withFallback(
+      () => http.post<Ticket>('/tickets', { id: uid('t'), ...payload }).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const newItem = { id: uid('t'), ...payload }
+        db.tickets.push(newItem)
+        saveLocalDb(db)
+        return newItem
+      }
+    ),
   updateTicket: (id: string, patch: Partial<Ticket>) =>
-    http.patch<Ticket>(`/tickets/${id}`, patch).then((r) => r.data),
+    withFallback(
+      () => http.patch<Ticket>(`/tickets/${id}`, patch).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const idx = db.tickets.findIndex((t: any) => t.id === id)
+        if (idx !== -1) {
+          db.tickets[idx] = { ...db.tickets[idx], ...patch }
+          saveLocalDb(db)
+          return db.tickets[idx]
+        }
+        throw new Error('Ticket not found')
+      }
+    ),
 
   getOrders: (params?: Record<string, string>) =>
-    http.get<Order[]>('/orders', { params }).then((r) => r.data),
+    withFallback(
+      () => http.get<Order[]>('/orders', { params }).then((r) => r.data),
+      () => filterList(getLocalDb().orders, params)
+    ),
   createOrder: (payload: Omit<Order, 'id'> & { id?: string }) =>
-    http.post<Order>('/orders', { id: uid('ord'), ...payload }).then((r) => r.data),
+    withFallback(
+      () => http.post<Order>('/orders', { id: uid('ord'), ...payload }).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const newItem = { id: uid('ord'), ...payload }
+        db.orders.push(newItem)
+        saveLocalDb(db)
+        return newItem
+      }
+    ),
 
   getTransactions: (params?: Record<string, string>) =>
-    http.get<Transaction[]>('/transactions', { params }).then((r) => r.data),
+    withFallback(
+      () => http.get<Transaction[]>('/transactions', { params }).then((r) => r.data),
+      () => filterList(getLocalDb().transactions, params)
+    ),
   createTransaction: (payload: Omit<Transaction, 'id'> & { id?: string }) =>
-    http.post<Transaction>('/transactions', { id: uid('tx'), ...payload }).then((r) => r.data),
+    withFallback(
+      () => http.post<Transaction>('/transactions', { id: uid('tx'), ...payload }).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const newItem = { id: uid('tx'), ...payload }
+        db.transactions.push(newItem)
+        saveLocalDb(db)
+        return newItem
+      }
+    ),
 
   getWallets: (params?: Record<string, string>) =>
-    http.get<Wallet[]>('/wallets', { params }).then((r) => r.data),
+    withFallback(
+      () => http.get<Wallet[]>('/wallets', { params }).then((r) => r.data),
+      () => filterList(getLocalDb().wallets, params)
+    ),
   updateWallet: (id: string, patch: Partial<Wallet>) =>
-    http.patch<Wallet>(`/wallets/${id}`, patch).then((r) => r.data),
+    withFallback(
+      () => http.patch<Wallet>(`/wallets/${id}`, patch).then((r) => r.data),
+      () => {
+        const db = getLocalDb()
+        const idx = db.wallets.findIndex((w: any) => w.id === id)
+        if (idx !== -1) {
+          db.wallets[idx] = { ...db.wallets[idx], ...patch }
+          saveLocalDb(db)
+          return db.wallets[idx]
+        }
+        throw new Error('Wallet not found')
+      }
+    ),
 
   getPlaces: (params?: Record<string, string>) =>
-    http.get<Place[]>('/places', { params }).then((r) => r.data),
-  getPlace: (id: string) => http.get<Place>(`/places/${id}`).then((r) => r.data),
+    withFallback(
+      () => http.get<Place[]>('/places', { params }).then((r) => r.data),
+      () => filterList(getLocalDb().places, params)
+    ),
+  getPlace: (id: string) =>
+    withFallback(
+      () => http.get<Place>(`/places/${id}`).then((r) => r.data),
+      () => {
+        const item = getLocalDb().places.find((p: any) => p.id === id)
+        if (!item) throw new Error('Place not found')
+        return item
+      }
+    ),
 }
 
 /** Admin lists qty from a pass lot onto customer Discover. */
@@ -268,6 +492,8 @@ export async function lookupTicketFromScan(raw: string): Promise<ScanLookup | nu
       return null
     }
   }
+
+  if (!ticket) return null
 
   const event = await api.getEvent(ticket.eventId)
   let buyer: User | null = null
