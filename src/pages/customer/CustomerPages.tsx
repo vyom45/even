@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { QRCodeSVG } from 'qrcode.react'
 import {
   Calendar,
@@ -18,10 +18,21 @@ import { Select } from '../../components/ui/Select'
 import { PageLoading } from '../../components/ui/LoadingSkeleton'
 import { ErrorState } from '../../components/ui/ErrorState'
 import { NavratriMap } from '../../components/map/NavratriMap'
+import { BestMatchFilterChips, BestMatchTags } from '../../components/events/BestMatchTags'
+import { DiscoverPassCard } from '../../components/events/DiscoverPassCard'
+import { BuildNavratriModal } from '../../components/customer/BuildNavratriModal'
+import { deriveMatchTags, type MatchTagId } from '../../utils/bestMatch'
 import { DashboardShell } from '../../layouts/DashboardShell'
-import type { EventRecord, Order, Place, Ticket } from '../../types/garba'
+import type { BundleDay, EventRecord, Order, Place, Ticket } from '../../types/garba'
 import { formatINR } from '../../utils/formatters'
 import { encodeTicketQr } from '../../utils/ticketQr'
+import {
+  BUILD_PRICES,
+  MIN_BUNDLE_NIGHTS,
+  PASS_TIER_OPTIONS,
+  formatNavratriLabel,
+  type BuildNights,
+} from '../../utils/navratri'
 
 const nav = [
   { to: '/app', label: 'Discover', icon: Search },
@@ -43,11 +54,13 @@ export function CustomerHomePage() {
   const [venueBusy, setVenueBusy] = useState(false)
   const [venueMsg, setVenueMsg] = useState('')
   const [q, setQ] = useState('')
-  const [offerMode, setOfferMode] = useState<'bundle' | 'individual'>('bundle')
+  const [offerMode, setOfferMode] = useState<'bundle' | 'individual' | 'build'>('bundle')
   const [category, setCategory] = useState('all')
   const [area, setArea] = useState('all')
   const [sort, setSort] = useState('featured')
+  const [matchFilter, setMatchFilter] = useState<MatchTagId | 'all'>('all')
   const [error, setError] = useState(false)
+  const [buildOpen, setBuildOpen] = useState(false)
   const [loading, setLoading] = useState(true)
 
   const load = async () => {
@@ -74,14 +87,16 @@ export function CustomerHomePage() {
   }, [])
 
   const categories = useMemo(() => {
-    const scoped = events.filter((e) =>
-      offerMode === 'bundle' ? e.offerType === 'bundle9x' : e.offerType === 'venue' || e.offerType === 'single',
-    )
+    const scoped = events.filter((e) => {
+      if (offerMode === 'bundle') return e.offerType === 'bundle9x'
+      if (offerMode === 'individual') return e.offerType === 'venue' || e.offerType === 'single'
+      return false
+    })
     return Array.from(new Set(scoped.map((e) => e.category)))
   }, [events, offerMode])
 
   const areas = useMemo(() => {
-    if (offerMode === 'individual') {
+    if (offerMode === 'individual' || offerMode === 'build') {
       return Array.from(new Set(places.map((p) => p.area).filter(Boolean)))
     }
     const fromEvents = events
@@ -90,12 +105,26 @@ export function CustomerHomePage() {
     return Array.from(new Set(fromEvents.filter(Boolean) as string[]))
   }, [events, places, offerMode])
 
+  const priceMedian = useMemo(() => {
+    const prices = events
+      .filter((e) => (offerMode === 'bundle' ? e.offerType === 'bundle9x' : e.offerType === 'venue' || e.offerType === 'single'))
+      .map((e) => e.publicPriceFrom)
+      .sort((a, b) => a - b)
+    if (!prices.length) return 799
+    return prices[Math.floor(prices.length / 2)]
+  }, [events, offerMode])
+
+  const selectedPlace = places.find((p) => p.id === selectedPlaceId) ?? null
+  const nearArea = area !== 'all' ? area : selectedPlace?.area ?? null
+
   const filtered = useMemo(() => {
+    if (offerMode === 'build') return []
     let list = events.filter((e) => {
       const isBundle = e.offerType === 'bundle9x'
       const isIndividual = e.offerType === 'venue' || e.offerType === 'single'
       if (offerMode === 'bundle' && !isBundle) return false
       if (offerMode === 'individual' && !isIndividual) return false
+      if (e.offerType === 'customBundle') return false
 
       const dayHit = (e.bundleDays ?? []).some(
         (d) =>
@@ -114,20 +143,21 @@ export function CustomerHomePage() {
         area === 'all' ||
         e.area === area ||
         (e.bundleDays ?? []).some((d) => d.area === area)
-      return matchQ && matchCat && matchArea
+      const tags = deriveMatchTags(e, { nearArea, priceMedian })
+      const matchTag = matchFilter === 'all' || tags.includes(matchFilter)
+      return matchQ && matchCat && matchArea && matchTag
     })
     if (sort === 'price') list = [...list].sort((a, b) => a.publicPriceFrom - b.publicPriceFrom)
     if (sort === 'date') list = [...list].sort((a, b) => a.date.localeCompare(b.date))
     if (sort === 'featured') list = [...list].sort((a, b) => Number(b.featured) - Number(a.featured))
     return list
-  }, [events, q, category, area, sort, offerMode])
+  }, [events, q, category, area, sort, offerMode, matchFilter, nearArea, priceMedian])
 
   useEffect(() => {
     setCategory('all')
     setArea('all')
+    setMatchFilter('all')
   }, [offerMode])
-
-  const selectedPlace = places.find((p) => p.id === selectedPlaceId) ?? null
 
   if (loading) return <PageLoading />
   if (error) return <ErrorState onRetry={load} description="Restart npm run dev so API reloads db.json" />
@@ -212,6 +242,19 @@ export function CustomerHomePage() {
               <div>
                 <Badge tone="brand" className="mb-2">{selectedPlace.city}</Badge>
                 <h2 className="font-display text-xl font-bold text-ink-900 sm:text-2xl">{selectedPlace.name}</h2>
+                <BestMatchTags
+                  className="mt-2"
+                  tags={deriveMatchTags(
+                    {
+                      name: selectedPlace.name,
+                      area: selectedPlace.area,
+                      tags: selectedPlace.tags,
+                      offerType: 'venue',
+                      publicPriceFrom: 799,
+                    },
+                    { nearArea },
+                  )}
+                />
                 <p className="mt-2 flex items-start gap-1.5 text-sm text-ink-600">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" />
                   {selectedPlace.address}
@@ -285,12 +328,12 @@ export function CustomerHomePage() {
         <div>
           <p className="mb-2 text-xs font-bold uppercase tracking-wide text-ink-400">Pass type</p>
           <div
-            className="inline-flex rounded-2xl border border-ink-200 bg-ink-50 p-1"
+            className="flex w-full flex-col gap-1 rounded-2xl border border-ink-200 bg-ink-50 p-1 sm:inline-flex sm:w-auto sm:flex-row sm:flex-wrap"
             role="radiogroup"
             aria-label="Pass type"
           >
             <label
-              className={`cursor-pointer rounded-xl px-4 py-2 text-sm font-bold transition ${
+              className={`cursor-pointer rounded-xl px-4 py-2.5 text-center text-sm font-bold transition sm:text-left ${
                 offerMode === 'bundle'
                   ? 'bg-brand-700 text-white shadow-sm'
                   : 'text-ink-600 hover:text-ink-900'
@@ -306,7 +349,7 @@ export function CustomerHomePage() {
               9x Bundles
             </label>
             <label
-              className={`cursor-pointer rounded-xl px-4 py-2 text-sm font-bold transition ${
+              className={`cursor-pointer rounded-xl px-4 py-2.5 text-center text-sm font-bold transition sm:text-left ${
                 offerMode === 'individual'
                   ? 'bg-brand-700 text-white shadow-sm'
                   : 'text-ink-600 hover:text-ink-900'
@@ -321,75 +364,139 @@ export function CustomerHomePage() {
               />
               Individual venue
             </label>
+            <label
+              className={`cursor-pointer rounded-xl px-4 py-2.5 text-center text-sm font-bold transition sm:text-left ${
+                offerMode === 'build'
+                  ? 'bg-brand-700 text-white shadow-sm'
+                  : 'text-ink-600 hover:text-ink-900'
+              }`}
+            >
+              <input
+                type="radio"
+                name="offerMode"
+                className="sr-only"
+                checked={offerMode === 'build'}
+                onChange={() => setOfferMode('build')}
+              />
+              Build Navratri
+            </label>
           </div>
         </div>
       </div>
 
-      <div className="mb-5 grid gap-3 sm:grid-cols-3">
-        <Select label="Category" value={category} onChange={(e) => setCategory(e.target.value)} options={[{ value: 'all', label: 'All categories' }, ...categories.map((c) => ({ value: c, label: c }))]} />
-        <Select label="Area" value={area} onChange={(e) => setArea(e.target.value)} options={[{ value: 'all', label: 'All areas' }, ...areas.map((a) => ({ value: a, label: a }))]} />
-        <Select
-          label="Sort"
-          value={sort}
-          onChange={(e) => setSort(e.target.value)}
-          options={[
-            { value: 'featured', label: 'Featured' },
-            { value: 'date', label: 'Date' },
-            { value: 'price', label: 'Price: low to high' },
-          ]}
-        />
-      </div>
+      {offerMode !== 'build' && (
+        <div className="mb-5 space-y-4">
+          <BestMatchFilterChips value={matchFilter} onChange={setMatchFilter} />
+          <div className="grid gap-3 sm:grid-cols-3">
+            <Select label="Category" value={category} onChange={(e) => setCategory(e.target.value)} options={[{ value: 'all', label: 'All categories' }, ...categories.map((c) => ({ value: c, label: c }))]} />
+            <Select label="Area" value={area} onChange={(e) => setArea(e.target.value)} options={[{ value: 'all', label: 'All areas' }, ...areas.map((a) => ({ value: a, label: a }))]} />
+            <Select
+              label="Sort"
+              value={sort}
+              onChange={(e) => setSort(e.target.value)}
+              options={[
+                { value: 'featured', label: 'Featured' },
+                { value: 'date', label: 'Date' },
+                { value: 'price', label: 'Price: low to high' },
+              ]}
+            />
+          </div>
+        </div>
+      )}
 
-      {filtered.length === 0 ? (
+      {offerMode === 'build' ? (
+        <div className="mb-8 space-y-4">
+          <div className="overflow-hidden rounded-3xl border border-ink-100 bg-white shadow-soft">
+            <div className="relative overflow-hidden bg-gradient-to-br from-[#B57F08] via-[#C9920A] to-ink-950 px-5 py-8 text-white sm:px-10 sm:py-10">
+              <img
+                src="/images/hero/ambe-maa.svg"
+                alt=""
+                className="pointer-events-none absolute -right-8 bottom-0 w-28 opacity-30 sm:-right-4 sm:top-1/2 sm:w-44 sm:-translate-y-1/2 sm:opacity-40"
+              />
+              <div className="relative z-10 max-w-xl pr-0 sm:pr-36">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-100">
+                  Build &amp; Save
+                </p>
+                <h2 className="mt-2 font-display text-3xl font-extrabold leading-tight sm:text-4xl">
+                  Build your own Navratri
+                </h2>
+                <p className="mt-3 text-sm text-white/90 sm:text-base">
+                  Choose from Ahmedabad&apos;s best Garba experiences across 9 nights.
+                </p>
+                <ul className="mt-5 space-y-1.5 text-sm font-semibold text-white/95">
+                  <li>✓ Choose 5–9 nights</li>
+                  <li>✓ Skip any night</li>
+                  <li>✓ Unlock bundle pricing</li>
+                </ul>
+                <Button
+                  className="relative z-10 mt-6 w-full bg-white text-ink-900 hover:bg-amber-50 sm:w-auto"
+                  onClick={() => setBuildOpen(true)}
+                >
+                  Start building
+                </Button>
+              </div>
+            </div>
+            <div className="grid gap-3 border-t border-ink-100 p-4 sm:grid-cols-3 sm:p-5">
+              <div className="rounded-2xl bg-ink-50 px-4 py-3">
+                <p className="text-xs font-bold uppercase tracking-wide text-ink-400">Progress</p>
+                <p className="mt-1 text-sm font-semibold text-ink-800">
+                  0/{MIN_BUNDLE_NIGHTS} → 🎉 Bundle unlocked
+                </p>
+              </div>
+              <div className="rounded-2xl bg-ink-50 px-4 py-3">
+                <p className="text-xs font-bold uppercase tracking-wide text-ink-400">At 6–7</p>
+                <p className="mt-1 text-sm font-semibold text-ink-800">
+                  Extra unlocks · better value as you explore
+                </p>
+              </div>
+              <div className="rounded-2xl bg-ink-50 px-4 py-3">
+                <p className="text-xs font-bold uppercase tracking-wide text-ink-400">At 9</p>
+                <p className="mt-1 text-sm font-semibold text-ink-800">
+                  👑 Full Navratri · {formatINR(BUILD_PRICES[9])}
+                </p>
+              </div>
+            </div>
+          </div>
+          <BuildNavratriModal
+            open={buildOpen}
+            places={places}
+            onClose={() => setBuildOpen(false)}
+            onConfirm={({ nights, days, eventId }: { nights: BuildNights; days: BundleDay[]; eventId: string }) => {
+              setBuildOpen(false)
+              navigate(`/app/events/${eventId}`, {
+                state: {
+                  customBundleDays: days,
+                  customNights: nights,
+                  customUnitPrice: (() => {
+                    const addOns = days.reduce((s, d) => {
+                      const t = PASS_TIER_OPTIONS.find((o) => o.id === d.passTier)
+                      return s + (t?.fromPrice ?? 0)
+                    }, 0)
+                    return (BUILD_PRICES[nights] ?? 0) + addOns
+                  })(),
+                },
+              })
+            }}
+          />
+        </div>
+      ) : filtered.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-ink-200 bg-white px-6 py-14 text-center">
           <p className="font-display text-lg font-bold">No passes match</p>
           <p className="mt-2 text-sm text-ink-500">
             {offerMode === 'bundle'
-              ? 'No 9x bundles listed right now — try Individual venue.'
+              ? 'No 9x bundles listed right now — try Individual venue or Build your Navratri.'
               : 'No individual venue passes match these filters.'}
           </p>
         </div>
       ) : (
         <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {filtered.map((ev) => (
-            <Link key={ev.id} to={`/app/events/${ev.id}`} className="group overflow-hidden rounded-3xl border border-ink-100 bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-card">
-              <div className="relative aspect-[4/5] overflow-hidden sm:aspect-[16/10]">
-                <img src={ev.image} alt={ev.name} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-transparent to-transparent" />
-                <div className="absolute left-3 top-3 flex flex-wrap gap-1">
-                  <Badge tone="brand">
-                    {ev.offerType === 'bundle9x'
-                      ? '9x Bundle'
-                      : ev.offerType === 'venue'
-                        ? 'Individual'
-                        : ev.category}
-                  </Badge>
-                  {ev.offerType === 'bundle9x' && <Badge tone="success">{ev.nights ?? 9} nights</Badge>}
-                  {ev.offerType === 'venue' && <Badge tone="info">1 night</Badge>}
-                  {ev.featured && <Badge tone="warning">Featured</Badge>}
-                </div>
-                <div className="absolute bottom-0 p-4 text-white">
-                  <p className="font-display text-xl font-bold leading-snug">{ev.name}</p>
-                  <p className="mt-1 text-xs text-white/80">{ev.subtitle}</p>
-                  <p className="mt-2 flex items-center gap-1 text-xs text-white/75">
-                    <MapPin className="h-3.5 w-3.5" />{' '}
-                    {ev.offerType === 'bundle9x'
-                      ? `${ev.area} · ${(ev.bundleDays ?? []).length} venues`
-                      : `${ev.area} · ${ev.venue}`}
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center justify-between p-4">
-                <div>
-                  <p className="text-xs font-medium text-ink-500">
-                    {ev.availablePasses} left · {ev.date}
-                    {ev.endDate && ev.endDate !== ev.date ? ` → ${ev.endDate}` : ''}
-                  </p>
-                  <p className="font-display text-lg font-bold">From {formatINR(ev.publicPriceFrom)}</p>
-                </div>
-                <span className="text-sm font-bold text-brand-700">Details →</span>
-              </div>
-            </Link>
+            <DiscoverPassCard
+              key={ev.id}
+              event={ev}
+              nearArea={nearArea}
+              priceMedian={priceMedian}
+            />
           ))}
         </div>
       )}
@@ -401,11 +508,12 @@ export function CustomerBuyPage() {
   const { id } = useParams()
   const { user } = useAuth()
   const navigate = useNavigate()
+  const location = useLocation()
   const [event, setEvent] = useState<EventRecord | null>(null)
   const [available, setAvailable] = useState(0)
   const [price, setPrice] = useState(0)
-  const [maxPerOrder, setMaxPerOrder] = useState(6)
   const [qty, setQty] = useState(1)
+  const [qtyDraft, setQtyDraft] = useState('1')
   const [step, setStep] = useState(1)
   const [buying, setBuying] = useState(false)
   const [error, setError] = useState('')
@@ -417,12 +525,16 @@ export function CustomerBuyPage() {
   const [attendees, setAttendees] = useState([{ name: '', phone: '' }])
   const [paymentMethod, setPaymentMethod] = useState('UPI')
   const [dayFocus, setDayFocus] = useState<string | null>(null)
+  const [customBundleDays, setCustomBundleDays] = useState<BundleDay[] | null>(null)
+  const [customNights, setCustomNights] = useState<number | null>(null)
 
   const onlyTenDigits = (raw: string) => raw.replace(/\D/g, '').slice(0, 10)
 
+  const itineraryDays = customBundleDays?.length ? customBundleDays : event?.bundleDays ?? []
+
   const bundleMapPlaces = useMemo((): Place[] => {
-    if (!event?.bundleDays?.length) return []
-    return event.bundleDays
+    if (!itineraryDays.length) return []
+    return itineraryDays
       .filter((d) => d.lat != null && d.lng != null)
       .map((d) => ({
         id: d.placeId || `day-${d.day}`,
@@ -431,14 +543,19 @@ export function CustomerBuyPage() {
         area: d.area,
         address: d.address,
         landmark: d.landmark,
-        image: d.image || event.image,
+        image: d.image || event?.image || '',
         lat: d.lat,
         lng: d.lng,
       }))
-  }, [event])
+  }, [itineraryDays, event?.image])
 
   useEffect(() => {
     if (!id) return
+    const state = location.state as {
+      customBundleDays?: BundleDay[]
+      customNights?: number
+      customUnitPrice?: number
+    } | null
     void (async () => {
       const [ev, tickets, lots] = await Promise.all([
         api.getEvent(id),
@@ -446,13 +563,36 @@ export function CustomerBuyPage() {
         api.getPassLots({ eventId: id }),
       ])
       const listed = tickets.filter((t) => t.listedForSale)
-      setEvent(ev)
+      const days = state?.customBundleDays?.length ? state.customBundleDays : ev.bundleDays
+      if (state?.customBundleDays?.length) {
+        setCustomBundleDays(state.customBundleDays)
+        setCustomNights(state.customNights ?? state.customBundleDays.length)
+      }
+      const merged: EventRecord = {
+        ...ev,
+        bundleDays: days,
+        nights: state?.customNights ?? days?.length ?? ev.nights,
+        date: days?.[0]?.date ?? ev.date,
+        endDate: days?.[days.length - 1]?.date ?? ev.endDate,
+      }
+      setEvent(merged)
       setAvailable(listed.length)
       const lot = lots.find((l) => listed.some((t) => t.passLotId === l.id)) ?? lots[0]
-      setPrice(lot?.pricePerPass ?? ev.publicPriceFrom)
-      setMaxPerOrder(lot?.maxPerOrder ?? 6)
-      if (ev.bundleDays?.[0]?.placeId) setDayFocus(ev.bundleDays[0].placeId)
+      const tierAddOns =
+        days?.reduce((sum: number, d: BundleDay) => {
+          const t = PASS_TIER_OPTIONS.find((o) => o.id === d.passTier)
+          return sum + (t?.fromPrice ?? 0)
+        }, 0) ?? 0
+      const builtPrice =
+        state?.customUnitPrice ??
+        (state?.customBundleDays?.length
+          ? (BUILD_PRICES[state.customNights ?? state.customBundleDays.length] ?? lot?.pricePerPass ?? 0) +
+            tierAddOns
+          : null)
+      setPrice(builtPrice ?? lot?.pricePerPass ?? ev.publicPriceFrom)
+      if (days?.[0]?.placeId) setDayFocus(days[0].placeId)
     })()
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- hydrate once per event id
   }, [id])
 
   useEffect(() => {
@@ -462,6 +602,24 @@ export function CustomerBuyPage() {
       return next.slice(0, qty)
     })
   }, [qty])
+
+  const maxQty = Math.max(1, Math.min(10, Math.max(available, 1)))
+
+  useEffect(() => {
+    setQty((q) => Math.min(Math.max(1, q), maxQty))
+    setQtyDraft((d) => {
+      const n = Number(d)
+      if (!Number.isFinite(n) || n < 1) return d
+      return String(Math.min(n, maxQty))
+    })
+  }, [maxQty])
+
+  const commitQty = (raw: string) => {
+    const n = Number.parseInt(raw, 10)
+    const next = Number.isFinite(n) ? Math.min(maxQty, Math.max(1, n)) : 1
+    setQty(next)
+    setQtyDraft(String(next))
+  }
 
   const fee = (event?.convenienceFee ?? 29) * qty
   const subtotal = price * qty
@@ -497,6 +655,13 @@ export function CustomerBuyPage() {
         buyerPhone,
         attendees,
         paymentMethod,
+        unitPrice: customBundleDays?.length ? price : undefined,
+        ...(customBundleDays?.length
+          ? {
+              customBundleDays,
+              customNights: customNights ?? customBundleDays.length,
+            }
+          : {}),
       })
       navigate('/my-tickets')
     } catch (e) {
@@ -546,14 +711,20 @@ export function CustomerBuyPage() {
             <p>Landmark: {event.landmark}</p>
           </div>
 
-          {(event.bundleDays?.length ?? 0) > 0 && (
+          {(itineraryDays.length ?? 0) > 0 && (
             <section>
               <div className="mb-3 flex items-end justify-between gap-2">
                 <div>
-                  <h2 className="font-display text-xl font-bold">9-night itinerary</h2>
-                  <p className="text-sm text-ink-500">Map every night — tap a day card to fly the map to that mandli ground.</p>
+                  <h2 className="font-display text-xl font-bold">
+                    {event.offerType === 'customBundle' || customBundleDays?.length
+                      ? 'Your custom itinerary'
+                      : '9-night itinerary'}
+                  </h2>
+                  <p className="text-sm text-ink-500">
+                    Map every night — tap a day card to fly the map to that mandli ground.
+                  </p>
                 </div>
-                <Badge tone="success">{event.bundleDays!.length} days</Badge>
+                <Badge tone="success">{itineraryDays.length} days</Badge>
               </div>
               {bundleMapPlaces.length > 0 && (
                 <div className="mb-4">
@@ -566,7 +737,7 @@ export function CustomerBuyPage() {
                 </div>
               )}
               <div className="space-y-3">
-                {event.bundleDays!.map((day) => (
+                {itineraryDays.map((day) => (
                   <article
                     key={`${day.day}-${day.date}`}
                     className={`overflow-hidden rounded-2xl border bg-white shadow-soft sm:grid sm:grid-cols-[140px_1fr] ${
@@ -636,21 +807,47 @@ export function CustomerBuyPage() {
             </section>
           )}
 
-          {(event.schedule?.length ?? 0) > 0 && (
-            <section className="rounded-2xl border border-ink-100 bg-white p-5">
-              <h2 className="font-display text-lg font-bold">Schedule</h2>
-              <ol className="mt-3 space-y-2 text-sm">
-                {event.schedule!.map((s) => (
-                  <li key={s.time + s.title} className="flex gap-3">
-                    <span className="w-12 font-mono text-xs font-bold text-brand-700">{s.time}</span>
-                    <span><strong>{s.title}</strong>{s.detail ? ` — ${s.detail}` : ''}</span>
-                  </li>
-                ))}
-              </ol>
-            </section>
-          )}
+          {(() => {
+            const scheduleRows =
+              itineraryDays.length > 0
+                ? itineraryDays.map((day) => {
+                    const tier = PASS_TIER_OPTIONS.find((t) => t.id === day.passTier)
+                    return {
+                      time: day.gatesOpen ?? day.startTime ?? '18:00',
+                      title: `Day ${day.day} · ${day.venue}`,
+                      detail: [day.theme, tier ? `${tier.emoji} ${tier.label}` : null]
+                        .filter(Boolean)
+                        .join(' · '),
+                    }
+                  })
+                : (event.schedule ?? []).map((s) => ({
+                    time: s.time,
+                    title: s.title,
+                    detail: s.detail ?? '',
+                  }))
+            if (!scheduleRows.length) return null
+            return (
+              <section className="rounded-2xl border border-ink-100 bg-white p-5">
+                <div className="flex items-center justify-between gap-2">
+                  <h2 className="font-display text-lg font-bold">Schedule</h2>
+                  <Badge tone="neutral">{scheduleRows.length} nights</Badge>
+                </div>
+                <ol className="mt-3 space-y-2 text-sm">
+                  {scheduleRows.map((s) => (
+                    <li key={s.time + s.title} className="flex gap-3">
+                      <span className="w-12 shrink-0 font-mono text-xs font-bold text-brand-700">{s.time}</span>
+                      <span>
+                        <strong>{s.title}</strong>
+                        {s.detail ? ` — ${s.detail}` : ''}
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            )
+          })()}
 
-          {(event.lineup?.length ?? 0) > 0 && (
+          {(event.lineup?.length ?? 0) > 0 && !(customBundleDays?.length) && (
             <section>
               <h2 className="font-display text-xl font-bold">Lineup</h2>
               <ul className="mt-2 space-y-2 text-sm">
@@ -702,23 +899,70 @@ export function CustomerBuyPage() {
             <p className="text-xs font-bold uppercase tracking-wide text-ink-400">Checkout</p>
             <p className="mt-1 font-display text-3xl font-extrabold">{formatINR(price)}</p>
             <p className="text-xs text-ink-500">+ {formatINR(event.convenienceFee ?? 29)} convenience / pass</p>
-            {event.offerType === 'bundle9x' && (
+            {(event.offerType === 'bundle9x' ||
+              event.offerType === 'customBundle' ||
+              (customBundleDays?.length ?? 0) > 0) && (
               <p className="mt-2 rounded-xl bg-brand-50 px-3 py-2 text-xs font-semibold text-brand-800">
-                9x season pass — qty = number of people. Each pass covers all {(event.bundleDays ?? []).length || 9} nights.
+                {(customBundleDays?.length || event.offerType === 'customBundle'
+                  ? `Custom ${itineraryDays.length || customNights || ''}-night pass`
+                  : '9x season pass')}{' '}
+                — qty = number of people. Each pass covers all {itineraryDays.length || event.nights || 9}{' '}
+                nights.
               </p>
             )}
             <p className="mt-2 text-sm font-semibold text-emerald-700">{available} available</p>
 
             {step === 1 && (
               <div className="mt-4 space-y-3">
-                <Input
-                  label="Quantity"
-                  type="number"
-                  min={1}
-                  max={Math.min(maxPerOrder, available)}
-                  value={qty}
-                  onChange={(e) => setQty(Math.max(1, Math.min(maxPerOrder, Number(e.target.value) || 1)))}
-                />
+                <div>
+                  <p className="mb-1.5 text-sm font-semibold text-ink-700">Quantity</p>
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      aria-label="Decrease quantity"
+                      className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-ink-200 text-lg font-bold text-ink-700 hover:bg-ink-50 disabled:opacity-40"
+                      disabled={qty <= 1}
+                      onClick={() => commitQty(String(qty - 1))}
+                    >
+                      −
+                    </button>
+                    <input
+                      inputMode="numeric"
+                      pattern="[0-9]*"
+                      className="h-11 w-full rounded-xl border border-ink-200 bg-white px-3.5 text-center text-sm font-semibold text-ink-900 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
+                      value={qtyDraft}
+                      onChange={(e) => {
+                        const raw = e.target.value.replace(/\D/g, '')
+                        if (raw === '') {
+                          setQtyDraft('')
+                          return
+                        }
+                        const n = Number.parseInt(raw, 10)
+                        if (!Number.isFinite(n)) return
+                        // Clamp live: never below 1, never above max (10)
+                        const next = Math.min(maxQty, Math.max(1, n))
+                        setQty(next)
+                        setQtyDraft(String(next))
+                      }}
+                      onBlur={() => commitQty(qtyDraft === '' ? '1' : qtyDraft)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          e.currentTarget.blur()
+                        }
+                      }}
+                    />
+                    <button
+                      type="button"
+                      aria-label="Increase quantity"
+                      className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-ink-200 text-lg font-bold text-ink-700 hover:bg-ink-50 disabled:opacity-40"
+                      disabled={qty >= maxQty}
+                      onClick={() => commitQty(String(qty + 1))}
+                    >
+                      +
+                    </button>
+                  </div>
+                  <p className="mt-1 text-xs text-ink-500">Max {maxQty} per order (1–{maxQty})</p>
+                </div>
                 <div className="space-y-1 text-sm">
                   <div className="flex justify-between"><span className="text-ink-500">Subtotal</span><span>{formatINR(subtotal)}</span></div>
                   <div className="flex justify-between"><span className="text-ink-500">Convenience</span><span>{formatINR(fee)}</span></div>
@@ -869,16 +1113,27 @@ export function TicketDetailPage() {
   const navigate = useNavigate()
   const [ticket, setTicket] = useState<Ticket | null>(null)
   const [event, setEvent] = useState<EventRecord | null>(null)
+  const [orderDays, setOrderDays] = useState<BundleDay[] | null>(null)
 
   useEffect(() => {
     if (!id) return
     void api.getTicket(id).then(async (t) => {
       setTicket(t)
       setEvent(await api.getEvent(t.eventId))
+      if (t.orderId) {
+        try {
+          const ord = await api.getOrder(t.orderId)
+          if (ord.customBundleDays?.length) setOrderDays(ord.customBundleDays)
+        } catch {
+          /* optional */
+        }
+      }
     })
   }, [id])
 
   if (!ticket || !event) return <PageLoading />
+
+  const nights = orderDays?.length ? orderDays : event.bundleDays ?? []
 
   return (
     <div className="mx-auto max-w-md animate-fade-in">
@@ -916,14 +1171,16 @@ export function TicketDetailPage() {
           {ticket.checkedInAt && (
             <Row label="Checked in" value={new Date(ticket.checkedInAt).toLocaleString()} />
           )}
-          {(event.bundleDays?.length ?? 0) > 0 && (
+          {nights.length > 0 && (
             <div className="pt-2">
-              <p className="mb-2 text-xs font-bold uppercase tracking-wide text-ink-400">Your 9 nights</p>
+              <p className="mb-2 text-xs font-bold uppercase tracking-wide text-ink-400">
+                Your {nights.length} nights
+              </p>
               <div className="max-h-72 space-y-2 overflow-y-auto pr-1">
-                {event.bundleDays!.map((day) => (
-                  <div key={day.day} className="rounded-xl border border-ink-100 bg-ink-50 p-3 text-left text-sm">
+                {nights.map((day) => (
+                  <div key={`${day.day}-${day.date}`} className="rounded-xl border border-ink-100 bg-ink-50 p-3 text-left text-sm">
                     <div className="flex items-center justify-between gap-2">
-                      <span className="font-bold text-ink-900">Day {day.day} · {day.date}</span>
+                      <span className="font-bold text-ink-900">Day {day.day} · {formatNavratriLabel(day.date)}</span>
                       <span className="text-xs text-ink-500">{day.startTime}</span>
                     </div>
                     <p className="mt-1 font-semibold text-brand-800">{day.venue}</p>

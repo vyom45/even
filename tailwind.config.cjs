@@ -37,7 +37,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        display: ['"Outfit"', 'system-ui', 'sans-serif'],
+        display: ['"Syne"', '"Outfit"', 'system-ui', 'sans-serif'],
         sans: ['"Manrope"', 'system-ui', 'sans-serif'],
       },
       boxShadow: {

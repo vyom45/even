@@ -4,6 +4,7 @@ import { uid } from '../utils/formatters'
 import { parseTicketQr } from '../utils/ticketQr'
 import { dbData } from '../data/dbData'
 import type {
+  BundleDay,
   EventRecord,
   Order,
   PassLot,
@@ -238,6 +239,15 @@ export const api = {
       () => http.get<Order[]>('/orders', { params }).then((r) => r.data),
       () => filterList(getLocalDb().orders, params)
     ),
+  getOrder: (id: string) =>
+    withFallback(
+      () => http.get<Order>(`/orders/${id}`).then((r) => r.data),
+      () => {
+        const item = getLocalDb().orders.find((o: any) => o.id === id)
+        if (!item) throw new Error('Order not found')
+        return item
+      }
+    ),
   createOrder: (payload: Omit<Order, 'id'> & { id?: string }) =>
     withFallback(
       () => http.post<Order>('/orders', { id: uid('ord'), ...payload }).then((r) => r.data),
@@ -343,6 +353,9 @@ export interface CheckoutPayload {
   gstInvoice?: boolean
   gstin?: string
   businessName?: string
+  customBundleDays?: BundleDay[]
+  customNights?: number
+  unitPrice?: number
 }
 
 /** Buy N admin-listed passes. */
@@ -360,7 +373,7 @@ export async function checkoutPasses(payload: CheckoutPayload) {
 
   const picked = listed.slice(0, payload.quantity)
   const lot = await api.getPassLot(picked[0].passLotId)
-  const unit = lot.pricePerPass
+  const unit = payload.unitPrice ?? lot.pricePerPass
   const cost = lot.cost ?? lot.providerPrice ?? 0
   const fee = (event.convenienceFee ?? 29) * payload.quantity
   const subtotal = unit * payload.quantity
@@ -428,6 +441,12 @@ export async function checkoutPasses(payload: CheckoutPayload) {
     businessName: payload.businessName,
     status: 'confirmed',
     createdAt: new Date().toISOString(),
+    ...(payload.customBundleDays?.length
+      ? {
+          customBundleDays: payload.customBundleDays,
+          customNights: payload.customNights ?? payload.customBundleDays.length,
+        }
+      : {}),
   })
 
   return { order, ticketIds, total }

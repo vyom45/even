@@ -10,24 +10,43 @@ interface ModalProps {
   children: ReactNode
   footer?: ReactNode
   size?: 'sm' | 'md' | 'lg'
+  /** Higher layer for nested popups (default 80). */
+  layer?: number
+  closeOnEscape?: boolean
 }
 
-export function Modal({ open, onClose, title, children, footer, size = 'md' }: ModalProps) {
+export function Modal({
+  open,
+  onClose,
+  title,
+  children,
+  footer,
+  size = 'md',
+  layer = 80,
+  closeOnEscape = true,
+}: ModalProps) {
   useEffect(() => {
     if (!open) return
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
+    const onKey = (e: KeyboardEvent) => {
+      if (!closeOnEscape) return
+      if (e.key === 'Escape') onClose()
+    }
     document.addEventListener('keydown', onKey)
-    document.body.style.overflow = 'hidden'
+    const lockScroll = layer <= 80
+    if (lockScroll) document.body.style.overflow = 'hidden'
     return () => {
       document.removeEventListener('keydown', onKey)
-      document.body.style.overflow = ''
+      if (lockScroll) document.body.style.overflow = ''
     }
-  }, [open, onClose])
+  }, [open, onClose, closeOnEscape, layer])
 
   if (!open) return null
 
   return (
-    <div className="fixed inset-0 z-[80] flex items-end justify-center p-0 sm:items-center sm:p-4">
+    <div
+      className="fixed inset-0 flex items-end justify-center p-0 sm:items-center sm:p-4"
+      style={{ zIndex: layer }}
+    >
       <button
         type="button"
         aria-label="Close modal backdrop"

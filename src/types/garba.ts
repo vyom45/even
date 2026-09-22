@@ -18,6 +18,8 @@ export interface User {
   avatarColor?: string
 }
 
+import type { MatchTagId } from '../utils/bestMatch'
+
 export interface EventRecord {
   id: string
   name: string
@@ -53,11 +55,15 @@ export interface EventRecord {
   faqs?: { q: string; a: string }[]
   convenienceFee?: number
   publicPriceFrom: number
+  /** Gate / market price shown struck-through on cards */
+  marketPrice?: number
   featured?: boolean
   offerType?: 'single' | 'bundle9x' | 'venue' | string
   nights?: number
   bundleDays?: BundleDay[]
   placeId?: string
+  /** Best Match quick-scan tags */
+  matchTags?: MatchTagId[]
 }
 
 export interface BundleDay {
@@ -78,6 +84,8 @@ export interface BundleDay {
   image?: string
   highlights?: string[]
   note?: string
+  /** Gold / Diamond / Platinum pass tier chosen in Build flow */
+  passTier?: 'gold' | 'diamond' | 'platinum'
 }
 
 export interface Place {
@@ -168,6 +176,9 @@ export interface Order {
   businessName?: string
   status: 'confirmed' | 'cancelled'
   createdAt: string
+  /** Snapshot for Build your Navratri custom itineraries */
+  customBundleDays?: BundleDay[]
+  customNights?: number
 }
 
 export interface Transaction {

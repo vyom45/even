@@ -374,7 +374,14 @@
           "q": "Different venue every day?",
           "a": "Yes — open the itinerary on the event page for full address, landmark, and theme."
         }
-      ]
+      ],
+      "matchTags": [
+        "artist_pick",
+        "traditional",
+        "group_friendly",
+        "best_value"
+      ],
+      "marketPrice": 4900
     },
     {
       "id": "e-b2",
@@ -699,7 +706,14 @@
           "q": "Same price every night?",
           "a": "Yes — the 9x price covers all listed nights; no top-up for mega nights."
         }
-      ]
+      ],
+      "matchTags": [
+        "artist_pick",
+        "high_energy",
+        "group_friendly",
+        "premium"
+      ],
+      "marketPrice": 5500
     },
     {
       "id": "e3",
@@ -776,7 +790,12 @@
           "q": "Included in 9x?",
           "a": "East & Mega 9x includes a Science City night on Day 1 — this is a separate single sale."
         }
-      ]
+      ],
+      "matchTags": [
+        "high_energy",
+        "group_friendly"
+      ],
+      "marketPrice": 1100
     },
     {
       "id": "e4",
@@ -851,7 +870,12 @@
           "q": "Kids zone free?",
           "a": "Yes with paying adult ticket."
         }
-      ]
+      ],
+      "matchTags": [
+        "group_friendly",
+        "best_value"
+      ],
+      "marketPrice": 400
     },
     {
       "id": "e-v-01",
@@ -941,7 +965,12 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "best_value"
+      ],
+      "marketPrice": 650
     },
     {
       "id": "e-v-02",
@@ -1031,7 +1060,13 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "best_value",
+        "group_friendly"
+      ],
+      "marketPrice": 750
     },
     {
       "id": "e-v-03",
@@ -1121,7 +1156,12 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "premium"
+      ],
+      "marketPrice": 800
     },
     {
       "id": "e-v-04",
@@ -1211,7 +1251,13 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "high_energy",
+        "group_friendly"
+      ],
+      "marketPrice": 900
     },
     {
       "id": "e-v-05",
@@ -1301,7 +1347,12 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "premium"
+      ],
+      "marketPrice": 950
     },
     {
       "id": "e-v-06",
@@ -1391,7 +1442,13 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "best_value",
+        "group_friendly"
+      ],
+      "marketPrice": 1000
     },
     {
       "id": "e-v-07",
@@ -1481,7 +1538,13 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "premium",
+        "artist_pick"
+      ],
+      "marketPrice": 1100
     },
     {
       "id": "e-v-08",
@@ -1571,7 +1634,13 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "high_energy",
+        "group_friendly"
+      ],
+      "marketPrice": 1150
     },
     {
       "id": "e-v-09",
@@ -1661,7 +1730,12 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "best_value"
+      ],
+      "marketPrice": 650
     },
     {
       "id": "e-v-10",
@@ -1751,7 +1825,14 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "best_value",
+        "premium",
+        "group_friendly"
+      ],
+      "marketPrice": 750
     },
     {
       "id": "e-v-11",
@@ -1841,7 +1922,11 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional"
+      ],
+      "marketPrice": 800
     },
     {
       "id": "e-v-12",
@@ -1931,7 +2016,14 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "high_energy",
+        "best_value",
+        "group_friendly"
+      ],
+      "marketPrice": 900
     },
     {
       "id": "e-v-13",
@@ -2021,7 +2113,11 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional"
+      ],
+      "marketPrice": 950
     },
     {
       "id": "e-v-14",
@@ -2111,7 +2207,13 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "artist_pick",
+        "group_friendly"
+      ],
+      "marketPrice": 1000
     },
     {
       "id": "e-v-15",
@@ -2201,7 +2303,12 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "premium"
+      ],
+      "marketPrice": 1100
     },
     {
       "id": "e-v-16",
@@ -2291,7 +2398,13 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "high_energy",
+        "traditional",
+        "group_friendly"
+      ],
+      "marketPrice": 1150
     },
     {
       "id": "e-v-17",
@@ -2381,7 +2494,13 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "high_energy",
+        "traditional",
+        "best_value"
+      ],
+      "marketPrice": 650
     },
     {
       "id": "e-v-18",
@@ -2471,7 +2590,13 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "best_value",
+        "group_friendly"
+      ],
+      "marketPrice": 750
     },
     {
       "id": "e-v-19",
@@ -2561,7 +2686,11 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional"
+      ],
+      "marketPrice": 800
     },
     {
       "id": "e-v-20",
@@ -2651,7 +2780,14 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "premium",
+        "high_energy",
+        "group_friendly"
+      ],
+      "marketPrice": 900
     },
     {
       "id": "e-v-21",
@@ -2741,7 +2877,12 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "artist_pick"
+      ],
+      "marketPrice": 950
     },
     {
       "id": "e-v-22",
@@ -2831,7 +2972,12 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "group_friendly"
+      ],
+      "marketPrice": 1000
     },
     {
       "id": "e-v-23",
@@ -2921,7 +3067,11 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional"
+      ],
+      "marketPrice": 1100
     },
     {
       "id": "e-v-24",
@@ -3011,7 +3161,14 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "high_energy",
+        "best_value",
+        "group_friendly"
+      ],
+      "marketPrice": 1150
     },
     {
       "id": "e-v-25",
@@ -3101,7 +3258,13 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "best_value",
+        "premium"
+      ],
+      "marketPrice": 650
     },
     {
       "id": "e-v-26",
@@ -3191,7 +3354,13 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "best_value",
+        "group_friendly"
+      ],
+      "marketPrice": 750
     },
     {
       "id": "e-v-27",
@@ -3281,7 +3450,11 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional"
+      ],
+      "marketPrice": 800
     },
     {
       "id": "e-v-28",
@@ -3371,7 +3544,14 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "high_energy",
+        "traditional",
+        "artist_pick",
+        "group_friendly"
+      ],
+      "marketPrice": 900
     },
     {
       "id": "e-v-29",
@@ -3461,7 +3641,12 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "high_energy",
+        "traditional"
+      ],
+      "marketPrice": 950
     },
     {
       "id": "e-v-30",
@@ -3551,7 +3736,14 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "premium",
+        "best_value",
+        "group_friendly"
+      ],
+      "marketPrice": 1000
     },
     {
       "id": "e-v-31",
@@ -3641,7 +3833,12 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "high_energy",
+        "traditional"
+      ],
+      "marketPrice": 1100
     },
     {
       "id": "e-v-32",
@@ -3731,7 +3928,13 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "high_energy",
+        "group_friendly"
+      ],
+      "marketPrice": 1150
     },
     {
       "id": "e-v-33",
@@ -3821,7 +4024,12 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "best_value"
+      ],
+      "marketPrice": 650
     },
     {
       "id": "e-v-34",
@@ -3911,7 +4119,13 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "best_value",
+        "group_friendly"
+      ],
+      "marketPrice": 750
     },
     {
       "id": "e-v-35",
@@ -4001,7 +4215,14 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "high_energy",
+        "traditional",
+        "artist_pick",
+        "premium"
+      ],
+      "marketPrice": 800
     },
     {
       "id": "e-v-36",
@@ -4091,7 +4312,14 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "high_energy",
+        "best_value",
+        "group_friendly"
+      ],
+      "marketPrice": 900
     },
     {
       "id": "e-v-37",
@@ -4181,7 +4409,11 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional"
+      ],
+      "marketPrice": 950
     },
     {
       "id": "e-v-38",
@@ -4271,7 +4503,12 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "group_friendly"
+      ],
+      "marketPrice": 1000
     },
     {
       "id": "e-v-39",
@@ -4361,7 +4598,11 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional"
+      ],
+      "marketPrice": 1100
     },
     {
       "id": "e-v-40",
@@ -4451,7 +4692,14 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "premium",
+        "high_energy",
+        "group_friendly"
+      ],
+      "marketPrice": 1150
     },
     {
       "id": "e-v-41",
@@ -4541,7 +4789,13 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "premium",
+        "best_value"
+      ],
+      "marketPrice": 650
     },
     {
       "id": "e-v-42",
@@ -4631,7 +4885,14 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "premium",
+        "best_value",
+        "artist_pick"
+      ],
+      "marketPrice": 750
     },
     {
       "id": "e-v-43",
@@ -4721,7 +4982,12 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "premium"
+      ],
+      "marketPrice": 800
     },
     {
       "id": "e-v-44",
@@ -4811,7 +5077,13 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "high_energy",
+        "group_friendly"
+      ],
+      "marketPrice": 900
     },
     {
       "id": "e-v-45",
@@ -4901,7 +5173,12 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "premium"
+      ],
+      "marketPrice": 950
     },
     {
       "id": "e-v-46",
@@ -4991,7 +5268,12 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "group_friendly"
+      ],
+      "marketPrice": 1000
     },
     {
       "id": "e-v-47",
@@ -5081,7 +5363,11 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional"
+      ],
+      "marketPrice": 1100
     },
     {
       "id": "e-v-48",
@@ -5171,7 +5457,14 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "premium",
+        "high_energy",
+        "best_value"
+      ],
+      "marketPrice": 1150
     },
     {
       "id": "e-v-49",
@@ -5261,7 +5554,14 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "premium",
+        "best_value",
+        "artist_pick"
+      ],
+      "marketPrice": 650
     },
     {
       "id": "e-v-50",
@@ -5351,7 +5651,609 @@
           "q": "Can I upgrade to 9x later?",
           "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
         }
-      ]
+      ],
+      "matchTags": [
+        "traditional",
+        "best_value",
+        "premium",
+        "group_friendly"
+      ],
+      "marketPrice": 750
+    },
+    {
+      "id": "e-build-5",
+      "name": "Build your Navratri · 5 nights",
+      "subtitle": "Progressive 5-night custom Garba itinerary",
+      "adminId": "u-admin",
+      "date": "2026-10-05",
+      "endDate": "2026-10-13",
+      "startTime": "19:00",
+      "endTime": "00:30",
+      "gatesOpen": "18:00",
+      "venue": "Rotating — 9 Ahmedabad mandli grounds",
+      "address": "See day-wise map & itinerary",
+      "city": "Ahmedabad",
+      "area": "West & Bopal circuit",
+      "landmark": "Mandavadi – Garba & Mandli",
+      "status": "active",
+      "image": "/images/garba-fest/garba-01.jpg",
+      "gallery": [
+        "/images/garba-fest/garba-01.jpg",
+        "/images/garba-fest/garba-02.jpg",
+        "/images/garba-fest/garba-03.jpg",
+        "/images/garba-fest/garba-06.jpg",
+        "/images/garba-fest/garba-07.jpg",
+        "/images/garba-fest/garba-09.jpg",
+        "/images/garba-fest/garba-12.jpg",
+        "/images/garba-fest/garba-15.jpg",
+        "/images/garba-fest/garba-39.jpg"
+      ],
+      "shortDescription": "Pick any 5 Navratri nights and choose venues night by night.",
+      "description": "Progressive custom bundle — unlock at 5 nights, keep adding for extra savings up to 9 nights.",
+      "category": "Custom Bundle",
+      "tags": [
+        "Build your Navratri",
+        "5 nights",
+        "Progressive",
+        "Ahmedabad"
+      ],
+      "languages": [
+        "Gujarati",
+        "Hindi",
+        "English"
+      ],
+      "ageLimit": "All ages (under 5 free with adult)",
+      "durationLabel": "5 nights",
+      "dressCode": "Theme-wise (see each day)",
+      "convenienceFee": 99,
+      "publicPriceFrom": 2499,
+      "featured": true,
+      "offerType": "customBundle",
+      "nights": 5,
+      "bundleDays": [],
+      "highlights": [
+        "Access all 9 nights with one purchase",
+        "Different Ahmedabad venue every night",
+        "Theme nights with dress cues",
+        "QR valid for the full season (show each night)",
+        "Family-friendly early waves most nights"
+      ],
+      "amenities": [
+        "Day-wise venue map",
+        "Food courts most nights",
+        "Medical desk",
+        "Women help desk"
+      ],
+      "lineup": [
+        {
+          "name": "Classic House Orchestra",
+          "role": "Resident band"
+        },
+        {
+          "name": "Ahmedabad Dhol Collective",
+          "role": "Opening nights"
+        }
+      ],
+      "schedule": [
+        {
+          "time": "18:00",
+          "title": "Day 1 · Sabarmati Riverfront Event Lawn",
+          "detail": "Shailaputri Night"
+        },
+        {
+          "time": "18:00",
+          "title": "Day 2 · Law Garden Amphitheatre",
+          "detail": "Brahmacharini Night"
+        },
+        {
+          "time": "18:00",
+          "title": "Day 3 · GMDC Ground",
+          "detail": "Chandraghanta Night"
+        }
+      ],
+      "terms": [
+        "One attendee per 9x pass",
+        "Valid only for listed nights & venues",
+        "Non-transferable after first scan",
+        "Show digital QR + ID every night"
+      ],
+      "refundPolicy": "Full refund until 7 days before Day 1. 40% until 72h before Day 1. No refund after Day 1 starts.",
+      "faqs": [
+        {
+          "q": "Is this 9 separate tickets?",
+          "a": "You buy one 9x season pass. Your ticket shows all 9 day venues; show the same QR each night."
+        },
+        {
+          "q": "Can I skip a night?",
+          "a": "Yes — unused nights stay on your pass. No partial refund for skipped nights."
+        },
+        {
+          "q": "Different venue every day?",
+          "a": "Yes — open the itinerary on the event page for full address, landmark, and theme."
+        }
+      ],
+      "matchTags": [
+        "traditional",
+        "group_friendly",
+        "best_value"
+      ],
+      "marketPrice": 3350
+    },
+    {
+      "id": "e-build-6",
+      "name": "Build your Navratri · 6 nights",
+      "subtitle": "Progressive 6-night custom Garba itinerary",
+      "adminId": "u-admin",
+      "date": "2026-10-05",
+      "endDate": "2026-10-13",
+      "startTime": "19:00",
+      "endTime": "00:30",
+      "gatesOpen": "18:00",
+      "venue": "Rotating — 9 Ahmedabad mandli grounds",
+      "address": "See day-wise map & itinerary",
+      "city": "Ahmedabad",
+      "area": "West & Bopal circuit",
+      "landmark": "Mandavadi – Garba & Mandli",
+      "status": "active",
+      "image": "/images/garba-fest/garba-01.jpg",
+      "gallery": [
+        "/images/garba-fest/garba-01.jpg",
+        "/images/garba-fest/garba-02.jpg",
+        "/images/garba-fest/garba-03.jpg",
+        "/images/garba-fest/garba-06.jpg",
+        "/images/garba-fest/garba-07.jpg",
+        "/images/garba-fest/garba-09.jpg",
+        "/images/garba-fest/garba-12.jpg",
+        "/images/garba-fest/garba-15.jpg",
+        "/images/garba-fest/garba-39.jpg"
+      ],
+      "shortDescription": "Pick any 6 Navratri nights and choose venues night by night.",
+      "description": "Progressive custom bundle — unlock at 5 nights, keep adding for extra savings up to 9 nights.",
+      "category": "Custom Bundle",
+      "tags": [
+        "Build your Navratri",
+        "6 nights",
+        "Progressive",
+        "Ahmedabad"
+      ],
+      "languages": [
+        "Gujarati",
+        "Hindi",
+        "English"
+      ],
+      "ageLimit": "All ages (under 5 free with adult)",
+      "durationLabel": "6 nights",
+      "dressCode": "Theme-wise (see each day)",
+      "convenienceFee": 99,
+      "publicPriceFrom": 2849,
+      "featured": true,
+      "offerType": "customBundle",
+      "nights": 6,
+      "bundleDays": [],
+      "highlights": [
+        "Access all 9 nights with one purchase",
+        "Different Ahmedabad venue every night",
+        "Theme nights with dress cues",
+        "QR valid for the full season (show each night)",
+        "Family-friendly early waves most nights"
+      ],
+      "amenities": [
+        "Day-wise venue map",
+        "Food courts most nights",
+        "Medical desk",
+        "Women help desk"
+      ],
+      "lineup": [
+        {
+          "name": "Classic House Orchestra",
+          "role": "Resident band"
+        },
+        {
+          "name": "Ahmedabad Dhol Collective",
+          "role": "Opening nights"
+        }
+      ],
+      "schedule": [
+        {
+          "time": "18:00",
+          "title": "Day 1 · Sabarmati Riverfront Event Lawn",
+          "detail": "Shailaputri Night"
+        },
+        {
+          "time": "18:00",
+          "title": "Day 2 · Law Garden Amphitheatre",
+          "detail": "Brahmacharini Night"
+        },
+        {
+          "time": "18:00",
+          "title": "Day 3 · GMDC Ground",
+          "detail": "Chandraghanta Night"
+        }
+      ],
+      "terms": [
+        "One attendee per 9x pass",
+        "Valid only for listed nights & venues",
+        "Non-transferable after first scan",
+        "Show digital QR + ID every night"
+      ],
+      "refundPolicy": "Full refund until 7 days before Day 1. 40% until 72h before Day 1. No refund after Day 1 starts.",
+      "faqs": [
+        {
+          "q": "Is this 9 separate tickets?",
+          "a": "You buy one 9x season pass. Your ticket shows all 9 day venues; show the same QR each night."
+        },
+        {
+          "q": "Can I skip a night?",
+          "a": "Yes — unused nights stay on your pass. No partial refund for skipped nights."
+        },
+        {
+          "q": "Different venue every day?",
+          "a": "Yes — open the itinerary on the event page for full address, landmark, and theme."
+        }
+      ],
+      "matchTags": [
+        "traditional",
+        "group_friendly",
+        "best_value"
+      ],
+      "marketPrice": 3850
+    },
+    {
+      "id": "e-build-7",
+      "name": "Build your Navratri · 7 nights",
+      "subtitle": "Progressive 7-night custom Garba itinerary",
+      "adminId": "u-admin",
+      "date": "2026-10-05",
+      "endDate": "2026-10-13",
+      "startTime": "19:00",
+      "endTime": "00:30",
+      "gatesOpen": "18:00",
+      "venue": "Rotating — 9 Ahmedabad mandli grounds",
+      "address": "See day-wise map & itinerary",
+      "city": "Ahmedabad",
+      "area": "West & Bopal circuit",
+      "landmark": "Mandavadi – Garba & Mandli",
+      "status": "active",
+      "image": "/images/garba-fest/garba-01.jpg",
+      "gallery": [
+        "/images/garba-fest/garba-01.jpg",
+        "/images/garba-fest/garba-02.jpg",
+        "/images/garba-fest/garba-03.jpg",
+        "/images/garba-fest/garba-06.jpg",
+        "/images/garba-fest/garba-07.jpg",
+        "/images/garba-fest/garba-09.jpg",
+        "/images/garba-fest/garba-12.jpg",
+        "/images/garba-fest/garba-15.jpg",
+        "/images/garba-fest/garba-39.jpg"
+      ],
+      "shortDescription": "Pick any 7 Navratri nights and choose venues night by night.",
+      "description": "Progressive custom bundle — unlock at 5 nights, keep adding for extra savings up to 9 nights.",
+      "category": "Custom Bundle",
+      "tags": [
+        "Build your Navratri",
+        "7 nights",
+        "Progressive",
+        "Ahmedabad"
+      ],
+      "languages": [
+        "Gujarati",
+        "Hindi",
+        "English"
+      ],
+      "ageLimit": "All ages (under 5 free with adult)",
+      "durationLabel": "7 nights",
+      "dressCode": "Theme-wise (see each day)",
+      "convenienceFee": 99,
+      "publicPriceFrom": 3149,
+      "featured": true,
+      "offerType": "customBundle",
+      "nights": 7,
+      "bundleDays": [],
+      "highlights": [
+        "Access all 9 nights with one purchase",
+        "Different Ahmedabad venue every night",
+        "Theme nights with dress cues",
+        "QR valid for the full season (show each night)",
+        "Family-friendly early waves most nights"
+      ],
+      "amenities": [
+        "Day-wise venue map",
+        "Food courts most nights",
+        "Medical desk",
+        "Women help desk"
+      ],
+      "lineup": [
+        {
+          "name": "Classic House Orchestra",
+          "role": "Resident band"
+        },
+        {
+          "name": "Ahmedabad Dhol Collective",
+          "role": "Opening nights"
+        }
+      ],
+      "schedule": [
+        {
+          "time": "18:00",
+          "title": "Day 1 · Sabarmati Riverfront Event Lawn",
+          "detail": "Shailaputri Night"
+        },
+        {
+          "time": "18:00",
+          "title": "Day 2 · Law Garden Amphitheatre",
+          "detail": "Brahmacharini Night"
+        },
+        {
+          "time": "18:00",
+          "title": "Day 3 · GMDC Ground",
+          "detail": "Chandraghanta Night"
+        }
+      ],
+      "terms": [
+        "One attendee per 9x pass",
+        "Valid only for listed nights & venues",
+        "Non-transferable after first scan",
+        "Show digital QR + ID every night"
+      ],
+      "refundPolicy": "Full refund until 7 days before Day 1. 40% until 72h before Day 1. No refund after Day 1 starts.",
+      "faqs": [
+        {
+          "q": "Is this 9 separate tickets?",
+          "a": "You buy one 9x season pass. Your ticket shows all 9 day venues; show the same QR each night."
+        },
+        {
+          "q": "Can I skip a night?",
+          "a": "Yes — unused nights stay on your pass. No partial refund for skipped nights."
+        },
+        {
+          "q": "Different venue every day?",
+          "a": "Yes — open the itinerary on the event page for full address, landmark, and theme."
+        }
+      ],
+      "matchTags": [
+        "traditional",
+        "group_friendly",
+        "best_value"
+      ],
+      "marketPrice": 4250
+    },
+    {
+      "id": "e-build-8",
+      "name": "Build your Navratri · 8 nights",
+      "subtitle": "Progressive 8-night custom Garba itinerary",
+      "adminId": "u-admin",
+      "date": "2026-10-05",
+      "endDate": "2026-10-13",
+      "startTime": "19:00",
+      "endTime": "00:30",
+      "gatesOpen": "18:00",
+      "venue": "Rotating — 9 Ahmedabad mandli grounds",
+      "address": "See day-wise map & itinerary",
+      "city": "Ahmedabad",
+      "area": "West & Bopal circuit",
+      "landmark": "Mandavadi – Garba & Mandli",
+      "status": "active",
+      "image": "/images/garba-fest/garba-01.jpg",
+      "gallery": [
+        "/images/garba-fest/garba-01.jpg",
+        "/images/garba-fest/garba-02.jpg",
+        "/images/garba-fest/garba-03.jpg",
+        "/images/garba-fest/garba-06.jpg",
+        "/images/garba-fest/garba-07.jpg",
+        "/images/garba-fest/garba-09.jpg",
+        "/images/garba-fest/garba-12.jpg",
+        "/images/garba-fest/garba-15.jpg",
+        "/images/garba-fest/garba-39.jpg"
+      ],
+      "shortDescription": "Pick any 8 Navratri nights and choose venues night by night.",
+      "description": "Progressive custom bundle — unlock at 5 nights, keep adding for extra savings up to 9 nights.",
+      "category": "Custom Bundle",
+      "tags": [
+        "Build your Navratri",
+        "8 nights",
+        "Progressive",
+        "Ahmedabad"
+      ],
+      "languages": [
+        "Gujarati",
+        "Hindi",
+        "English"
+      ],
+      "ageLimit": "All ages (under 5 free with adult)",
+      "durationLabel": "8 nights",
+      "dressCode": "Theme-wise (see each day)",
+      "convenienceFee": 99,
+      "publicPriceFrom": 3399,
+      "featured": true,
+      "offerType": "customBundle",
+      "nights": 8,
+      "bundleDays": [],
+      "highlights": [
+        "Access all 9 nights with one purchase",
+        "Different Ahmedabad venue every night",
+        "Theme nights with dress cues",
+        "QR valid for the full season (show each night)",
+        "Family-friendly early waves most nights"
+      ],
+      "amenities": [
+        "Day-wise venue map",
+        "Food courts most nights",
+        "Medical desk",
+        "Women help desk"
+      ],
+      "lineup": [
+        {
+          "name": "Classic House Orchestra",
+          "role": "Resident band"
+        },
+        {
+          "name": "Ahmedabad Dhol Collective",
+          "role": "Opening nights"
+        }
+      ],
+      "schedule": [
+        {
+          "time": "18:00",
+          "title": "Day 1 · Sabarmati Riverfront Event Lawn",
+          "detail": "Shailaputri Night"
+        },
+        {
+          "time": "18:00",
+          "title": "Day 2 · Law Garden Amphitheatre",
+          "detail": "Brahmacharini Night"
+        },
+        {
+          "time": "18:00",
+          "title": "Day 3 · GMDC Ground",
+          "detail": "Chandraghanta Night"
+        }
+      ],
+      "terms": [
+        "One attendee per 9x pass",
+        "Valid only for listed nights & venues",
+        "Non-transferable after first scan",
+        "Show digital QR + ID every night"
+      ],
+      "refundPolicy": "Full refund until 7 days before Day 1. 40% until 72h before Day 1. No refund after Day 1 starts.",
+      "faqs": [
+        {
+          "q": "Is this 9 separate tickets?",
+          "a": "You buy one 9x season pass. Your ticket shows all 9 day venues; show the same QR each night."
+        },
+        {
+          "q": "Can I skip a night?",
+          "a": "Yes — unused nights stay on your pass. No partial refund for skipped nights."
+        },
+        {
+          "q": "Different venue every day?",
+          "a": "Yes — open the itinerary on the event page for full address, landmark, and theme."
+        }
+      ],
+      "matchTags": [
+        "traditional",
+        "group_friendly",
+        "best_value"
+      ],
+      "marketPrice": 4600
+    },
+    {
+      "id": "e-build-9",
+      "name": "Build your Navratri · 9 nights",
+      "subtitle": "Progressive 9-night custom Garba itinerary",
+      "adminId": "u-admin",
+      "date": "2026-10-05",
+      "endDate": "2026-10-13",
+      "startTime": "19:00",
+      "endTime": "00:30",
+      "gatesOpen": "18:00",
+      "venue": "Rotating — 9 Ahmedabad mandli grounds",
+      "address": "See day-wise map & itinerary",
+      "city": "Ahmedabad",
+      "area": "West & Bopal circuit",
+      "landmark": "Mandavadi – Garba & Mandli",
+      "status": "active",
+      "image": "/images/garba-fest/garba-01.jpg",
+      "gallery": [
+        "/images/garba-fest/garba-01.jpg",
+        "/images/garba-fest/garba-02.jpg",
+        "/images/garba-fest/garba-03.jpg",
+        "/images/garba-fest/garba-06.jpg",
+        "/images/garba-fest/garba-07.jpg",
+        "/images/garba-fest/garba-09.jpg",
+        "/images/garba-fest/garba-12.jpg",
+        "/images/garba-fest/garba-15.jpg",
+        "/images/garba-fest/garba-39.jpg"
+      ],
+      "shortDescription": "Pick any 9 Navratri nights and choose venues night by night.",
+      "description": "Progressive custom bundle — unlock at 5 nights, keep adding for extra savings up to 9 nights.",
+      "category": "Custom Bundle",
+      "tags": [
+        "Build your Navratri",
+        "9 nights",
+        "Progressive",
+        "Ahmedabad"
+      ],
+      "languages": [
+        "Gujarati",
+        "Hindi",
+        "English"
+      ],
+      "ageLimit": "All ages (under 5 free with adult)",
+      "durationLabel": "9 nights",
+      "dressCode": "Theme-wise (see each day)",
+      "convenienceFee": 99,
+      "publicPriceFrom": 3599,
+      "featured": true,
+      "offerType": "customBundle",
+      "nights": 9,
+      "bundleDays": [],
+      "highlights": [
+        "Access all 9 nights with one purchase",
+        "Different Ahmedabad venue every night",
+        "Theme nights with dress cues",
+        "QR valid for the full season (show each night)",
+        "Family-friendly early waves most nights"
+      ],
+      "amenities": [
+        "Day-wise venue map",
+        "Food courts most nights",
+        "Medical desk",
+        "Women help desk"
+      ],
+      "lineup": [
+        {
+          "name": "Classic House Orchestra",
+          "role": "Resident band"
+        },
+        {
+          "name": "Ahmedabad Dhol Collective",
+          "role": "Opening nights"
+        }
+      ],
+      "schedule": [
+        {
+          "time": "18:00",
+          "title": "Day 1 · Sabarmati Riverfront Event Lawn",
+          "detail": "Shailaputri Night"
+        },
+        {
+          "time": "18:00",
+          "title": "Day 2 · Law Garden Amphitheatre",
+          "detail": "Brahmacharini Night"
+        },
+        {
+          "time": "18:00",
+          "title": "Day 3 · GMDC Ground",
+          "detail": "Chandraghanta Night"
+        }
+      ],
+      "terms": [
+        "One attendee per 9x pass",
+        "Valid only for listed nights & venues",
+        "Non-transferable after first scan",
+        "Show digital QR + ID every night"
+      ],
+      "refundPolicy": "Full refund until 7 days before Day 1. 40% until 72h before Day 1. No refund after Day 1 starts.",
+      "faqs": [
+        {
+          "q": "Is this 9 separate tickets?",
+          "a": "You buy one 9x season pass. Your ticket shows all 9 day venues; show the same QR each night."
+        },
+        {
+          "q": "Can I skip a night?",
+          "a": "Yes — unused nights stay on your pass. No partial refund for skipped nights."
+        },
+        {
+          "q": "Different venue every day?",
+          "a": "Yes — open the itinerary on the event page for full address, landmark, and theme."
+        }
+      ],
+      "matchTags": [
+        "traditional",
+        "group_friendly",
+        "best_value"
+      ],
+      "marketPrice": 4850
     }
   ],
   "passLots": [
@@ -6595,6 +7497,126 @@
       "status": "active",
       "isBundle": false,
       "bundleNights": 1
+    },
+    {
+      "id": "pl-build-5",
+      "eventId": "e-build-5",
+      "adminId": "u-admin",
+      "name": "5-night Build Pass",
+      "description": "Progressive 5-night Navratri bundle",
+      "perks": [
+        "5 nights",
+        "Choose your venues",
+        "Progressive savings",
+        "QR gate entry"
+      ],
+      "totalQty": 200,
+      "remainingQty": 200,
+      "pricePerPass": 2499,
+      "cost": 2099,
+      "maxPerOrder": 10,
+      "saleStartsAt": "2026-09-01T00:00:00.000Z",
+      "saleEndsAt": "2026-10-13T23:59:59.000Z",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "status": "active",
+      "isBundle": true,
+      "bundleNights": 5
+    },
+    {
+      "id": "pl-build-6",
+      "eventId": "e-build-6",
+      "adminId": "u-admin",
+      "name": "6-night Build Pass",
+      "description": "Progressive 6-night Navratri bundle",
+      "perks": [
+        "6 nights",
+        "Choose your venues",
+        "Progressive savings",
+        "QR gate entry"
+      ],
+      "totalQty": 200,
+      "remainingQty": 200,
+      "pricePerPass": 2849,
+      "cost": 2449,
+      "maxPerOrder": 10,
+      "saleStartsAt": "2026-09-01T00:00:00.000Z",
+      "saleEndsAt": "2026-10-13T23:59:59.000Z",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "status": "active",
+      "isBundle": true,
+      "bundleNights": 6
+    },
+    {
+      "id": "pl-build-7",
+      "eventId": "e-build-7",
+      "adminId": "u-admin",
+      "name": "7-night Build Pass",
+      "description": "Progressive 7-night Navratri bundle",
+      "perks": [
+        "7 nights",
+        "Choose your venues",
+        "Progressive savings",
+        "QR gate entry"
+      ],
+      "totalQty": 200,
+      "remainingQty": 200,
+      "pricePerPass": 3149,
+      "cost": 2749,
+      "maxPerOrder": 10,
+      "saleStartsAt": "2026-09-01T00:00:00.000Z",
+      "saleEndsAt": "2026-10-13T23:59:59.000Z",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "status": "active",
+      "isBundle": true,
+      "bundleNights": 7
+    },
+    {
+      "id": "pl-build-8",
+      "eventId": "e-build-8",
+      "adminId": "u-admin",
+      "name": "8-night Build Pass",
+      "description": "Progressive 8-night Navratri bundle",
+      "perks": [
+        "8 nights",
+        "Choose your venues",
+        "Progressive savings",
+        "QR gate entry"
+      ],
+      "totalQty": 200,
+      "remainingQty": 200,
+      "pricePerPass": 3399,
+      "cost": 2999,
+      "maxPerOrder": 10,
+      "saleStartsAt": "2026-09-01T00:00:00.000Z",
+      "saleEndsAt": "2026-10-13T23:59:59.000Z",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "status": "active",
+      "isBundle": true,
+      "bundleNights": 8
+    },
+    {
+      "id": "pl-build-9",
+      "eventId": "e-build-9",
+      "adminId": "u-admin",
+      "name": "9-night Build Pass",
+      "description": "Progressive 9-night Navratri bundle",
+      "perks": [
+        "9 nights",
+        "Choose your venues",
+        "Progressive savings",
+        "QR gate entry"
+      ],
+      "totalQty": 200,
+      "remainingQty": 200,
+      "pricePerPass": 3599,
+      "cost": 3199,
+      "maxPerOrder": 10,
+      "saleStartsAt": "2026-09-01T00:00:00.000Z",
+      "saleEndsAt": "2026-10-13T23:59:59.000Z",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "status": "active",
+      "isBundle": true,
+      "bundleNights": 9
     }
   ],
   "sellRequests": [],
@@ -8902,6 +9924,849 @@
       "pricePaid": null,
       "listedForSale": true,
       "lotName": "Individual Venue Pass"
+    },
+    {
+      "id": "tbuild5-1",
+      "passLotId": "pl-build-5",
+      "eventId": "e-build-5",
+      "ownerType": "customer",
+      "ownerId": "u-customer",
+      "status": "sold",
+      "qrCode": "QR-BUILD-5-1",
+      "soldBy": "u-admin",
+      "soldAt": "2026-09-22T12:39:28.933Z",
+      "pricePaid": 4694,
+      "listedForSale": false,
+      "lotName": "5-night Build Pass",
+      "attendeeName": "vmkmym",
+      "attendeePhone": "4238578478",
+      "orderId": "ord-mucnvd7p-cehvn"
+    },
+    {
+      "id": "tbuild5-2",
+      "passLotId": "pl-build-5",
+      "eventId": "e-build-5",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-5-2",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "5-night Build Pass"
+    },
+    {
+      "id": "tbuild5-3",
+      "passLotId": "pl-build-5",
+      "eventId": "e-build-5",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-5-3",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "5-night Build Pass"
+    },
+    {
+      "id": "tbuild5-4",
+      "passLotId": "pl-build-5",
+      "eventId": "e-build-5",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-5-4",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "5-night Build Pass"
+    },
+    {
+      "id": "tbuild5-5",
+      "passLotId": "pl-build-5",
+      "eventId": "e-build-5",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-5-5",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "5-night Build Pass"
+    },
+    {
+      "id": "tbuild5-6",
+      "passLotId": "pl-build-5",
+      "eventId": "e-build-5",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-5-6",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "5-night Build Pass"
+    },
+    {
+      "id": "tbuild5-7",
+      "passLotId": "pl-build-5",
+      "eventId": "e-build-5",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-5-7",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "5-night Build Pass"
+    },
+    {
+      "id": "tbuild5-8",
+      "passLotId": "pl-build-5",
+      "eventId": "e-build-5",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-5-8",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "5-night Build Pass"
+    },
+    {
+      "id": "tbuild5-9",
+      "passLotId": "pl-build-5",
+      "eventId": "e-build-5",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-5-9",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "5-night Build Pass"
+    },
+    {
+      "id": "tbuild5-10",
+      "passLotId": "pl-build-5",
+      "eventId": "e-build-5",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-5-10",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "5-night Build Pass"
+    },
+    {
+      "id": "tbuild5-11",
+      "passLotId": "pl-build-5",
+      "eventId": "e-build-5",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-5-11",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "5-night Build Pass"
+    },
+    {
+      "id": "tbuild5-12",
+      "passLotId": "pl-build-5",
+      "eventId": "e-build-5",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-5-12",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "5-night Build Pass"
+    },
+    {
+      "id": "tbuild6-1",
+      "passLotId": "pl-build-6",
+      "eventId": "e-build-6",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-6-1",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "6-night Build Pass"
+    },
+    {
+      "id": "tbuild6-2",
+      "passLotId": "pl-build-6",
+      "eventId": "e-build-6",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-6-2",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "6-night Build Pass"
+    },
+    {
+      "id": "tbuild6-3",
+      "passLotId": "pl-build-6",
+      "eventId": "e-build-6",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-6-3",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "6-night Build Pass"
+    },
+    {
+      "id": "tbuild6-4",
+      "passLotId": "pl-build-6",
+      "eventId": "e-build-6",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-6-4",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "6-night Build Pass"
+    },
+    {
+      "id": "tbuild6-5",
+      "passLotId": "pl-build-6",
+      "eventId": "e-build-6",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-6-5",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "6-night Build Pass"
+    },
+    {
+      "id": "tbuild6-6",
+      "passLotId": "pl-build-6",
+      "eventId": "e-build-6",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-6-6",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "6-night Build Pass"
+    },
+    {
+      "id": "tbuild6-7",
+      "passLotId": "pl-build-6",
+      "eventId": "e-build-6",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-6-7",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "6-night Build Pass"
+    },
+    {
+      "id": "tbuild6-8",
+      "passLotId": "pl-build-6",
+      "eventId": "e-build-6",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-6-8",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "6-night Build Pass"
+    },
+    {
+      "id": "tbuild6-9",
+      "passLotId": "pl-build-6",
+      "eventId": "e-build-6",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-6-9",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "6-night Build Pass"
+    },
+    {
+      "id": "tbuild6-10",
+      "passLotId": "pl-build-6",
+      "eventId": "e-build-6",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-6-10",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "6-night Build Pass"
+    },
+    {
+      "id": "tbuild6-11",
+      "passLotId": "pl-build-6",
+      "eventId": "e-build-6",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-6-11",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "6-night Build Pass"
+    },
+    {
+      "id": "tbuild6-12",
+      "passLotId": "pl-build-6",
+      "eventId": "e-build-6",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-6-12",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "6-night Build Pass"
+    },
+    {
+      "id": "tbuild7-1",
+      "passLotId": "pl-build-7",
+      "eventId": "e-build-7",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-7-1",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "7-night Build Pass"
+    },
+    {
+      "id": "tbuild7-2",
+      "passLotId": "pl-build-7",
+      "eventId": "e-build-7",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-7-2",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "7-night Build Pass"
+    },
+    {
+      "id": "tbuild7-3",
+      "passLotId": "pl-build-7",
+      "eventId": "e-build-7",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-7-3",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "7-night Build Pass"
+    },
+    {
+      "id": "tbuild7-4",
+      "passLotId": "pl-build-7",
+      "eventId": "e-build-7",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-7-4",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "7-night Build Pass"
+    },
+    {
+      "id": "tbuild7-5",
+      "passLotId": "pl-build-7",
+      "eventId": "e-build-7",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-7-5",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "7-night Build Pass"
+    },
+    {
+      "id": "tbuild7-6",
+      "passLotId": "pl-build-7",
+      "eventId": "e-build-7",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-7-6",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "7-night Build Pass"
+    },
+    {
+      "id": "tbuild7-7",
+      "passLotId": "pl-build-7",
+      "eventId": "e-build-7",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-7-7",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "7-night Build Pass"
+    },
+    {
+      "id": "tbuild7-8",
+      "passLotId": "pl-build-7",
+      "eventId": "e-build-7",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-7-8",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "7-night Build Pass"
+    },
+    {
+      "id": "tbuild7-9",
+      "passLotId": "pl-build-7",
+      "eventId": "e-build-7",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-7-9",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "7-night Build Pass"
+    },
+    {
+      "id": "tbuild7-10",
+      "passLotId": "pl-build-7",
+      "eventId": "e-build-7",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-7-10",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "7-night Build Pass"
+    },
+    {
+      "id": "tbuild7-11",
+      "passLotId": "pl-build-7",
+      "eventId": "e-build-7",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-7-11",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "7-night Build Pass"
+    },
+    {
+      "id": "tbuild7-12",
+      "passLotId": "pl-build-7",
+      "eventId": "e-build-7",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-7-12",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "7-night Build Pass"
+    },
+    {
+      "id": "tbuild8-1",
+      "passLotId": "pl-build-8",
+      "eventId": "e-build-8",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-8-1",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "8-night Build Pass"
+    },
+    {
+      "id": "tbuild8-2",
+      "passLotId": "pl-build-8",
+      "eventId": "e-build-8",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-8-2",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "8-night Build Pass"
+    },
+    {
+      "id": "tbuild8-3",
+      "passLotId": "pl-build-8",
+      "eventId": "e-build-8",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-8-3",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "8-night Build Pass"
+    },
+    {
+      "id": "tbuild8-4",
+      "passLotId": "pl-build-8",
+      "eventId": "e-build-8",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-8-4",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "8-night Build Pass"
+    },
+    {
+      "id": "tbuild8-5",
+      "passLotId": "pl-build-8",
+      "eventId": "e-build-8",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-8-5",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "8-night Build Pass"
+    },
+    {
+      "id": "tbuild8-6",
+      "passLotId": "pl-build-8",
+      "eventId": "e-build-8",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-8-6",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "8-night Build Pass"
+    },
+    {
+      "id": "tbuild8-7",
+      "passLotId": "pl-build-8",
+      "eventId": "e-build-8",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-8-7",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "8-night Build Pass"
+    },
+    {
+      "id": "tbuild8-8",
+      "passLotId": "pl-build-8",
+      "eventId": "e-build-8",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-8-8",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "8-night Build Pass"
+    },
+    {
+      "id": "tbuild8-9",
+      "passLotId": "pl-build-8",
+      "eventId": "e-build-8",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-8-9",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "8-night Build Pass"
+    },
+    {
+      "id": "tbuild8-10",
+      "passLotId": "pl-build-8",
+      "eventId": "e-build-8",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-8-10",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "8-night Build Pass"
+    },
+    {
+      "id": "tbuild8-11",
+      "passLotId": "pl-build-8",
+      "eventId": "e-build-8",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-8-11",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "8-night Build Pass"
+    },
+    {
+      "id": "tbuild8-12",
+      "passLotId": "pl-build-8",
+      "eventId": "e-build-8",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-8-12",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "8-night Build Pass"
+    },
+    {
+      "id": "tbuild9-1",
+      "passLotId": "pl-build-9",
+      "eventId": "e-build-9",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-9-1",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "9-night Build Pass"
+    },
+    {
+      "id": "tbuild9-2",
+      "passLotId": "pl-build-9",
+      "eventId": "e-build-9",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-9-2",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "9-night Build Pass"
+    },
+    {
+      "id": "tbuild9-3",
+      "passLotId": "pl-build-9",
+      "eventId": "e-build-9",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-9-3",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "9-night Build Pass"
+    },
+    {
+      "id": "tbuild9-4",
+      "passLotId": "pl-build-9",
+      "eventId": "e-build-9",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-9-4",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "9-night Build Pass"
+    },
+    {
+      "id": "tbuild9-5",
+      "passLotId": "pl-build-9",
+      "eventId": "e-build-9",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-9-5",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "9-night Build Pass"
+    },
+    {
+      "id": "tbuild9-6",
+      "passLotId": "pl-build-9",
+      "eventId": "e-build-9",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-9-6",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "9-night Build Pass"
+    },
+    {
+      "id": "tbuild9-7",
+      "passLotId": "pl-build-9",
+      "eventId": "e-build-9",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-9-7",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "9-night Build Pass"
+    },
+    {
+      "id": "tbuild9-8",
+      "passLotId": "pl-build-9",
+      "eventId": "e-build-9",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-9-8",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "9-night Build Pass"
+    },
+    {
+      "id": "tbuild9-9",
+      "passLotId": "pl-build-9",
+      "eventId": "e-build-9",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-9-9",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "9-night Build Pass"
+    },
+    {
+      "id": "tbuild9-10",
+      "passLotId": "pl-build-9",
+      "eventId": "e-build-9",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-9-10",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "9-night Build Pass"
+    },
+    {
+      "id": "tbuild9-11",
+      "passLotId": "pl-build-9",
+      "eventId": "e-build-9",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-9-11",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "9-night Build Pass"
+    },
+    {
+      "id": "tbuild9-12",
+      "passLotId": "pl-build-9",
+      "eventId": "e-build-9",
+      "ownerType": "admin",
+      "ownerId": "u-admin",
+      "status": "available",
+      "qrCode": "QR-BUILD-9-12",
+      "soldBy": null,
+      "soldAt": null,
+      "pricePaid": null,
+      "listedForSale": true,
+      "lotName": "9-night Build Pass"
     }
   ],
   "orders": [
@@ -8955,6 +10820,159 @@
       ],
       "status": "confirmed",
       "createdAt": "2026-09-19T08:17:14.684Z"
+    },
+    {
+      "id": "ord-mucnvd7p-cehvn",
+      "eventId": "e-build-5",
+      "buyerId": "u-customer",
+      "sellerId": "u-admin",
+      "ticketIds": [
+        "tbuild5-1"
+      ],
+      "quantity": 1,
+      "subtotal": 4694,
+      "convenienceFee": 99,
+      "total": 4793,
+      "paymentMethod": "UPI",
+      "buyerName": "vyom",
+      "buyerEmail": "vyom@gmail.com",
+      "buyerPhone": "9594396758",
+      "attendees": [
+        {
+          "name": "vmkmym",
+          "phone": "4238578478"
+        }
+      ],
+      "status": "confirmed",
+      "createdAt": "2026-09-22T12:39:28.987Z",
+      "customBundleDays": [
+        {
+          "day": 1,
+          "date": "2026-10-06",
+          "placeId": "place-02",
+          "venue": "Mandalam Garba",
+          "area": "Bopal",
+          "address": "VIP Road, Bopal, Ahmedabad",
+          "landmark": "VIP Road",
+          "lat": 23.032,
+          "lng": 72.465,
+          "theme": "Brahmacharini Night",
+          "dressHint": "Traditional chaniya choli / kediyu",
+          "startTime": "19:00",
+          "endTime": "00:30",
+          "gatesOpen": "18:00",
+          "image": "/images/garba-fest/garba-02.jpg",
+          "passTier": "platinum",
+          "highlights": [
+            "👑 Platinum",
+            "Bopal Folk Orchestra",
+            "Garba",
+            "Mandli"
+          ],
+          "note": "VIP lounge · soft seating"
+        },
+        {
+          "day": 2,
+          "date": "2026-10-09",
+          "placeId": "place-03",
+          "venue": "Dholki Garba – The Premium Mandli",
+          "area": "Ognaj–Bhadaj",
+          "address": "Ognaj–Bhadaj, Ahmedabad",
+          "landmark": "Ognaj–Bhadaj",
+          "lat": 23.095,
+          "lng": 72.475,
+          "theme": "Skandamata Night",
+          "dressHint": "Traditional chaniya choli / kediyu",
+          "startTime": "19:00",
+          "endTime": "00:30",
+          "gatesOpen": "18:00",
+          "image": "/images/garba-fest/garba-03.jpg",
+          "passTier": "platinum",
+          "highlights": [
+            "👑 Platinum",
+            "Ognaj Classic Ensemble",
+            "Garba",
+            "Mandli"
+          ],
+          "note": "VIP lounge · soft seating"
+        },
+        {
+          "day": 3,
+          "date": "2026-10-10",
+          "placeId": "place-03",
+          "venue": "Dholki Garba – The Premium Mandli",
+          "area": "Ognaj–Bhadaj",
+          "address": "Ognaj–Bhadaj, Ahmedabad",
+          "landmark": "Ognaj–Bhadaj",
+          "lat": 23.095,
+          "lng": 72.475,
+          "theme": "Katyayani Night",
+          "dressHint": "Traditional chaniya choli / kediyu",
+          "startTime": "19:00",
+          "endTime": "00:30",
+          "gatesOpen": "18:00",
+          "image": "/images/garba-fest/garba-03.jpg",
+          "passTier": "platinum",
+          "highlights": [
+            "👑 Platinum",
+            "GIFT City Night Band",
+            "Garba",
+            "Mandli"
+          ],
+          "note": "VIP lounge · soft seating"
+        },
+        {
+          "day": 4,
+          "date": "2026-10-11",
+          "placeId": "place-08",
+          "venue": "Divi Garba",
+          "area": "Khodiyar",
+          "address": "Master Farm, Khodiyar, Ahmedabad",
+          "landmark": "Master Farm",
+          "lat": 23.142,
+          "lng": 72.545,
+          "theme": "Kalaratri Night",
+          "dressHint": "Traditional chaniya choli / kediyu",
+          "startTime": "19:00",
+          "endTime": "00:30",
+          "gatesOpen": "18:00",
+          "image": "/images/garba-fest/garba-08.jpg",
+          "passTier": "diamond",
+          "highlights": [
+            "💎 Diamond",
+            "Kalaratri Live Circle",
+            "Garba",
+            "Mandli"
+          ],
+          "note": "Better circle · priority entry"
+        },
+        {
+          "day": 5,
+          "date": "2026-10-13",
+          "placeId": "place-18",
+          "venue": "Sheri Garba",
+          "area": "Aarav Farm",
+          "address": "Aarav Farm, Ahmedabad",
+          "landmark": "Aarav Farm",
+          "lat": 23.05,
+          "lng": 72.495,
+          "theme": "Siddhidatri Night",
+          "dressHint": "Traditional chaniya choli / kediyu",
+          "startTime": "19:00",
+          "endTime": "00:30",
+          "gatesOpen": "18:00",
+          "image": "/images/garba-fest/garba-18.jpg",
+          "passTier": "platinum",
+          "highlights": [
+            "👑 Platinum",
+            "Siddhidatri Finale Cast",
+            "Garba",
+            "Mandli"
+          ],
+          "note": "VIP lounge · soft seating"
+        }
+      ],
+      "customNights": 5
     }
   ],
   "transactions": [
@@ -8983,6 +11001,19 @@
       "cost": 3149,
       "commission": 1350,
       "timestamp": "2026-09-19T08:17:14.667Z"
+    },
+    {
+      "id": "tx-mucnvd8k-m5umu",
+      "ticketId": "tbuild5-1",
+      "eventId": "e-build-5",
+      "orderId": "ord-mucnvd7p-cehvn",
+      "sellerId": "u-admin",
+      "sellerRole": "admin",
+      "buyerId": "u-customer",
+      "amount": 4694,
+      "cost": 2099,
+      "commission": 2595,
+      "timestamp": "2026-09-22T12:39:28.964Z"
     }
   ],
   "wallets": [
@@ -8990,9 +11021,9 @@
       "id": "w-admin",
       "userId": "u-admin",
       "role": "admin",
-      "totalEarned": 1350,
+      "totalEarned": 3945,
       "totalOwed": 0,
-      "availableBalance": 1350,
+      "availableBalance": 3945,
       "lastPayoutAt": null
     }
   ],
