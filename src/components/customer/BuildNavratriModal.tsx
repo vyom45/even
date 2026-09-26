@@ -14,6 +14,7 @@ import {
   NAVRATRI_START,
   NAVRATRI_THEMES,
   NIGHT_ARTISTS,
+  NIGHT_INDIVIDUAL_PRICE,
   PASS_TIER_OPTIONS,
   bundlePriceFor,
   extraUnlockSaving,
@@ -547,6 +548,7 @@ export function BuildNavratriModal({ open, places, onClose, onConfirm }: BuildNa
               <div className="mt-3 grid gap-2">
                 {PASS_TIER_OPTIONS.map((opt) => {
                   const active = draftTier === opt.id
+                  const basePrice = NIGHT_INDIVIDUAL_PRICE[activeDate] ?? 799
                   return (
                     <button
                       key={opt.id}
@@ -572,11 +574,15 @@ export function BuildNavratriModal({ open, places, onClose, onConfirm }: BuildNa
                         </div>
                         <div className="shrink-0 text-right">
                           {opt.fromPrice === 0 ? (
-                            <p className="text-xs font-bold text-emerald-700">Included</p>
+                            <div>
+                              <p className="text-xs font-bold text-ink-900">{formatINR(basePrice)}</p>
+                              <p className="text-[11px] font-semibold text-emerald-700">Included in bundle</p>
+                            </div>
                           ) : (
-                            <p className="text-xs font-bold text-ink-700">
-                              +{formatINR(opt.fromPrice)}
-                            </p>
+                            <div>
+                              <p className="text-xs font-bold text-ink-900">{formatINR(basePrice + opt.fromPrice)}</p>
+                              <p className="text-[11px] font-semibold text-brand-700">+{formatINR(opt.fromPrice)} upgrade</p>
+                            </div>
                           )}
                           {active && <Check className="ml-auto mt-1 h-4 w-4 text-brand-700" />}
                         </div>
