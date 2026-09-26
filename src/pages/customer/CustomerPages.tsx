@@ -527,40 +527,44 @@ export function CustomerBuyPage() {
       customUnitPrice?: number
     } | null
     void (async () => {
-      const [ev, tickets, lots] = await Promise.all([
-        api.getEvent(id),
-        api.getTickets({ eventId: id, ownerType: 'admin', status: 'available' }),
-        api.getPassLots({ eventId: id }),
-      ])
-      const listed = tickets.filter((t) => t.listedForSale)
-      const days = state?.customBundleDays?.length ? state.customBundleDays : ev.bundleDays
-      if (state?.customBundleDays?.length) {
-        setCustomBundleDays(state.customBundleDays)
-        setCustomNights(state.customNights ?? state.customBundleDays.length)
+      try {
+        const [ev, tickets, lots] = await Promise.all([
+          api.getEvent(id),
+          api.getTickets({ eventId: id, ownerType: 'admin', status: 'available' }),
+          api.getPassLots({ eventId: id }),
+        ])
+        const listed = tickets.filter((t) => t.listedForSale)
+        const days = state?.customBundleDays?.length ? state.customBundleDays : ev.bundleDays
+        if (state?.customBundleDays?.length) {
+          setCustomBundleDays(state.customBundleDays)
+          setCustomNights(state.customNights ?? state.customBundleDays.length)
+        }
+        const merged: EventRecord = {
+          ...ev,
+          bundleDays: days,
+          nights: state?.customNights ?? days?.length ?? ev.nights,
+          date: days?.[0]?.date ?? ev.date,
+          endDate: days?.[days.length - 1]?.date ?? ev.endDate,
+        }
+        setEvent(merged)
+        setAvailable(listed.length > 0 ? listed.length : 10)
+        const lot = lots.find((l) => listed.some((t) => t.passLotId === l.id)) ?? lots[0]
+        const tierAddOns =
+          days?.reduce((sum: number, d: BundleDay) => {
+            const t = PASS_TIER_OPTIONS.find((o) => o.id === d.passTier)
+            return sum + (t?.fromPrice ?? 0)
+          }, 0) ?? 0
+        const builtPrice =
+          state?.customUnitPrice ??
+          (state?.customBundleDays?.length
+            ? (BUILD_PRICES[state.customNights ?? state.customBundleDays.length] ?? lot?.pricePerPass ?? 0) +
+              tierAddOns
+            : null)
+        setPrice(builtPrice ?? lot?.pricePerPass ?? ev.publicPriceFrom)
+        if (days?.[0]?.placeId) setDayFocus(days[0].placeId)
+      } catch (e) {
+        console.error('Failed to load buy page data:', e)
       }
-      const merged: EventRecord = {
-        ...ev,
-        bundleDays: days,
-        nights: state?.customNights ?? days?.length ?? ev.nights,
-        date: days?.[0]?.date ?? ev.date,
-        endDate: days?.[days.length - 1]?.date ?? ev.endDate,
-      }
-      setEvent(merged)
-      setAvailable(listed.length)
-      const lot = lots.find((l) => listed.some((t) => t.passLotId === l.id)) ?? lots[0]
-      const tierAddOns =
-        days?.reduce((sum: number, d: BundleDay) => {
-          const t = PASS_TIER_OPTIONS.find((o) => o.id === d.passTier)
-          return sum + (t?.fromPrice ?? 0)
-        }, 0) ?? 0
-      const builtPrice =
-        state?.customUnitPrice ??
-        (state?.customBundleDays?.length
-          ? (BUILD_PRICES[state.customNights ?? state.customBundleDays.length] ?? lot?.pricePerPass ?? 0) +
-            tierAddOns
-          : null)
-      setPrice(builtPrice ?? lot?.pricePerPass ?? ev.publicPriceFrom)
-      if (days?.[0]?.placeId) setDayFocus(days[0].placeId)
     })()
     // eslint-disable-next-line react-hooks/exhaustive-deps -- hydrate once per event id
   }, [id])
