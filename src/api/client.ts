@@ -239,6 +239,7 @@ export const api = {
             providerPrice: 1500,
             adminId: 'u-admin',
             createdAt: new Date().toISOString(),
+            status: 'active',
           } as PassLot
         }
         throw new Error('PassLot not found')
@@ -260,7 +261,24 @@ export const api = {
       () => http.patch<PassLot>(`/passLots/${id}`, patch).then((r) => r.data),
       () => {
         const db = getLocalDb()
-        const idx = db.passLots.findIndex((p) => p.id === id)
+        let idx = db.passLots.findIndex((p) => p.id === id)
+        if (idx === -1 && id.startsWith('pl-e-build-')) {
+          const dynamicLot: PassLot = {
+            id,
+            eventId: id.replace('pl-', ''),
+            name: 'Custom Bundle Pass Lot',
+            totalQty: 100,
+            remainingQty: 50,
+            pricePerPass: 2499,
+            cost: 1500,
+            providerPrice: 1500,
+            adminId: 'u-admin',
+            createdAt: new Date().toISOString(),
+            status: 'active',
+          }
+          db.passLots.push(dynamicLot)
+          idx = db.passLots.length - 1
+        }
         if (idx !== -1) {
           db.passLots[idx] = { ...db.passLots[idx], ...patch }
           saveLocalDb(db)
@@ -276,20 +294,21 @@ export const api = {
       () => {
         const list = filterList(getLocalDb().tickets, params)
         if (list.length === 0 && params?.eventId?.startsWith('e-build-')) {
+          const existingIds = new Set(getLocalDb().tickets.map((t) => t.id))
           return Array.from({ length: 10 }, (_, i) => ({
             id: `t-${params.eventId}-${i + 1}`,
             passLotId: `pl-${params.eventId}`,
-            eventId: params.eventId,
+            eventId: params.eventId!,
             ownerType: 'admin',
             ownerId: 'u-admin',
             status: 'available',
-            qrCode: `QR-${params.eventId.toUpperCase()}-${i + 1}`,
+            qrCode: `QR-${params.eventId!.toUpperCase()}-${i + 1}`,
             soldBy: null,
             soldAt: null,
             pricePaid: null,
             listedForSale: true,
             lotName: 'Custom Bundle Pass',
-          })) as Ticket[]
+          })).filter((t) => !existingIds.has(t.id)) as Ticket[]
         }
         return list
       }
@@ -299,8 +318,26 @@ export const api = {
       () => http.get<Ticket>(`/tickets/${id}`).then((r) => r.data),
       () => {
         const item = getLocalDb().tickets.find((t) => t.id === id)
-        if (!item) throw new Error('Ticket not found')
-        return item
+        if (item) return item
+        if (id.startsWith('t-e-build-')) {
+          const parts = id.split('-')
+          const eventId = `e-build-${parts[3] ?? '5'}`
+          return {
+            id,
+            passLotId: `pl-${eventId}`,
+            eventId,
+            ownerType: 'admin',
+            ownerId: 'u-admin',
+            status: 'available',
+            qrCode: `QR-${id.toUpperCase()}`,
+            soldBy: null,
+            soldAt: null,
+            pricePaid: null,
+            listedForSale: true,
+            lotName: 'Custom Bundle Pass',
+          } as Ticket
+        }
+        throw new Error('Ticket not found')
       }
     ),
   createTicket: (payload: Omit<Ticket, 'id'> & { id?: string }): Promise<Ticket> =>
@@ -319,7 +356,27 @@ export const api = {
       () => http.patch<Ticket>(`/tickets/${id}`, patch).then((r) => r.data),
       () => {
         const db = getLocalDb()
-        const idx = db.tickets.findIndex((t) => t.id === id)
+        let idx = db.tickets.findIndex((t) => t.id === id)
+        if (idx === -1 && id.startsWith('t-e-build-')) {
+          const parts = id.split('-')
+          const eventId = `e-build-${parts[3] ?? '5'}`
+          const dynamicTicket: Ticket = {
+            id,
+            passLotId: `pl-${eventId}`,
+            eventId,
+            ownerType: 'admin',
+            ownerId: 'u-admin',
+            status: 'available',
+            qrCode: `QR-${id.toUpperCase()}`,
+            soldBy: null,
+            soldAt: null,
+            pricePaid: null,
+            listedForSale: true,
+            lotName: 'Custom Bundle Pass',
+          }
+          db.tickets.push(dynamicTicket)
+          idx = db.tickets.length - 1
+        }
         if (idx !== -1) {
           db.tickets[idx] = { ...db.tickets[idx], ...patch }
           saveLocalDb(db)
