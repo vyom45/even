@@ -47,675 +47,6 @@
   ],
   "events": [
     {
-      "id": "e-b1",
-      "name": "Ahmedabad Classic 9x Bundle",
-      "subtitle": "9 nights · West & Central circuit · One season pass",
-      "adminId": "u-admin",
-      "date": "2026-10-05",
-      "endDate": "2026-10-13",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:00",
-      "venue": "Rotating — 9 Ahmedabad mandli grounds",
-      "address": "See day-wise map & itinerary",
-      "city": "Ahmedabad",
-      "area": "West & Bopal circuit",
-      "landmark": "Mandavadi – Garba & Mandli",
-      "status": "active",
-      "image": "/images/garba-fest/garba-01.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-01.jpg",
-        "/images/garba-fest/garba-02.jpg",
-        "/images/garba-fest/garba-03.jpg",
-        "/images/garba-fest/garba-06.jpg",
-        "/images/garba-fest/garba-07.jpg",
-        "/images/garba-fest/garba-09.jpg",
-        "/images/garba-fest/garba-12.jpg",
-        "/images/garba-fest/garba-15.jpg",
-        "/images/garba-fest/garba-39.jpg"
-      ],
-      "shortDescription": "One pass for all 9 Navratri nights across iconic West & Central Ahmedabad venues.",
-      "description": "The Classic 9x Bundle covers every Navratri night with a curated venue hop — Riverfront, Law Garden, GMDC, Ellisbridge, ISKCON, Prahlad Nagar, Satellite, CG Road Heritage Plaza, and Usmanpura Riverfront East. Each night has its own goddess theme, dress cue, and gate note. Buy once; dance nine nights.",
-      "category": "9x Bundle",
-      "tags": [
-        "9x Bundle",
-        "Season pass",
-        "West Ahmedabad",
-        "All 9 nights"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages (under 5 free with adult)",
-      "durationLabel": "9 nights · ~5.5 hrs / night",
-      "dressCode": "Theme-wise (see each day)",
-      "convenienceFee": 99,
-      "publicPriceFrom": 3999,
-      "featured": true,
-      "offerType": "bundle9x",
-      "nights": 9,
-      "bundleDays": [
-        {
-          "day": 1,
-          "date": "2026-10-05",
-          "placeId": "place-01",
-          "venue": "Mandavadi – Garba & Mandli",
-          "area": "Ognaj Circle",
-          "address": "Nidhivan Party Plot, Ognaj Circle, Ahmedabad",
-          "landmark": "Nidhivan Party Plot",
-          "lat": 23.1025,
-          "lng": 72.481,
-          "theme": "Shailaputri Night",
-          "dressHint": "White & saffron dress theme",
-          "startTime": "19:00",
-          "endTime": "00:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-01.jpg",
-          "highlights": [
-            "Shailaputri Night",
-            "Ognaj Circle",
-            "White & saffron dress theme",
-            "Wide mandli ground"
-          ],
-          "note": "Day 1 of 9 — Mandavadi – Garba & Mandli"
-        },
-        {
-          "day": 2,
-          "date": "2026-10-06",
-          "placeId": "place-02",
-          "venue": "Mandalam Garba",
-          "area": "Bopal",
-          "address": "VIP Road, Bopal, Ahmedabad",
-          "landmark": "VIP Road",
-          "lat": 23.032,
-          "lng": 72.465,
-          "theme": "Brahmacharini Night",
-          "dressHint": "Yellow festive theme",
-          "startTime": "19:00",
-          "endTime": "00:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-02.jpg",
-          "highlights": [
-            "Brahmacharini Night",
-            "Bopal",
-            "Yellow festive theme",
-            "Wide mandli ground"
-          ],
-          "note": "Day 2 of 9 — Mandalam Garba"
-        },
-        {
-          "day": 3,
-          "date": "2026-10-07",
-          "placeId": "place-03",
-          "venue": "Dholki Garba – The Premium Mandli",
-          "area": "Ognaj–Bhadaj",
-          "address": "Ognaj–Bhadaj, Ahmedabad",
-          "landmark": "Ognaj–Bhadaj",
-          "lat": 23.095,
-          "lng": 72.475,
-          "theme": "Chandraghanta Night",
-          "dressHint": "Green traditional theme",
-          "startTime": "19:00",
-          "endTime": "00:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-03.jpg",
-          "highlights": [
-            "Chandraghanta Night",
-            "Ognaj–Bhadaj",
-            "Green traditional theme",
-            "Wide mandli ground"
-          ],
-          "note": "Day 3 of 9 — Dholki Garba – The Premium Mandli"
-        },
-        {
-          "day": 4,
-          "date": "2026-10-08",
-          "placeId": "place-06",
-          "venue": "Radhevan – The Mandli Garba",
-          "area": "Bopal",
-          "address": "S.P. Ring Road, Bopal, Ahmedabad",
-          "landmark": "S.P. Ring Road",
-          "lat": 23.028,
-          "lng": 72.458,
-          "theme": "Kushmanda Night",
-          "dressHint": "Orange dandiya night",
-          "startTime": "19:00",
-          "endTime": "00:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-06.jpg",
-          "highlights": [
-            "Kushmanda Night",
-            "Bopal",
-            "Orange dandiya night",
-            "Wide mandli ground"
-          ],
-          "note": "Day 4 of 9 — Radhevan – The Mandli Garba"
-        },
-        {
-          "day": 5,
-          "date": "2026-10-09",
-          "placeId": "place-07",
-          "venue": "Swarnim Nagari Garba",
-          "area": "Makarba",
-          "address": "LJ University Road, Makarba, Ahmedabad",
-          "landmark": "LJ University Road",
-          "lat": 22.992,
-          "lng": 72.498,
-          "theme": "Skandamata Night",
-          "dressHint": "Family & kids priority",
-          "startTime": "19:00",
-          "endTime": "00:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-07.jpg",
-          "highlights": [
-            "Skandamata Night",
-            "Makarba",
-            "Family & kids priority",
-            "Wide mandli ground"
-          ],
-          "note": "Day 5 of 9 — Swarnim Nagari Garba"
-        },
-        {
-          "day": 6,
-          "date": "2026-10-10",
-          "placeId": "place-09",
-          "venue": "Maavdee",
-          "area": "SG Highway",
-          "address": "RM Patel Farm, SG Highway, Ahmedabad",
-          "landmark": "RM Patel Farm",
-          "lat": 23.055,
-          "lng": 72.508,
-          "theme": "Katyayani Night",
-          "dressHint": "Red & gold glam night",
-          "startTime": "19:00",
-          "endTime": "00:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-09.jpg",
-          "highlights": [
-            "Katyayani Night",
-            "SG Highway",
-            "Red & gold glam night",
-            "Wide mandli ground"
-          ],
-          "note": "Day 6 of 9 — Maavdee"
-        },
-        {
-          "day": 7,
-          "date": "2026-10-11",
-          "placeId": "place-12",
-          "venue": "SAIBO Navratri Garba",
-          "area": "Shilaj",
-          "address": "Mahendra Farm, Shilaj, Ahmedabad",
-          "landmark": "Mahendra Farm",
-          "lat": 23.068,
-          "lng": 72.478,
-          "theme": "Kaalratri Night",
-          "dressHint": "Black & silver youth night",
-          "startTime": "19:00",
-          "endTime": "00:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-12.jpg",
-          "highlights": [
-            "Kaalratri Night",
-            "Shilaj",
-            "Black & silver youth night",
-            "Wide mandli ground"
-          ],
-          "note": "Day 7 of 9 — SAIBO Navratri Garba"
-        },
-        {
-          "day": 8,
-          "date": "2026-10-12",
-          "placeId": "place-15",
-          "venue": "Raaton Ni Rassleela",
-          "area": "Bhadaj",
-          "address": "Evergreen Party Plot, Bhadaj, Ahmedabad",
-          "landmark": "Evergreen Party Plot",
-          "lat": 23.098,
-          "lng": 72.468,
-          "theme": "Mahagauri Night",
-          "dressHint": "All-white classic Garba",
-          "startTime": "19:00",
-          "endTime": "00:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-15.jpg",
-          "highlights": [
-            "Mahagauri Night",
-            "Bhadaj",
-            "All-white classic Garba",
-            "Wide mandli ground"
-          ],
-          "note": "Day 8 of 9 — Raaton Ni Rassleela"
-        },
-        {
-          "day": 9,
-          "date": "2026-10-13",
-          "placeId": "place-39",
-          "venue": "Navratri Nights",
-          "area": "Sindhu Bhavan",
-          "address": "Sindhu Bhavan, Ahmedabad",
-          "landmark": "Sindhu Bhavan",
-          "lat": 23.0455,
-          "lng": 72.528,
-          "theme": "Siddhidatri Night",
-          "dressHint": "Grand finale & fireworks cue",
-          "startTime": "18:30",
-          "endTime": "01:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-39.jpg",
-          "highlights": [
-            "Siddhidatri Night",
-            "Sindhu Bhavan",
-            "Grand finale & fireworks cue",
-            "Wide mandli ground"
-          ],
-          "note": "Day 9 of 9 — Navratri Nights"
-        }
-      ],
-      "highlights": [
-        "Access all 9 nights with one purchase",
-        "Different Ahmedabad venue every night",
-        "Theme nights with dress cues",
-        "QR valid for the full season (show each night)",
-        "Family-friendly early waves most nights"
-      ],
-      "amenities": [
-        "Day-wise venue map",
-        "Food courts most nights",
-        "Medical desk",
-        "Women help desk"
-      ],
-      "lineup": [
-        {
-          "name": "Classic House Orchestra",
-          "role": "Resident band"
-        },
-        {
-          "name": "Ahmedabad Dhol Collective",
-          "role": "Opening nights"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:00",
-          "title": "Day 1 · Sabarmati Riverfront Event Lawn",
-          "detail": "Shailaputri Night"
-        },
-        {
-          "time": "18:00",
-          "title": "Day 2 · Law Garden Amphitheatre",
-          "detail": "Brahmacharini Night"
-        },
-        {
-          "time": "18:00",
-          "title": "Day 3 · GMDC Ground",
-          "detail": "Chandraghanta Night"
-        }
-      ],
-      "terms": [
-        "One attendee per 9x pass",
-        "Valid only for listed nights & venues",
-        "Non-transferable after first scan",
-        "Show digital QR + ID every night"
-      ],
-      "refundPolicy": "Full refund until 7 days before Day 1. 40% until 72h before Day 1. No refund after Day 1 starts.",
-      "faqs": [
-        {
-          "q": "Is this 9 separate tickets?",
-          "a": "You buy one 9x season pass. Your ticket shows all 9 day venues; show the same QR each night."
-        },
-        {
-          "q": "Can I skip a night?",
-          "a": "Yes — unused nights stay on your pass. No partial refund for skipped nights."
-        },
-        {
-          "q": "Different venue every day?",
-          "a": "Yes — open the itinerary on the event page for full address, landmark, and theme."
-        }
-      ],
-      "matchTags": [
-        "artist_pick",
-        "traditional",
-        "group_friendly",
-        "best_value"
-      ],
-      "marketPrice": 4900
-    },
-    {
-      "id": "e-b2",
-      "name": "Ahmedabad East & Mega 9x Bundle",
-      "subtitle": "9 nights · East + Science City mega · Season pass",
-      "adminId": "u-admin",
-      "date": "2026-10-05",
-      "endDate": "2026-10-13",
-      "startTime": "19:00",
-      "endTime": "01:00",
-      "gatesOpen": "18:00",
-      "venue": "Rotating — East + GIFT / Gandhinagar",
-      "address": "See day-wise map & itinerary",
-      "city": "Ahmedabad",
-      "area": "East & GIFT circuit",
-      "landmark": "Vibrant Navratri Festival",
-      "status": "active",
-      "image": "/images/garba-fest/garba-40.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-40.jpg",
-        "/images/garba-fest/garba-05.jpg",
-        "/images/garba-fest/garba-08.jpg",
-        "/images/garba-fest/garba-41.jpg",
-        "/images/garba-fest/garba-42.jpg",
-        "/images/garba-fest/garba-43.jpg",
-        "/images/garba-fest/garba-47.jpg",
-        "/images/garba-fest/garba-49.jpg",
-        "/images/garba-fest/garba-20.jpg"
-      ],
-      "shortDescription": "Nine-night mega circuit: Science City, Kankaria, Maninagar, Motera, and more.",
-      "description": "The East & Mega 9x Bundle is built for big floors and east-side energy — Science City Amphitheatre, Kankaria Carnival Ground, Maninagar Rambaug, Chandkheda, Motera Event Zone, Isanpur, CEPT Lawn, Ahmedabad One Amphitheatre, and Karnavati Club. Perfect if you want larger productions and LED nights in the mix.",
-      "category": "9x Bundle",
-      "tags": [
-        "9x Bundle",
-        "Mega nights",
-        "East Ahmedabad",
-        "Season pass"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "9 nights · mega + neighbourhood mix",
-      "dressCode": "Theme-wise (see each day)",
-      "convenienceFee": 119,
-      "publicPriceFrom": 4499,
-      "featured": true,
-      "offerType": "bundle9x",
-      "nights": 9,
-      "bundleDays": [
-        {
-          "day": 1,
-          "date": "2026-10-05",
-          "placeId": "place-40",
-          "venue": "Vibrant Navratri Festival",
-          "area": "Memnagar",
-          "address": "GMDC Ground, Memnagar, Ahmedabad",
-          "landmark": "GMDC Ground",
-          "lat": 23.045,
-          "lng": 72.538,
-          "theme": "Shailaputri Night",
-          "dressHint": "White & saffron dress theme",
-          "startTime": "19:00",
-          "endTime": "00:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-40.jpg",
-          "highlights": [
-            "Shailaputri Night",
-            "Memnagar",
-            "White & saffron dress theme",
-            "Wide mandli ground"
-          ],
-          "note": "Day 1 of 9 — Vibrant Navratri Festival"
-        },
-        {
-          "day": 2,
-          "date": "2026-10-06",
-          "placeId": "place-05",
-          "venue": "Ghammardi – Garba & Mandli",
-          "area": "Khodiyar",
-          "address": "Khodiyar, Ahmedabad",
-          "landmark": "Khodiyar",
-          "lat": 23.138,
-          "lng": 72.538,
-          "theme": "Brahmacharini Night",
-          "dressHint": "Yellow festive theme",
-          "startTime": "19:00",
-          "endTime": "00:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-05.jpg",
-          "highlights": [
-            "Brahmacharini Night",
-            "Khodiyar",
-            "Yellow festive theme",
-            "Wide mandli ground"
-          ],
-          "note": "Day 2 of 9 — Ghammardi – Garba & Mandli"
-        },
-        {
-          "day": 3,
-          "date": "2026-10-07",
-          "placeId": "place-08",
-          "venue": "Divi Garba",
-          "area": "Khodiyar",
-          "address": "Master Farm, Khodiyar, Ahmedabad",
-          "landmark": "Master Farm",
-          "lat": 23.142,
-          "lng": 72.545,
-          "theme": "Chandraghanta Night",
-          "dressHint": "Green traditional theme",
-          "startTime": "19:00",
-          "endTime": "00:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-08.jpg",
-          "highlights": [
-            "Chandraghanta Night",
-            "Khodiyar",
-            "Green traditional theme",
-            "Wide mandli ground"
-          ],
-          "note": "Day 3 of 9 — Divi Garba"
-        },
-        {
-          "day": 4,
-          "date": "2026-10-08",
-          "placeId": "place-41",
-          "venue": "Garba City Navratri",
-          "area": "GIFT City",
-          "address": "North Gate, GIFT City, Gandhinagar",
-          "landmark": "North Gate",
-          "lat": 23.162,
-          "lng": 72.682,
-          "theme": "Kushmanda Night",
-          "dressHint": "Orange dandiya night",
-          "startTime": "19:00",
-          "endTime": "00:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-41.jpg",
-          "highlights": [
-            "Kushmanda Night",
-            "GIFT City",
-            "Orange dandiya night",
-            "Wide mandli ground"
-          ],
-          "note": "Day 4 of 9 — Garba City Navratri"
-        },
-        {
-          "day": 5,
-          "date": "2026-10-09",
-          "placeId": "place-42",
-          "venue": "GIFT City Garba Ground",
-          "area": "GIFT City",
-          "address": "GIFT City, Gandhinagar",
-          "landmark": "GIFT City",
-          "lat": 23.158,
-          "lng": 72.685,
-          "theme": "Skandamata Night",
-          "dressHint": "Family & kids priority",
-          "startTime": "19:00",
-          "endTime": "00:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-42.jpg",
-          "highlights": [
-            "Skandamata Night",
-            "GIFT City",
-            "Family & kids priority",
-            "Wide mandli ground"
-          ],
-          "note": "Day 5 of 9 — GIFT City Garba Ground"
-        },
-        {
-          "day": 6,
-          "date": "2026-10-10",
-          "placeId": "place-43",
-          "venue": "Garba Ni Ramjhat & Premium Mandli",
-          "area": "Madhav Party Lawns",
-          "address": "Madhav Party Lawns, Santej/Gandhinagar",
-          "landmark": "Madhav Party Lawns",
-          "lat": 23.145,
-          "lng": 72.655,
-          "theme": "Katyayani Night",
-          "dressHint": "Red & gold glam night",
-          "startTime": "19:00",
-          "endTime": "00:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-43.jpg",
-          "highlights": [
-            "Katyayani Night",
-            "Madhav Party Lawns",
-            "Red & gold glam night",
-            "Wide mandli ground"
-          ],
-          "note": "Day 6 of 9 — Garba Ni Ramjhat & Premium Mandli"
-        },
-        {
-          "day": 7,
-          "date": "2026-10-11",
-          "placeId": "place-47",
-          "venue": "Mandli Garba 2025 / Pushpakunj Farm",
-          "area": "Rancharda",
-          "address": "Rancharda, Ahmedabad",
-          "landmark": "Rancharda",
-          "lat": 23.112,
-          "lng": 72.452,
-          "theme": "Kaalratri Night",
-          "dressHint": "Black & silver youth night",
-          "startTime": "19:00",
-          "endTime": "00:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-47.jpg",
-          "highlights": [
-            "Kaalratri Night",
-            "Rancharda",
-            "Black & silver youth night",
-            "Wide mandli ground"
-          ],
-          "note": "Day 7 of 9 — Mandli Garba 2025 / Pushpakunj Farm"
-        },
-        {
-          "day": 8,
-          "date": "2026-10-12",
-          "placeId": "place-49",
-          "venue": "Premium Mandvi",
-          "area": "Enasan",
-          "address": "Near Bhat Circle, Enasan, Ahmedabad",
-          "landmark": "Near Bhat Circle",
-          "lat": 23.125,
-          "lng": 72.575,
-          "theme": "Mahagauri Night",
-          "dressHint": "All-white classic Garba",
-          "startTime": "19:00",
-          "endTime": "00:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-49.jpg",
-          "highlights": [
-            "Mahagauri Night",
-            "Enasan",
-            "All-white classic Garba",
-            "Wide mandli ground"
-          ],
-          "note": "Day 8 of 9 — Premium Mandvi"
-        },
-        {
-          "day": 9,
-          "date": "2026-10-13",
-          "placeId": "place-20",
-          "venue": "Aadyaraas Garba",
-          "area": "Bopal",
-          "address": "Sankus Farm, Bopal, Ahmedabad",
-          "landmark": "Sankus Farm",
-          "lat": 23.025,
-          "lng": 72.462,
-          "theme": "Siddhidatri Night",
-          "dressHint": "Grand finale & fireworks cue",
-          "startTime": "18:30",
-          "endTime": "01:30",
-          "gatesOpen": "18:00",
-          "image": "/images/garba-fest/garba-20.jpg",
-          "highlights": [
-            "Siddhidatri Night",
-            "Bopal",
-            "Grand finale & fireworks cue",
-            "Wide mandli ground"
-          ],
-          "note": "Day 9 of 9 — Aadyaraas Garba"
-        }
-      ],
-      "highlights": [
-        "Includes Science City mega night",
-        "East Ahmedabad neighbourhood floors",
-        "Finale at Karnavati Club ground",
-        "One QR for all 9 nights",
-        "Stick counters on mega nights"
-      ],
-      "amenities": [
-        "Large parking on mega nights",
-        "Food courts",
-        "Medical posts",
-        "Multi-gate entry"
-      ],
-      "lineup": [
-        {
-          "name": "Mega Royale Orchestra",
-          "role": "Science City + Motera"
-        },
-        {
-          "name": "East Side Mandli",
-          "role": "Neighbourhood nights"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:00",
-          "title": "Day 1 · Science City Amphitheatre",
-          "detail": "Shailaputri Night"
-        },
-        {
-          "time": "18:00",
-          "title": "Day 2 · Kankaria Lake Carnival Ground",
-          "detail": "Brahmacharini Night"
-        },
-        {
-          "time": "18:00",
-          "title": "Day 3 · Maninagar Rambaug Ground",
-          "detail": "Chandraghanta Night"
-        }
-      ],
-      "terms": [
-        "One attendee per 9x pass",
-        "Mega nights may have earlier gates — check day card",
-        "Metal sticks banned on mega nights"
-      ],
-      "refundPolicy": "Full refund until 7 days before Day 1. 40% until 72h before Day 1. No refund after Day 1.",
-      "faqs": [
-        {
-          "q": "Is Science City included?",
-          "a": "Yes — Day 1 of this bundle is at Science City Amphitheatre."
-        },
-        {
-          "q": "Same price every night?",
-          "a": "Yes — the 9x price covers all listed nights; no top-up for mega nights."
-        }
-      ],
-      "matchTags": [
-        "artist_pick",
-        "high_energy",
-        "group_friendly",
-        "premium"
-      ],
-      "marketPrice": 5500
-    },
-    {
       "id": "e3",
       "name": "Dandiya Royale — One Night",
       "subtitle": "Single mega night · Science City",
@@ -731,7 +62,7 @@
       "area": "Sola",
       "landmark": "Sola flyover LED",
       "status": "active",
-      "image": "/images/places/p04.jpg",
+      "image": "/images/garba-fest/garba-01.jpg",
       "gallery": [
         "/images/places/p04.jpg",
         "/images/places/p10.jpg"
@@ -813,7 +144,7 @@
       "area": "Maninagar",
       "landmark": "Rambaug circle",
       "status": "active",
-      "image": "/images/places/p07.jpg",
+      "image": "/images/garba-fest/garba-02.jpg",
       "gallery": [
         "/images/places/p07.jpg"
       ],
@@ -3746,1921 +3077,6 @@
       "marketPrice": 1000
     },
     {
-      "id": "e-v-31",
-      "name": "JashnRatri — Single Night",
-      "subtitle": "Individual venue pass · Pleasant Party Plot",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "JashnRatri",
-      "address": "Pleasant Party Plot, Ahmedabad",
-      "city": "Ahmedabad",
-      "area": "Pleasant Party Plot",
-      "landmark": "Pleasant Party Plot",
-      "status": "active",
-      "image": "/images/garba-fest/garba-31.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-31.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at JashnRatri.",
-      "description": "Buy an individual night pass for JashnRatri at Pleasant Party Plot, Ahmedabad. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Pleasant Party Plot",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 799,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-31",
-      "highlights": [
-        "Entry at JashnRatri",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "high_energy",
-        "traditional"
-      ],
-      "marketPrice": 1100
-    },
-    {
-      "id": "e-v-32",
-      "name": "Sheri Circle Garba — Single Night",
-      "subtitle": "Individual venue pass · Ahmedabad",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Sheri Circle Garba",
-      "address": "Ahmedabad",
-      "city": "Ahmedabad",
-      "area": "Ahmedabad",
-      "landmark": "Ahmedabad",
-      "status": "active",
-      "image": "/images/garba-fest/garba-32.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-32.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Sheri Circle Garba.",
-      "description": "Buy an individual night pass for Sheri Circle Garba at Ahmedabad. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Ahmedabad",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 849,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-32",
-      "highlights": [
-        "Entry at Sheri Circle Garba",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional",
-        "high_energy",
-        "group_friendly"
-      ],
-      "marketPrice": 1150
-    },
-    {
-      "id": "e-v-33",
-      "name": "Parampara Navratri — Single Night",
-      "subtitle": "Individual venue pass · Ahmedabad",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Parampara Navratri",
-      "address": "Ahmedabad",
-      "city": "Ahmedabad",
-      "area": "Ahmedabad",
-      "landmark": "Ahmedabad",
-      "status": "active",
-      "image": "/images/garba-fest/garba-33.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-33.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Parampara Navratri.",
-      "description": "Buy an individual night pass for Parampara Navratri at Ahmedabad. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Ahmedabad",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 499,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-33",
-      "highlights": [
-        "Entry at Parampara Navratri",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional",
-        "best_value"
-      ],
-      "marketPrice": 650
-    },
-    {
-      "id": "e-v-34",
-      "name": "Inner Circle Garba — Single Night",
-      "subtitle": "Individual venue pass · Ahmedabad",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Inner Circle Garba",
-      "address": "Ahmedabad",
-      "city": "Ahmedabad",
-      "area": "Ahmedabad",
-      "landmark": "Ahmedabad",
-      "status": "active",
-      "image": "/images/garba-fest/garba-34.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-34.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Inner Circle Garba.",
-      "description": "Buy an individual night pass for Inner Circle Garba at Ahmedabad. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Ahmedabad",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 549,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-34",
-      "highlights": [
-        "Entry at Inner Circle Garba",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional",
-        "best_value",
-        "group_friendly"
-      ],
-      "marketPrice": 750
-    },
-    {
-      "id": "e-v-35",
-      "name": "Sach Raatri Navratri — Single Night",
-      "subtitle": "Individual venue pass · Tathastu Party Plot",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Sach Raatri Navratri",
-      "address": "Tathastu Party Plot, Ahmedabad",
-      "city": "Ahmedabad",
-      "area": "Tathastu Party Plot",
-      "landmark": "Tathastu Party Plot",
-      "status": "active",
-      "image": "/images/garba-fest/garba-35.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-35.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Sach Raatri Navratri.",
-      "description": "Buy an individual night pass for Sach Raatri Navratri at Tathastu Party Plot, Ahmedabad. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Tathastu Party Plot",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 599,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-35",
-      "highlights": [
-        "Entry at Sach Raatri Navratri",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "high_energy",
-        "traditional",
-        "artist_pick",
-        "premium"
-      ],
-      "marketPrice": 800
-    },
-    {
-      "id": "e-v-36",
-      "name": "Krishnamay Raas — Single Night",
-      "subtitle": "Individual venue pass · Milan Farm",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Krishnamay Raas",
-      "address": "Milan Farm, Ahmedabad",
-      "city": "Ahmedabad",
-      "area": "Milan Farm",
-      "landmark": "Milan Farm",
-      "status": "active",
-      "image": "/images/garba-fest/garba-36.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-36.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Krishnamay Raas.",
-      "description": "Buy an individual night pass for Krishnamay Raas at Milan Farm, Ahmedabad. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Milan Farm",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 649,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-36",
-      "highlights": [
-        "Entry at Krishnamay Raas",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional",
-        "high_energy",
-        "best_value",
-        "group_friendly"
-      ],
-      "marketPrice": 900
-    },
-    {
-      "id": "e-v-37",
-      "name": "Nagri Na Norta — Single Night",
-      "subtitle": "Individual venue pass · Club Babylon",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Nagri Na Norta",
-      "address": "Club Babylon, Ahmedabad",
-      "city": "Ahmedabad",
-      "area": "Club Babylon",
-      "landmark": "Club Babylon",
-      "status": "active",
-      "image": "/images/garba-fest/garba-37.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-37.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Nagri Na Norta.",
-      "description": "Buy an individual night pass for Nagri Na Norta at Club Babylon, Ahmedabad. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Club Babylon",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 699,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-37",
-      "highlights": [
-        "Entry at Nagri Na Norta",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional"
-      ],
-      "marketPrice": 950
-    },
-    {
-      "id": "e-v-38",
-      "name": "Haalo Garba — Single Night",
-      "subtitle": "Individual venue pass · Rancharda",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Haalo Garba",
-      "address": "Dwarkesh Farm, Rancharda, Ahmedabad",
-      "city": "Ahmedabad",
-      "area": "Rancharda",
-      "landmark": "Dwarkesh Farm",
-      "status": "active",
-      "image": "/images/garba-fest/garba-38.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-38.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Haalo Garba.",
-      "description": "Buy an individual night pass for Haalo Garba at Dwarkesh Farm, Rancharda, Ahmedabad. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Rancharda",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 749,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-38",
-      "highlights": [
-        "Entry at Haalo Garba",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional",
-        "group_friendly"
-      ],
-      "marketPrice": 1000
-    },
-    {
-      "id": "e-v-39",
-      "name": "Navratri Nights — Single Night",
-      "subtitle": "Individual venue pass · Sindhu Bhavan",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Navratri Nights",
-      "address": "Sindhu Bhavan, Ahmedabad",
-      "city": "Ahmedabad",
-      "area": "Sindhu Bhavan",
-      "landmark": "Sindhu Bhavan",
-      "status": "active",
-      "image": "/images/garba-fest/garba-39.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-39.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Navratri Nights.",
-      "description": "Buy an individual night pass for Navratri Nights at Sindhu Bhavan, Ahmedabad. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Sindhu Bhavan",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 799,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-39",
-      "highlights": [
-        "Entry at Navratri Nights",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional"
-      ],
-      "marketPrice": 1100
-    },
-    {
-      "id": "e-v-40",
-      "name": "Vibrant Navratri Festival — Single Night",
-      "subtitle": "Individual venue pass · Memnagar",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Vibrant Navratri Festival",
-      "address": "GMDC Ground, Memnagar, Ahmedabad",
-      "city": "Ahmedabad",
-      "area": "Memnagar",
-      "landmark": "GMDC Ground",
-      "status": "active",
-      "image": "/images/garba-fest/garba-40.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-40.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Vibrant Navratri Festival.",
-      "description": "Buy an individual night pass for Vibrant Navratri Festival at GMDC Ground, Memnagar, Ahmedabad. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Memnagar",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 849,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-40",
-      "highlights": [
-        "Entry at Vibrant Navratri Festival",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional",
-        "premium",
-        "high_energy",
-        "group_friendly"
-      ],
-      "marketPrice": 1150
-    },
-    {
-      "id": "e-v-41",
-      "name": "Garba City Navratri — Single Night",
-      "subtitle": "Individual venue pass · GIFT City",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Garba City Navratri",
-      "address": "North Gate, GIFT City, Gandhinagar",
-      "city": "Gandhinagar",
-      "area": "GIFT City",
-      "landmark": "North Gate",
-      "status": "active",
-      "image": "/images/garba-fest/garba-41.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-41.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Garba City Navratri.",
-      "description": "Buy an individual night pass for Garba City Navratri at North Gate, GIFT City, Gandhinagar. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "GIFT City",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 499,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-41",
-      "highlights": [
-        "Entry at Garba City Navratri",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional",
-        "premium",
-        "best_value"
-      ],
-      "marketPrice": 650
-    },
-    {
-      "id": "e-v-42",
-      "name": "GIFT City Garba Ground — Single Night",
-      "subtitle": "Individual venue pass · GIFT City",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "GIFT City Garba Ground",
-      "address": "GIFT City, Gandhinagar",
-      "city": "Gandhinagar",
-      "area": "GIFT City",
-      "landmark": "GIFT City",
-      "status": "active",
-      "image": "/images/garba-fest/garba-42.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-42.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at GIFT City Garba Ground.",
-      "description": "Buy an individual night pass for GIFT City Garba Ground at GIFT City, Gandhinagar. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "GIFT City",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 549,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-42",
-      "highlights": [
-        "Entry at GIFT City Garba Ground",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional",
-        "premium",
-        "best_value",
-        "artist_pick"
-      ],
-      "marketPrice": 750
-    },
-    {
-      "id": "e-v-43",
-      "name": "Garba Ni Ramjhat & Premium Mandli — Single Night",
-      "subtitle": "Individual venue pass · Madhav Party Lawns",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Garba Ni Ramjhat & Premium Mandli",
-      "address": "Madhav Party Lawns, Santej/Gandhinagar",
-      "city": "Gandhinagar",
-      "area": "Madhav Party Lawns",
-      "landmark": "Madhav Party Lawns",
-      "status": "active",
-      "image": "/images/garba-fest/garba-43.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-43.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Garba Ni Ramjhat & Premium Mandli.",
-      "description": "Buy an individual night pass for Garba Ni Ramjhat & Premium Mandli at Madhav Party Lawns, Santej/Gandhinagar. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Madhav Party Lawns",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 599,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-43",
-      "highlights": [
-        "Entry at Garba Ni Ramjhat & Premium Mandli",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional",
-        "premium"
-      ],
-      "marketPrice": 800
-    },
-    {
-      "id": "e-v-44",
-      "name": "Thanganat Garba Club — Single Night",
-      "subtitle": "Individual venue pass · Sector 6",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Thanganat Garba Club",
-      "address": "Sector 6, Gandhinagar",
-      "city": "Gandhinagar",
-      "area": "Sector 6",
-      "landmark": "Sector 6",
-      "status": "active",
-      "image": "/images/garba-fest/garba-44.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-44.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Thanganat Garba Club.",
-      "description": "Buy an individual night pass for Thanganat Garba Club at Sector 6, Gandhinagar. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Sector 6",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 649,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-44",
-      "highlights": [
-        "Entry at Thanganat Garba Club",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional",
-        "high_energy",
-        "group_friendly"
-      ],
-      "marketPrice": 900
-    },
-    {
-      "id": "e-v-45",
-      "name": "Garba Navratri Ground — Single Night",
-      "subtitle": "Individual venue pass · Sector 2B",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Garba Navratri Ground",
-      "address": "Sector 2B, Gandhinagar",
-      "city": "Gandhinagar",
-      "area": "Sector 2B",
-      "landmark": "Sector 2B",
-      "status": "active",
-      "image": "/images/garba-fest/garba-45.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-45.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Garba Navratri Ground.",
-      "description": "Buy an individual night pass for Garba Navratri Ground at Sector 2B, Gandhinagar. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Sector 2B",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 699,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-45",
-      "highlights": [
-        "Entry at Garba Navratri Ground",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional",
-        "premium"
-      ],
-      "marketPrice": 950
-    },
-    {
-      "id": "e-v-46",
-      "name": "Garba Ground — Single Night",
-      "subtitle": "Individual venue pass · Sector 22",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Garba Ground",
-      "address": "Sector 22, Gandhinagar",
-      "city": "Gandhinagar",
-      "area": "Sector 22",
-      "landmark": "Sector 22",
-      "status": "active",
-      "image": "/images/garba-fest/garba-46.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-46.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Garba Ground.",
-      "description": "Buy an individual night pass for Garba Ground at Sector 22, Gandhinagar. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Sector 22",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 749,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-46",
-      "highlights": [
-        "Entry at Garba Ground",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional",
-        "group_friendly"
-      ],
-      "marketPrice": 1000
-    },
-    {
-      "id": "e-v-47",
-      "name": "Mandli Garba 2025 / Pushpakunj Farm — Single Night",
-      "subtitle": "Individual venue pass · Rancharda",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Mandli Garba 2025 / Pushpakunj Farm",
-      "address": "Rancharda, Ahmedabad",
-      "city": "Ahmedabad",
-      "area": "Rancharda",
-      "landmark": "Rancharda",
-      "status": "active",
-      "image": "/images/garba-fest/garba-47.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-47.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Mandli Garba 2025 / Pushpakunj Farm.",
-      "description": "Buy an individual night pass for Mandli Garba 2025 / Pushpakunj Farm at Rancharda, Ahmedabad. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Rancharda",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 799,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-47",
-      "highlights": [
-        "Entry at Mandli Garba 2025 / Pushpakunj Farm",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional"
-      ],
-      "marketPrice": 1100
-    },
-    {
-      "id": "e-v-48",
-      "name": "Premium Mandli & Garbani Ramjhat — Single Night",
-      "subtitle": "Individual venue pass · Super City Road",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Premium Mandli & Garbani Ramjhat",
-      "address": "Super City Road, Ahmedabad",
-      "city": "Ahmedabad",
-      "area": "Super City Road",
-      "landmark": "Super City Road",
-      "status": "active",
-      "image": "/images/garba-fest/garba-48.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-48.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Premium Mandli & Garbani Ramjhat.",
-      "description": "Buy an individual night pass for Premium Mandli & Garbani Ramjhat at Super City Road, Ahmedabad. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Super City Road",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 849,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-48",
-      "highlights": [
-        "Entry at Premium Mandli & Garbani Ramjhat",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional",
-        "premium",
-        "high_energy",
-        "best_value"
-      ],
-      "marketPrice": 1150
-    },
-    {
-      "id": "e-v-49",
-      "name": "Premium Mandvi — Single Night",
-      "subtitle": "Individual venue pass · Enasan",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Premium Mandvi",
-      "address": "Near Bhat Circle, Enasan, Ahmedabad",
-      "city": "Ahmedabad",
-      "area": "Enasan",
-      "landmark": "Near Bhat Circle",
-      "status": "active",
-      "image": "/images/garba-fest/garba-49.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-49.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Premium Mandvi.",
-      "description": "Buy an individual night pass for Premium Mandvi at Near Bhat Circle, Enasan, Ahmedabad. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Enasan",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 499,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-49",
-      "highlights": [
-        "Entry at Premium Mandvi",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional",
-        "premium",
-        "best_value",
-        "artist_pick"
-      ],
-      "marketPrice": 650
-    },
-    {
-      "id": "e-v-50",
-      "name": "Mandli Garba — Single Night",
-      "subtitle": "Individual venue pass · Ahmedabad",
-      "adminId": "u-admin",
-      "date": "2026-10-08",
-      "endDate": "2026-10-08",
-      "startTime": "19:00",
-      "endTime": "00:30",
-      "gatesOpen": "18:15",
-      "venue": "Mandli Garba",
-      "address": "Ahmedabad",
-      "city": "Ahmedabad",
-      "area": "Ahmedabad",
-      "landmark": "Ahmedabad",
-      "status": "active",
-      "image": "/images/garba-fest/garba-50.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-50.jpg"
-      ],
-      "shortDescription": "One-night Garba pass at Mandli Garba.",
-      "description": "Buy an individual night pass for Mandli Garba at Ahmedabad. Perfect if you want this mandli only — no 9x bundle required.",
-      "category": "Venue Night",
-      "tags": [
-        "Individual pass",
-        "Single night",
-        "Ahmedabad",
-        "Mandli"
-      ],
-      "languages": [
-        "Gujarati",
-        "Hindi",
-        "English"
-      ],
-      "ageLimit": "All ages",
-      "durationLabel": "1 night",
-      "dressCode": "Festive / traditional preferred",
-      "convenienceFee": 29,
-      "publicPriceFrom": 549,
-      "featured": false,
-      "offerType": "venue",
-      "nights": 1,
-      "placeId": "place-50",
-      "highlights": [
-        "Entry at Mandli Garba",
-        "Single night only",
-        "Digital QR ticket",
-        "Parking nearby"
-      ],
-      "amenities": [
-        "Food stalls",
-        "Washrooms",
-        "First-aid desk"
-      ],
-      "lineup": [
-        {
-          "name": "House Mandli",
-          "role": "Live orchestra"
-        }
-      ],
-      "schedule": [
-        {
-          "time": "18:15",
-          "title": "Gates open"
-        },
-        {
-          "time": "19:00",
-          "title": "Garba begins"
-        },
-        {
-          "time": "00:00",
-          "title": "Last set"
-        }
-      ],
-      "terms": [
-        "Valid for this venue & date only",
-        "Show QR + ID at gate"
-      ],
-      "refundPolicy": "Full refund until 48h before gates.",
-      "faqs": [
-        {
-          "q": "Is this a 9x bundle?",
-          "a": "No — this is a single-night pass for this venue only."
-        },
-        {
-          "q": "Can I upgrade to 9x later?",
-          "a": "Buy a 9x bundle separately from Discover; this pass stays single-night."
-        }
-      ],
-      "matchTags": [
-        "traditional",
-        "best_value",
-        "premium",
-        "group_friendly"
-      ],
-      "marketPrice": 750
-    },
-    {
       "id": "e-build-5",
       "name": "Build your Navratri · 5 nights",
       "subtitle": "Progressive 5-night custom Garba itinerary",
@@ -6257,53 +3673,6 @@
     }
   ],
   "passLots": [
-    {
-      "id": "pl-b1",
-      "eventId": "e-b1",
-      "adminId": "u-admin",
-      "name": "Classic 9x Season Pass",
-      "description": "One attendee · all 9 Classic circuit nights · day-wise venues listed on ticket",
-      "perks": [
-        "All 9 nights",
-        "9 venues",
-        "Theme nights",
-        "Season QR"
-      ],
-      "totalQty": 500,
-      "remainingQty": 420,
-      "pricePerPass": 3999,
-      "maxPerOrder": 4,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-05",
-      "createdAt": "2026-09-01",
-      "status": "active",
-      "isBundle": true,
-      "bundleNights": 9,
-      "cost": 2799
-    },
-    {
-      "id": "pl-b2",
-      "eventId": "e-b2",
-      "adminId": "u-admin",
-      "name": "East & Mega 9x Season Pass",
-      "description": "One attendee · all 9 East & Mega nights including Science City",
-      "perks": [
-        "All 9 nights",
-        "Mega nights included",
-        "Season QR"
-      ],
-      "totalQty": 500,
-      "remainingQty": 440,
-      "pricePerPass": 4499,
-      "maxPerOrder": 4,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-05",
-      "createdAt": "2026-09-01",
-      "status": "active",
-      "isBundle": true,
-      "bundleNights": 9,
-      "cost": 3149
-    },
     {
       "id": "pl4",
       "eventId": "e3",
@@ -7039,466 +4408,6 @@
       "bundleNights": 1
     },
     {
-      "id": "pl-v-31",
-      "eventId": "e-v-31",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — JashnRatri",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 799,
-      "cost": 519,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-32",
-      "eventId": "e-v-32",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Sheri Circle Garba",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 849,
-      "cost": 552,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-33",
-      "eventId": "e-v-33",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Parampara Navratri",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 499,
-      "cost": 324,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-34",
-      "eventId": "e-v-34",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Inner Circle Garba",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 549,
-      "cost": 357,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-35",
-      "eventId": "e-v-35",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Sach Raatri Navratri",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 599,
-      "cost": 389,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-36",
-      "eventId": "e-v-36",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Krishnamay Raas",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 649,
-      "cost": 422,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-37",
-      "eventId": "e-v-37",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Nagri Na Norta",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 699,
-      "cost": 454,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-38",
-      "eventId": "e-v-38",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Haalo Garba",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 749,
-      "cost": 487,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-39",
-      "eventId": "e-v-39",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Navratri Nights",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 799,
-      "cost": 519,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-40",
-      "eventId": "e-v-40",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Vibrant Navratri Festival",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 849,
-      "cost": 552,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-41",
-      "eventId": "e-v-41",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Garba City Navratri",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 499,
-      "cost": 324,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-42",
-      "eventId": "e-v-42",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — GIFT City Garba Ground",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 549,
-      "cost": 357,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-43",
-      "eventId": "e-v-43",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Garba Ni Ramjhat & Premium Mandli",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 599,
-      "cost": 389,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-44",
-      "eventId": "e-v-44",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Thanganat Garba Club",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 649,
-      "cost": 422,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-45",
-      "eventId": "e-v-45",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Garba Navratri Ground",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 699,
-      "cost": 454,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-46",
-      "eventId": "e-v-46",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Garba Ground",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 749,
-      "cost": 487,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-47",
-      "eventId": "e-v-47",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Mandli Garba 2025 / Pushpakunj Farm",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 799,
-      "cost": 519,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-48",
-      "eventId": "e-v-48",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Premium Mandli & Garbani Ramjhat",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 849,
-      "cost": 552,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-49",
-      "eventId": "e-v-49",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Premium Mandvi",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 499,
-      "cost": 324,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
-      "id": "pl-v-50",
-      "eventId": "e-v-50",
-      "adminId": "u-admin",
-      "name": "Individual Venue Pass",
-      "description": "Single night entry — Mandli Garba",
-      "perks": [
-        "One night",
-        "Main floor",
-        "QR entry"
-      ],
-      "totalQty": 200,
-      "remainingQty": 197,
-      "pricePerPass": 549,
-      "cost": 357,
-      "maxPerOrder": 6,
-      "saleStartsAt": "2026-09-01",
-      "saleEndsAt": "2026-10-08",
-      "createdAt": "2026-09-15",
-      "status": "active",
-      "isBundle": false,
-      "bundleNights": 1
-    },
-    {
       "id": "pl-build-5",
       "eventId": "e-build-5",
       "adminId": "u-admin",
@@ -7622,163 +4531,6 @@
   "sellRequests": [],
   "tickets": [
     {
-      "id": "tb1-1",
-      "passLotId": "pl-b1",
-      "eventId": "e-b1",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-9X-C1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Classic 9x Season Pass"
-    },
-    {
-      "id": "tb1-2",
-      "passLotId": "pl-b1",
-      "eventId": "e-b1",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-9X-C2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Classic 9x Season Pass"
-    },
-    {
-      "id": "tb1-3",
-      "passLotId": "pl-b1",
-      "eventId": "e-b1",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-9X-C3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Classic 9x Season Pass"
-    },
-    {
-      "id": "tb1-4",
-      "passLotId": "pl-b1",
-      "eventId": "e-b1",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-9X-C4",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Classic 9x Season Pass"
-    },
-    {
-      "id": "tb1-5",
-      "passLotId": "pl-b1",
-      "eventId": "e-b1",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-9X-C5",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Classic 9x Season Pass"
-    },
-    {
-      "id": "tb1-6",
-      "passLotId": "pl-b1",
-      "eventId": "e-b1",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-9X-C6",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Classic 9x Season Pass"
-    },
-    {
-      "id": "tb2-1",
-      "passLotId": "pl-b2",
-      "eventId": "e-b2",
-      "ownerType": "customer",
-      "ownerId": "u-customer",
-      "status": "sold",
-      "qrCode": "QR-9X-E1",
-      "soldBy": "u-admin",
-      "soldAt": "2026-09-19T08:17:14.653Z",
-      "pricePaid": 4499,
-      "listedForSale": false,
-      "lotName": "East & Mega 9x Season Pass",
-      "attendeeName": "fmne",
-      "attendeePhone": "8743249823",
-      "orderId": "ord-mu846kkd-ems3x"
-    },
-    {
-      "id": "tb2-2",
-      "passLotId": "pl-b2",
-      "eventId": "e-b2",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-9X-E2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "East & Mega 9x Season Pass"
-    },
-    {
-      "id": "tb2-3",
-      "passLotId": "pl-b2",
-      "eventId": "e-b2",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-9X-E3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "East & Mega 9x Season Pass"
-    },
-    {
-      "id": "tb2-4",
-      "passLotId": "pl-b2",
-      "eventId": "e-b2",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-9X-E4",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "East & Mega 9x Season Pass"
-    },
-    {
-      "id": "tb2-5",
-      "passLotId": "pl-b2",
-      "eventId": "e-b2",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-9X-E5",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "East & Mega 9x Season Pass"
-    },
-    {
       "id": "t4",
       "passLotId": "pl4",
       "eventId": "e3",
@@ -7805,25 +4557,6 @@
       "pricePaid": null,
       "listedForSale": true,
       "lotName": "Lawn Access"
-    },
-    {
-      "id": "t6",
-      "passLotId": "pl-b1",
-      "eventId": "e-b1",
-      "ownerType": "customer",
-      "ownerId": "u-customer",
-      "status": "sold",
-      "qrCode": "QR-EB-T6",
-      "soldBy": "u-admin",
-      "soldAt": "2026-09-10T19:00:00+05:30",
-      "pricePaid": 3999,
-      "listedForSale": false,
-      "lotName": "Classic 9x Season Pass",
-      "attendeeName": "Customer Priya",
-      "attendeePhone": "+91 98765 43210",
-      "orderId": "ord1",
-      "checkedInAt": null,
-      "checkedInBy": null
     },
     {
       "id": "tv-01-1",
@@ -9086,846 +5819,6 @@
       "lotName": "Individual Venue Pass"
     },
     {
-      "id": "tv-31-1",
-      "passLotId": "pl-v-31",
-      "eventId": "e-v-31",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-31-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-31-2",
-      "passLotId": "pl-v-31",
-      "eventId": "e-v-31",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-31-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-31-3",
-      "passLotId": "pl-v-31",
-      "eventId": "e-v-31",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-31-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-32-1",
-      "passLotId": "pl-v-32",
-      "eventId": "e-v-32",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-32-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-32-2",
-      "passLotId": "pl-v-32",
-      "eventId": "e-v-32",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-32-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-32-3",
-      "passLotId": "pl-v-32",
-      "eventId": "e-v-32",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-32-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-33-1",
-      "passLotId": "pl-v-33",
-      "eventId": "e-v-33",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-33-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-33-2",
-      "passLotId": "pl-v-33",
-      "eventId": "e-v-33",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-33-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-33-3",
-      "passLotId": "pl-v-33",
-      "eventId": "e-v-33",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-33-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-34-1",
-      "passLotId": "pl-v-34",
-      "eventId": "e-v-34",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-34-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-34-2",
-      "passLotId": "pl-v-34",
-      "eventId": "e-v-34",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-34-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-34-3",
-      "passLotId": "pl-v-34",
-      "eventId": "e-v-34",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-34-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-35-1",
-      "passLotId": "pl-v-35",
-      "eventId": "e-v-35",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-35-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-35-2",
-      "passLotId": "pl-v-35",
-      "eventId": "e-v-35",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-35-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-35-3",
-      "passLotId": "pl-v-35",
-      "eventId": "e-v-35",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-35-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-36-1",
-      "passLotId": "pl-v-36",
-      "eventId": "e-v-36",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-36-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-36-2",
-      "passLotId": "pl-v-36",
-      "eventId": "e-v-36",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-36-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-36-3",
-      "passLotId": "pl-v-36",
-      "eventId": "e-v-36",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-36-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-37-1",
-      "passLotId": "pl-v-37",
-      "eventId": "e-v-37",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-37-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-37-2",
-      "passLotId": "pl-v-37",
-      "eventId": "e-v-37",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-37-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-37-3",
-      "passLotId": "pl-v-37",
-      "eventId": "e-v-37",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-37-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-38-1",
-      "passLotId": "pl-v-38",
-      "eventId": "e-v-38",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-38-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-38-2",
-      "passLotId": "pl-v-38",
-      "eventId": "e-v-38",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-38-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-38-3",
-      "passLotId": "pl-v-38",
-      "eventId": "e-v-38",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-38-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-39-1",
-      "passLotId": "pl-v-39",
-      "eventId": "e-v-39",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-39-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-39-2",
-      "passLotId": "pl-v-39",
-      "eventId": "e-v-39",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-39-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-39-3",
-      "passLotId": "pl-v-39",
-      "eventId": "e-v-39",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-39-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-40-1",
-      "passLotId": "pl-v-40",
-      "eventId": "e-v-40",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-40-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-40-2",
-      "passLotId": "pl-v-40",
-      "eventId": "e-v-40",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-40-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-40-3",
-      "passLotId": "pl-v-40",
-      "eventId": "e-v-40",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-40-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-41-1",
-      "passLotId": "pl-v-41",
-      "eventId": "e-v-41",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-41-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-41-2",
-      "passLotId": "pl-v-41",
-      "eventId": "e-v-41",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-41-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-41-3",
-      "passLotId": "pl-v-41",
-      "eventId": "e-v-41",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-41-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-42-1",
-      "passLotId": "pl-v-42",
-      "eventId": "e-v-42",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-42-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-42-2",
-      "passLotId": "pl-v-42",
-      "eventId": "e-v-42",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-42-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-42-3",
-      "passLotId": "pl-v-42",
-      "eventId": "e-v-42",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-42-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-43-1",
-      "passLotId": "pl-v-43",
-      "eventId": "e-v-43",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-43-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-43-2",
-      "passLotId": "pl-v-43",
-      "eventId": "e-v-43",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-43-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-43-3",
-      "passLotId": "pl-v-43",
-      "eventId": "e-v-43",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-43-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-44-1",
-      "passLotId": "pl-v-44",
-      "eventId": "e-v-44",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-44-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-44-2",
-      "passLotId": "pl-v-44",
-      "eventId": "e-v-44",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-44-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-44-3",
-      "passLotId": "pl-v-44",
-      "eventId": "e-v-44",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-44-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-45-1",
-      "passLotId": "pl-v-45",
-      "eventId": "e-v-45",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-45-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-45-2",
-      "passLotId": "pl-v-45",
-      "eventId": "e-v-45",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-45-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-45-3",
-      "passLotId": "pl-v-45",
-      "eventId": "e-v-45",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-45-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-46-1",
-      "passLotId": "pl-v-46",
-      "eventId": "e-v-46",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-46-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-46-2",
-      "passLotId": "pl-v-46",
-      "eventId": "e-v-46",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-46-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-46-3",
-      "passLotId": "pl-v-46",
-      "eventId": "e-v-46",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-46-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-47-1",
-      "passLotId": "pl-v-47",
-      "eventId": "e-v-47",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-47-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-47-2",
-      "passLotId": "pl-v-47",
-      "eventId": "e-v-47",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-47-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-47-3",
-      "passLotId": "pl-v-47",
-      "eventId": "e-v-47",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-47-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-48-1",
-      "passLotId": "pl-v-48",
-      "eventId": "e-v-48",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-48-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-48-2",
-      "passLotId": "pl-v-48",
-      "eventId": "e-v-48",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-48-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-48-3",
-      "passLotId": "pl-v-48",
-      "eventId": "e-v-48",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-48-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-49-1",
-      "passLotId": "pl-v-49",
-      "eventId": "e-v-49",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-49-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-49-2",
-      "passLotId": "pl-v-49",
-      "eventId": "e-v-49",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-49-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-49-3",
-      "passLotId": "pl-v-49",
-      "eventId": "e-v-49",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-49-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-50-1",
-      "passLotId": "pl-v-50",
-      "eventId": "e-v-50",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-50-1",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-50-2",
-      "passLotId": "pl-v-50",
-      "eventId": "e-v-50",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-50-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
-      "id": "tv-50-3",
-      "passLotId": "pl-v-50",
-      "eventId": "e-v-50",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
-      "qrCode": "QR-V-50-3",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "Individual Venue Pass"
-    },
-    {
       "id": "tbuild5-1",
       "passLotId": "pl-build-5",
       "eventId": "e-build-5",
@@ -9946,15 +5839,18 @@
       "id": "tbuild5-2",
       "passLotId": "pl-build-5",
       "eventId": "e-build-5",
-      "ownerType": "admin",
-      "ownerId": "u-admin",
-      "status": "available",
+      "ownerType": "customer",
+      "ownerId": "u-customer",
+      "status": "sold",
       "qrCode": "QR-BUILD-5-2",
-      "soldBy": null,
-      "soldAt": null,
-      "pricePaid": null,
-      "listedForSale": true,
-      "lotName": "5-night Build Pass"
+      "soldBy": "u-admin",
+      "soldAt": "2026-09-23T13:13:18.906Z",
+      "pricePaid": 3096,
+      "listedForSale": false,
+      "lotName": "5-night Build Pass",
+      "attendeeName": "ferfger",
+      "attendeePhone": "1234543211",
+      "orderId": "ord-mue4iq7u-ftfy6"
     },
     {
       "id": "tbuild5-3",
@@ -10774,9 +6670,7 @@
       "id": "ord1",
       "eventId": "e-b1",
       "buyerId": "u-customer",
-      "ticketIds": [
-        "t6"
-      ],
+      "ticketIds": [],
       "quantity": 1,
       "subtotal": 3999,
       "convenienceFee": 99,
@@ -10801,9 +6695,7 @@
       "eventId": "e-b2",
       "buyerId": "u-customer",
       "sellerId": "u-admin",
-      "ticketIds": [
-        "tb2-1"
-      ],
+      "ticketIds": [],
       "quantity": 1,
       "subtotal": 4499,
       "convenienceFee": 119,
@@ -10973,6 +6865,159 @@
         }
       ],
       "customNights": 5
+    },
+    {
+      "id": "ord-mue4iq7u-ftfy6",
+      "eventId": "e-build-5",
+      "buyerId": "u-customer",
+      "sellerId": "u-admin",
+      "ticketIds": [
+        "tbuild5-2"
+      ],
+      "quantity": 1,
+      "subtotal": 3096,
+      "convenienceFee": 99,
+      "total": 3195,
+      "paymentMethod": "UPI",
+      "buyerName": "koeejhfer",
+      "buyerEmail": "vyom.korat@kysz.tech",
+      "buyerPhone": "1234567765",
+      "attendees": [
+        {
+          "name": "ferfger",
+          "phone": "1234543211"
+        }
+      ],
+      "status": "confirmed",
+      "createdAt": "2026-09-23T13:13:18.964Z",
+      "customBundleDays": [
+        {
+          "day": 1,
+          "date": "2026-10-07",
+          "placeId": "place-02",
+          "venue": "Mandalam Garba",
+          "area": "Bopal",
+          "address": "VIP Road, Bopal, Ahmedabad",
+          "landmark": "VIP Road",
+          "lat": 23.032,
+          "lng": 72.465,
+          "theme": "Chandraghanta Night",
+          "dressHint": "Traditional chaniya choli / kediyu",
+          "startTime": "19:00",
+          "endTime": "00:30",
+          "gatesOpen": "18:00",
+          "image": "/images/garba-fest/garba-02.jpg",
+          "passTier": "diamond",
+          "highlights": [
+            "💎 Diamond",
+            "DJ Raas + Live Dhol",
+            "Garba",
+            "Mandli"
+          ],
+          "note": "Better circle · priority entry"
+        },
+        {
+          "day": 2,
+          "date": "2026-10-09",
+          "placeId": "place-09",
+          "venue": "Maavdee",
+          "area": "SG Highway",
+          "address": "RM Patel Farm, SG Highway, Ahmedabad",
+          "landmark": "RM Patel Farm",
+          "lat": 23.055,
+          "lng": 72.508,
+          "theme": "Skandamata Night",
+          "dressHint": "Traditional chaniya choli / kediyu",
+          "startTime": "19:00",
+          "endTime": "00:30",
+          "gatesOpen": "18:00",
+          "image": "/images/garba-fest/garba-09.jpg",
+          "passTier": "diamond",
+          "highlights": [
+            "💎 Diamond",
+            "Ognaj Classic Ensemble",
+            "Garba",
+            "Mandli"
+          ],
+          "note": "Better circle · priority entry"
+        },
+        {
+          "day": 3,
+          "date": "2026-10-10",
+          "placeId": "place-07",
+          "venue": "Swarnim Nagari Garba",
+          "area": "Makarba",
+          "address": "LJ University Road, Makarba, Ahmedabad",
+          "landmark": "LJ University Road",
+          "lat": 22.992,
+          "lng": 72.498,
+          "theme": "Katyayani Night",
+          "dressHint": "Traditional chaniya choli / kediyu",
+          "startTime": "19:00",
+          "endTime": "00:30",
+          "gatesOpen": "18:00",
+          "image": "/images/garba-fest/garba-07.jpg",
+          "passTier": "gold",
+          "highlights": [
+            "🟡 Gold",
+            "GIFT City Night Band",
+            "Garba",
+            "Mandli"
+          ],
+          "note": "Full floor access · classic Garba night"
+        },
+        {
+          "day": 4,
+          "date": "2026-10-12",
+          "placeId": "place-07",
+          "venue": "Swarnim Nagari Garba",
+          "area": "Makarba",
+          "address": "LJ University Road, Makarba, Ahmedabad",
+          "landmark": "LJ University Road",
+          "lat": 22.992,
+          "lng": 72.498,
+          "theme": "Mahagauri Night",
+          "dressHint": "Traditional chaniya choli / kediyu",
+          "startTime": "19:00",
+          "endTime": "00:30",
+          "gatesOpen": "18:00",
+          "image": "/images/garba-fest/garba-07.jpg",
+          "passTier": "diamond",
+          "highlights": [
+            "💎 Diamond",
+            "Mahagauri House Band",
+            "Garba",
+            "Mandli"
+          ],
+          "note": "Better circle · priority entry"
+        },
+        {
+          "day": 5,
+          "date": "2026-10-13",
+          "placeId": "place-03",
+          "venue": "Dholki Garba – The Premium Mandli",
+          "area": "Ognaj–Bhadaj",
+          "address": "Ognaj–Bhadaj, Ahmedabad",
+          "landmark": "Ognaj–Bhadaj",
+          "lat": 23.095,
+          "lng": 72.475,
+          "theme": "Siddhidatri Night",
+          "dressHint": "Traditional chaniya choli / kediyu",
+          "startTime": "19:00",
+          "endTime": "00:30",
+          "gatesOpen": "18:00",
+          "image": "/images/garba-fest/garba-03.jpg",
+          "passTier": "gold",
+          "highlights": [
+            "🟡 Gold",
+            "Siddhidatri Finale Cast",
+            "Garba",
+            "Mandli"
+          ],
+          "note": "Full floor access · classic Garba night"
+        }
+      ],
+      "customNights": 5
     }
   ],
   "transactions": [
@@ -11014,6 +7059,19 @@
       "cost": 2099,
       "commission": 2595,
       "timestamp": "2026-09-22T12:39:28.964Z"
+    },
+    {
+      "id": "tx-mue4iq8n-onyox",
+      "ticketId": "tbuild5-2",
+      "eventId": "e-build-5",
+      "orderId": "ord-mue4iq7u-ftfy6",
+      "sellerId": "u-admin",
+      "sellerRole": "admin",
+      "buyerId": "u-customer",
+      "amount": 3096,
+      "cost": 2099,
+      "commission": 997,
+      "timestamp": "2026-09-23T13:13:18.935Z"
     }
   ],
   "wallets": [
@@ -11021,9 +7079,9 @@
       "id": "w-admin",
       "userId": "u-admin",
       "role": "admin",
-      "totalEarned": 3945,
+      "totalEarned": 4942,
       "totalOwed": 0,
-      "availableBalance": 3945,
+      "availableBalance": 4942,
       "lastPayoutAt": null
     }
   ],
@@ -11050,8 +7108,7 @@
       "capacityHint": 1200,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-01.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-02",
@@ -11075,8 +7132,7 @@
       "capacityHint": 1400,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-02.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-03",
@@ -11100,8 +7156,7 @@
       "capacityHint": 1600,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-03.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-04",
@@ -11125,8 +7180,7 @@
       "capacityHint": 1800,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-04.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-05",
@@ -11150,8 +7204,7 @@
       "capacityHint": 2000,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-05.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-06",
@@ -11175,8 +7228,7 @@
       "capacityHint": 2200,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-06.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-07",
@@ -11200,8 +7252,7 @@
       "capacityHint": 2400,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-07.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-08",
@@ -11225,8 +7276,7 @@
       "capacityHint": 2600,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-08.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-09",
@@ -11250,8 +7300,7 @@
       "capacityHint": 2800,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-09.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-10",
@@ -11275,8 +7324,7 @@
       "capacityHint": 3000,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-10.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-11",
@@ -11300,8 +7348,7 @@
       "capacityHint": 1200,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-11.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-12",
@@ -11325,8 +7372,7 @@
       "capacityHint": 1400,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-12.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-13",
@@ -11350,8 +7396,7 @@
       "capacityHint": 1600,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-13.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-14",
@@ -11375,8 +7420,7 @@
       "capacityHint": 1800,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-14.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-15",
@@ -11400,8 +7444,7 @@
       "capacityHint": 2000,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-15.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-16",
@@ -11425,8 +7468,7 @@
       "capacityHint": 2200,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-16.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-17",
@@ -11450,8 +7492,7 @@
       "capacityHint": 2400,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-17.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-18",
@@ -11475,8 +7516,7 @@
       "capacityHint": 2600,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-18.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-19",
@@ -11500,8 +7540,7 @@
       "capacityHint": 2800,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-19.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-20",
@@ -11525,8 +7564,7 @@
       "capacityHint": 3000,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-20.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-21",
@@ -11550,8 +7588,7 @@
       "capacityHint": 1200,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-21.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-22",
@@ -11575,8 +7612,7 @@
       "capacityHint": 1400,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-22.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-23",
@@ -11600,8 +7636,7 @@
       "capacityHint": 1600,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-23.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-24",
@@ -11625,8 +7660,7 @@
       "capacityHint": 1800,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-24.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-25",
@@ -11650,8 +7684,7 @@
       "capacityHint": 2000,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-25.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-26",
@@ -11675,8 +7708,7 @@
       "capacityHint": 2200,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-26.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-27",
@@ -11700,8 +7732,7 @@
       "capacityHint": 2400,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-27.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-28",
@@ -11725,8 +7756,7 @@
       "capacityHint": 2600,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-28.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-29",
@@ -11750,8 +7780,7 @@
       "capacityHint": 2800,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-29.jpg"
+      "photoStyle": "garba-festival"
     },
     {
       "id": "place-30",
@@ -11775,508 +7804,7 @@
       "capacityHint": 3000,
       "parking": true,
       "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-30.jpg"
-    },
-    {
-      "id": "place-31",
-      "name": "JashnRatri",
-      "city": "Ahmedabad",
-      "area": "Pleasant Party Plot",
-      "address": "Pleasant Party Plot, Ahmedabad",
-      "landmark": "Pleasant Party Plot",
-      "image": "/images/garba-fest/garba-31.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-31.jpg"
-      ],
-      "lat": 23.058,
-      "lng": 72.535,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Pleasant Party Plot"
-      ],
-      "capacityHint": 1200,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-31.jpg"
-    },
-    {
-      "id": "place-32",
-      "name": "Sheri Circle Garba",
-      "city": "Ahmedabad",
-      "area": "Ahmedabad",
-      "address": "Ahmedabad",
-      "landmark": "Ahmedabad",
-      "image": "/images/garba-fest/garba-32.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-32.jpg"
-      ],
-      "lat": 23.03,
-      "lng": 72.56,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Ahmedabad"
-      ],
-      "capacityHint": 1400,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-32.jpg"
-    },
-    {
-      "id": "place-33",
-      "name": "Parampara Navratri",
-      "city": "Ahmedabad",
-      "area": "Ahmedabad",
-      "address": "Ahmedabad",
-      "landmark": "Ahmedabad",
-      "image": "/images/garba-fest/garba-33.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-33.jpg"
-      ],
-      "lat": 23.015,
-      "lng": 72.545,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Ahmedabad"
-      ],
-      "capacityHint": 1600,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-33.jpg"
-    },
-    {
-      "id": "place-34",
-      "name": "Inner Circle Garba",
-      "city": "Ahmedabad",
-      "area": "Ahmedabad",
-      "address": "Ahmedabad",
-      "landmark": "Ahmedabad",
-      "image": "/images/garba-fest/garba-34.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-34.jpg"
-      ],
-      "lat": 23.042,
-      "lng": 72.558,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Ahmedabad"
-      ],
-      "capacityHint": 1800,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-34.jpg"
-    },
-    {
-      "id": "place-35",
-      "name": "Sach Raatri Navratri",
-      "city": "Ahmedabad",
-      "area": "Tathastu Party Plot",
-      "address": "Tathastu Party Plot, Ahmedabad",
-      "landmark": "Tathastu Party Plot",
-      "image": "/images/garba-fest/garba-35.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-35.jpg"
-      ],
-      "lat": 23.072,
-      "lng": 72.532,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Tathastu Party Plot"
-      ],
-      "capacityHint": 2000,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-35.jpg"
-    },
-    {
-      "id": "place-36",
-      "name": "Krishnamay Raas",
-      "city": "Ahmedabad",
-      "area": "Milan Farm",
-      "address": "Milan Farm, Ahmedabad",
-      "landmark": "Milan Farm",
-      "image": "/images/garba-fest/garba-36.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-36.jpg"
-      ],
-      "lat": 23.08,
-      "lng": 72.518,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Milan Farm"
-      ],
-      "capacityHint": 2200,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-36.jpg"
-    },
-    {
-      "id": "place-37",
-      "name": "Nagri Na Norta",
-      "city": "Ahmedabad",
-      "area": "Club Babylon",
-      "address": "Club Babylon, Ahmedabad",
-      "landmark": "Club Babylon",
-      "image": "/images/garba-fest/garba-37.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-37.jpg"
-      ],
-      "lat": 23.038,
-      "lng": 72.505,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Club Babylon"
-      ],
-      "capacityHint": 2400,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-37.jpg"
-    },
-    {
-      "id": "place-38",
-      "name": "Haalo Garba",
-      "city": "Ahmedabad",
-      "area": "Rancharda",
-      "address": "Dwarkesh Farm, Rancharda, Ahmedabad",
-      "landmark": "Dwarkesh Farm",
-      "image": "/images/garba-fest/garba-38.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-38.jpg"
-      ],
-      "lat": 23.115,
-      "lng": 72.455,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Rancharda"
-      ],
-      "capacityHint": 2600,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-38.jpg"
-    },
-    {
-      "id": "place-39",
-      "name": "Navratri Nights",
-      "city": "Ahmedabad",
-      "area": "Sindhu Bhavan",
-      "address": "Sindhu Bhavan, Ahmedabad",
-      "landmark": "Sindhu Bhavan",
-      "image": "/images/garba-fest/garba-39.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-39.jpg"
-      ],
-      "lat": 23.0455,
-      "lng": 72.528,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Sindhu Bhavan"
-      ],
-      "capacityHint": 2800,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-39.jpg"
-    },
-    {
-      "id": "place-40",
-      "name": "Vibrant Navratri Festival",
-      "city": "Ahmedabad",
-      "area": "Memnagar",
-      "address": "GMDC Ground, Memnagar, Ahmedabad",
-      "landmark": "GMDC Ground",
-      "image": "/images/garba-fest/garba-40.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-40.jpg"
-      ],
-      "lat": 23.045,
-      "lng": 72.538,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Memnagar"
-      ],
-      "capacityHint": 3000,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-40.jpg"
-    },
-    {
-      "id": "place-41",
-      "name": "Garba City Navratri",
-      "city": "Gandhinagar",
-      "area": "GIFT City",
-      "address": "North Gate, GIFT City, Gandhinagar",
-      "landmark": "North Gate",
-      "image": "/images/garba-fest/garba-41.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-41.jpg"
-      ],
-      "lat": 23.162,
-      "lng": 72.682,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "GIFT City"
-      ],
-      "capacityHint": 1200,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-41.jpg"
-    },
-    {
-      "id": "place-42",
-      "name": "GIFT City Garba Ground",
-      "city": "Gandhinagar",
-      "area": "GIFT City",
-      "address": "GIFT City, Gandhinagar",
-      "landmark": "GIFT City",
-      "image": "/images/garba-fest/garba-42.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-42.jpg"
-      ],
-      "lat": 23.158,
-      "lng": 72.685,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "GIFT City"
-      ],
-      "capacityHint": 1400,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-42.jpg"
-    },
-    {
-      "id": "place-43",
-      "name": "Garba Ni Ramjhat & Premium Mandli",
-      "city": "Gandhinagar",
-      "area": "Madhav Party Lawns",
-      "address": "Madhav Party Lawns, Santej/Gandhinagar",
-      "landmark": "Madhav Party Lawns",
-      "image": "/images/garba-fest/garba-43.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-43.jpg"
-      ],
-      "lat": 23.145,
-      "lng": 72.655,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Madhav Party Lawns"
-      ],
-      "capacityHint": 1600,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-43.jpg"
-    },
-    {
-      "id": "place-44",
-      "name": "Thanganat Garba Club",
-      "city": "Gandhinagar",
-      "area": "Sector 6",
-      "address": "Sector 6, Gandhinagar",
-      "landmark": "Sector 6",
-      "image": "/images/garba-fest/garba-44.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-44.jpg"
-      ],
-      "lat": 23.223,
-      "lng": 72.645,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Sector 6"
-      ],
-      "capacityHint": 1800,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-44.jpg"
-    },
-    {
-      "id": "place-45",
-      "name": "Garba Navratri Ground",
-      "city": "Gandhinagar",
-      "area": "Sector 2B",
-      "address": "Sector 2B, Gandhinagar",
-      "landmark": "Sector 2B",
-      "image": "/images/garba-fest/garba-45.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-45.jpg"
-      ],
-      "lat": 23.215,
-      "lng": 72.638,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Sector 2B"
-      ],
-      "capacityHint": 2000,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-45.jpg"
-    },
-    {
-      "id": "place-46",
-      "name": "Garba Ground",
-      "city": "Gandhinagar",
-      "area": "Sector 22",
-      "address": "Sector 22, Gandhinagar",
-      "landmark": "Sector 22",
-      "image": "/images/garba-fest/garba-46.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-46.jpg"
-      ],
-      "lat": 23.235,
-      "lng": 72.655,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Sector 22"
-      ],
-      "capacityHint": 2200,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-46.jpg"
-    },
-    {
-      "id": "place-47",
-      "name": "Mandli Garba 2025 / Pushpakunj Farm",
-      "city": "Ahmedabad",
-      "area": "Rancharda",
-      "address": "Rancharda, Ahmedabad",
-      "landmark": "Rancharda",
-      "image": "/images/garba-fest/garba-47.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-47.jpg"
-      ],
-      "lat": 23.112,
-      "lng": 72.452,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Rancharda"
-      ],
-      "capacityHint": 2400,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-47.jpg"
-    },
-    {
-      "id": "place-48",
-      "name": "Premium Mandli & Garbani Ramjhat",
-      "city": "Ahmedabad",
-      "area": "Super City Road",
-      "address": "Super City Road, Ahmedabad",
-      "landmark": "Super City Road",
-      "image": "/images/garba-fest/garba-48.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-48.jpg"
-      ],
-      "lat": 23.108,
-      "lng": 72.498,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Super City Road"
-      ],
-      "capacityHint": 2600,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-48.jpg"
-    },
-    {
-      "id": "place-49",
-      "name": "Premium Mandvi",
-      "city": "Ahmedabad",
-      "area": "Enasan",
-      "address": "Near Bhat Circle, Enasan, Ahmedabad",
-      "landmark": "Near Bhat Circle",
-      "image": "/images/garba-fest/garba-49.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-49.jpg"
-      ],
-      "lat": 23.125,
-      "lng": 72.575,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Enasan"
-      ],
-      "capacityHint": 2800,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-49.jpg"
-    },
-    {
-      "id": "place-50",
-      "name": "Mandli Garba",
-      "city": "Ahmedabad",
-      "area": "Ahmedabad",
-      "address": "Ahmedabad",
-      "landmark": "Ahmedabad",
-      "image": "/images/garba-fest/garba-50.jpg",
-      "gallery": [
-        "/images/garba-fest/garba-50.jpg"
-      ],
-      "lat": 23.02,
-      "lng": 72.57,
-      "tags": [
-        "Garba",
-        "Mandli",
-        "Navratri",
-        "Ahmedabad"
-      ],
-      "capacityHint": 3000,
-      "parking": true,
-      "metroNearby": false,
-      "photoStyle": "garba-festival",
-      "mapImage": "/images/venues/place-50.jpg"
+      "photoStyle": "garba-festival"
     }
   ]
 }

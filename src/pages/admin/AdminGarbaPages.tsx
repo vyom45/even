@@ -97,7 +97,7 @@ const emptyEvent = {
   refundPolicy: '',
   convenienceFee: 29,
   publicPriceFrom: 499,
-  image: '/images/navratri-sabarmati.jpg',
+  image: '/images/garba-fest/garba-05.jpg',
   featured: true,
 }
 

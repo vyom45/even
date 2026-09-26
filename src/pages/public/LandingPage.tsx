@@ -231,7 +231,7 @@ export function LandingPage() {
           </div>
           <div className="relative hidden min-h-[240px] lg:block">
             <img
-              src="/images/garba-ellisbridge.jpg"
+              src="/images/garba-fest/garba-15.jpg"
               alt=""
               className="absolute inset-0 h-full w-full object-cover opacity-80"
             />

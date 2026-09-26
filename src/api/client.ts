@@ -464,6 +464,7 @@ export async function getCustomerFacingEvents() {
   }, {})
   return events
     .filter((e) => (counts[e.id] ?? 0) > 0)
+    .filter((e) => e.offerType !== 'bundle9x')
     .map((e) => ({ ...e, availablePasses: counts[e.id] ?? 0 }))
 }
 

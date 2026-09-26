@@ -54,7 +54,7 @@ export function CustomerHomePage() {
   const [venueBusy, setVenueBusy] = useState(false)
   const [venueMsg, setVenueMsg] = useState('')
   const [q, setQ] = useState('')
-  const [offerMode, setOfferMode] = useState<'bundle' | 'individual' | 'build'>('bundle')
+  const [offerMode, setOfferMode] = useState<'individual' | 'build'>('individual')
   const [category, setCategory] = useState('all')
   const [area, setArea] = useState('all')
   const [sort, setSort] = useState('featured')
@@ -87,32 +87,22 @@ export function CustomerHomePage() {
   }, [])
 
   const categories = useMemo(() => {
-    const scoped = events.filter((e) => {
-      if (offerMode === 'bundle') return e.offerType === 'bundle9x'
-      if (offerMode === 'individual') return e.offerType === 'venue' || e.offerType === 'single'
-      return false
-    })
+    const scoped = events.filter((e) => e.offerType === 'venue' || e.offerType === 'single')
     return Array.from(new Set(scoped.map((e) => e.category)))
-  }, [events, offerMode])
+  }, [events])
 
   const areas = useMemo(() => {
-    if (offerMode === 'individual' || offerMode === 'build') {
-      return Array.from(new Set(places.map((p) => p.area).filter(Boolean)))
-    }
-    const fromEvents = events
-      .filter((e) => e.offerType === 'bundle9x')
-      .flatMap((e) => [e.area, ...(e.bundleDays ?? []).map((d) => d.area)])
-    return Array.from(new Set(fromEvents.filter(Boolean) as string[]))
-  }, [events, places, offerMode])
+    return Array.from(new Set(places.map((p) => p.area).filter(Boolean)))
+  }, [places])
 
   const priceMedian = useMemo(() => {
     const prices = events
-      .filter((e) => (offerMode === 'bundle' ? e.offerType === 'bundle9x' : e.offerType === 'venue' || e.offerType === 'single'))
+      .filter((e) => e.offerType === 'venue' || e.offerType === 'single')
       .map((e) => e.publicPriceFrom)
       .sort((a, b) => a - b)
     if (!prices.length) return 799
     return prices[Math.floor(prices.length / 2)]
-  }, [events, offerMode])
+  }, [events])
 
   const selectedPlace = places.find((p) => p.id === selectedPlaceId) ?? null
   const nearArea = area !== 'all' ? area : selectedPlace?.area ?? null
@@ -120,10 +110,8 @@ export function CustomerHomePage() {
   const filtered = useMemo(() => {
     if (offerMode === 'build') return []
     let list = events.filter((e) => {
-      const isBundle = e.offerType === 'bundle9x'
       const isIndividual = e.offerType === 'venue' || e.offerType === 'single'
-      if (offerMode === 'bundle' && !isBundle) return false
-      if (offerMode === 'individual' && !isIndividual) return false
+      if (!isIndividual) return false
       if (e.offerType === 'customBundle') return false
 
       const dayHit = (e.bundleDays ?? []).some(
@@ -334,22 +322,6 @@ export function CustomerHomePage() {
           >
             <label
               className={`cursor-pointer rounded-xl px-4 py-2.5 text-center text-sm font-bold transition sm:text-left ${
-                offerMode === 'bundle'
-                  ? 'bg-brand-700 text-white shadow-sm'
-                  : 'text-ink-600 hover:text-ink-900'
-              }`}
-            >
-              <input
-                type="radio"
-                name="offerMode"
-                className="sr-only"
-                checked={offerMode === 'bundle'}
-                onChange={() => setOfferMode('bundle')}
-              />
-              9x Bundles
-            </label>
-            <label
-              className={`cursor-pointer rounded-xl px-4 py-2.5 text-center text-sm font-bold transition sm:text-left ${
                 offerMode === 'individual'
                   ? 'bg-brand-700 text-white shadow-sm'
                   : 'text-ink-600 hover:text-ink-900'
@@ -483,9 +455,7 @@ export function CustomerHomePage() {
         <div className="rounded-2xl border border-dashed border-ink-200 bg-white px-6 py-14 text-center">
           <p className="font-display text-lg font-bold">No passes match</p>
           <p className="mt-2 text-sm text-ink-500">
-            {offerMode === 'bundle'
-              ? 'No 9x bundles listed right now — try Individual venue or Build your Navratri.'
-              : 'No individual venue passes match these filters.'}
+            No individual venue passes match these filters.
           </p>
         </div>
       ) : (
